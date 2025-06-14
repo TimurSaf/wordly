@@ -1,0 +1,7 @@
+include(FetchContent)
+FetchContent_Declare(SFML GIT_REPOSITORY https://github.com/SFML/SFML.git GIT_TAG 3.0.0)
+FetchContent_GetProperties(SFML)
+FetchContent_MakeAvailable(SFML)
+FetchContent_Declare(doctest GIT_REPOSITORY https://github.com/doctest/doctest.git)
+FetchContent_GetProperties(doctest)
+FetchContent_MakeAvailable(doctest)
