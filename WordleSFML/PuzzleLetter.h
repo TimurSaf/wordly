@@ -40,6 +40,7 @@ public:
      *
      * \param bounds Прямоугольная область, в которой будет отображаться буква (sf::IntRect).
      * \param font   Шрифт для отображения символа (sf::Font).
+     * \throw std::invalid_argument Если bounds имеют неположительные размеры.
      */
     PuzzleLetter(const sf::IntRect& bounds, const sf::Font& font);
 
@@ -78,6 +79,7 @@ public:
      *
      * \param solutionState Состояние решения для буквы (SolutionState).
      * \return void
+     * \throw std::out_of_range Если solutionState недопустим.
      */
     void setSolutionState(const SolutionState& solutionState);
 
