@@ -1,0 +1,2 @@
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/arial.ttf
+        ${CMAKE_CURRENT_BINARY_DIR} COPYONLY)
