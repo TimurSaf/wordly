@@ -8,31 +8,9 @@
 #define FONT_FILE_PATH "../Fonts/arial.ttf"
 
 SFMLGame::SFMLGame()
-	: _window(sf::VideoMode(sf::Vector2u(WINDOW_WIDTH, WINDOW_HEIGHT)), "Wordle", sf::Style::Titlebar | sf::Style::Close),
-	_font(loadFont()), _game(sf::IntRect(sf::Vector2<int>(0, 0), sf::Vector2<int>(WINDOW_WIDTH, WINDOW_HEIGHT)), _font)
+    : _window(sf::VideoMode(sf::Vector2u(WINDOW_WIDTH, WINDOW_HEIGHT)), "Wordle", sf::Style::Titlebar | sf::Style::Close),
+    _font(loadFont()), _game(sf::IntRect(sf::Vector2<int>(0, 0), sf::Vector2<int>(WINDOW_WIDTH, WINDOW_HEIGHT)), _font)
 {
-    try {
-        _font = loadFont();
-    } catch (const std::runtime_error& e) {
-        throw std::runtime_error("Failed to initialize SFMLGame: " + std::string(e.what()));
-    }
-
-    if (WINDOW_WIDTH <= 0 || WINDOW_HEIGHT <= 0) {
-        throw std::invalid_argument("Window dimensions must be positive");
-    }
-
-    // _window.create(sf::VideoMode(sf::Vector2u(WINDOW_WIDTH, WINDOW_HEIGHT)), "Wordle", sf::Style::Titlebar | sf::Style::Close);
-    
-    // if (!_window.isOpen()) {
-    //     throw std::runtime_error("Failed to create SFML window");
-    // }
-
-    // try {
-    //     _game = Game(sf::IntRect(sf::Vector2<int>(0, 0),sf::Vector2<int> (WINDOW_WIDTH, WINDOW_HEIGHT)), _font);
-    // } catch (const std::exception& e) {
-    //     _window.close();
-    //     throw std::runtime_error("Failed to initialize Game: " + std::string(e.what()));
-    // }
 }
 
 void SFMLGame::gameLoop()
@@ -83,10 +61,10 @@ void SFMLGame::gameLoop()
 sf::Font SFMLGame::loadFont()
 {
     
-	sf::Font font;
+    sf::Font font;
     if (!font.openFromFile(FONT_FILE_PATH))
 	{
-		throw std::runtime_error("Font file not found");
+	    throw std::runtime_error("Font file not found");
 	}
 	return font;
 }
