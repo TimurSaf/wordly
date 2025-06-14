@@ -4,7 +4,7 @@
 Button::Button(const sf::IntRect & bounds, const std::string & text, const int actionID, const sf::Font& font)
     : _bounds(bounds), _text(text), _actionID(actionID),
       _background(sf::Vector2f(_bounds.size.x - 2, _bounds.size.y - 2)),
-    _textVisual(font, text, 30)
+      _textVisual(font, text, 30)
 {
     if (bounds.size.x <= 0 || bounds.size.y <= 0) {
         throw std::invalid_argument("Button bounds must have positive dimensions");
