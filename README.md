@@ -23,6 +23,7 @@ Wordle - популярная игра в слова
 
    ```bash
    mkdir build
+   cd build
    cmake ..
    cmake --build .
    ```
