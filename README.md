@@ -5,8 +5,28 @@ Wordle - популярная игра в слова
 
 * База слов для проверки на валидность: https://wordnet.princeton.edu/
 
-Для компиляции требуется следующее:
+# Для компиляции требуется следующее:
+
+* C++17 (или более поздняя)
+* Система сборки для C++ (CMake)
 * Boost.Beast (версия 1.88.0): https://www.boost.org/releases/latest/
+
+## Установка и сборка
+
+1. Склонируйте репозиторий:
+
+   ```bash
+   git clone https://github.com/TimurSaf/wordly.git
+   ```
+
+2. Соберите проект:
+
+   ```bash
+   mkdir build
+   cd build
+   cmake ..
+   cmake --build .
+   ```
 
 # Игровой процесс
 
