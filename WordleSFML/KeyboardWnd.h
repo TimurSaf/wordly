@@ -95,7 +95,6 @@ public:
      * чтобы не обрабатывалось повторно.
      *
      * \return int Идентификатор действия (actionID).
-     * \throw std::logic_error Если actionID не был установлен (т.е. -1).
      */
     int getActionIDReset();
 
