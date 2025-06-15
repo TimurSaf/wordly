@@ -16,7 +16,7 @@ http::request<http::string_body> make_request(std::string const & mode, int len_
         req.set(http::field::user_agent, BOOST_BEAST_VERSION_STRING);
         req.set(http::field::content_type, "text/html");
         std::string body = "word=" + word;
-        auto const size = body.size();
+        int const size = body.size();
         req.content_length(size);
         req.body() = body;
         return req;

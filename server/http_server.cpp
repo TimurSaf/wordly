@@ -23,10 +23,10 @@ http::message_generator handle_request(
         return bad_request("Unknown HTTP-method");
     if (req.method() == http::verb::post) {
         std::string word = (req.body());
-        auto const word_size = word.size();
+        int const word_size = word.size();
         word = word.substr(5, word_size - 5);
         std::string body = check_word(word);
-        auto const body_size = body.size();
+        int const body_size = body.size();
         http::response<http::string_body> res{
             std::piecewise_construct,
             std::make_tuple(std::move(body)),
@@ -41,7 +41,7 @@ http::message_generator handle_request(
     int len_word {atoi(len_word_str.c_str())};
 
     http::string_body::value_type body = get_word(len_word);
-    auto const size = body.size();
+    int const size = body.size();
 
     http::response<http::string_body> res{
         std::piecewise_construct,
