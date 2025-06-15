@@ -34,9 +34,6 @@ void KeyboardWnd::handleMouseMove(const sf::Vector2i & mousePosition)
 
 int KeyboardWnd::getActionIDReset()
 {
-	if (_actionID < 0) {
-		throw std::logic_error("No action ID set. Call handleMousePress first.");
-	}
 	int oldActionID = _actionID;
 	_actionID = -1;
 	return oldActionID;
