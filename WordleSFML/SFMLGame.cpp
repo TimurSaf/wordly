@@ -43,17 +43,12 @@ void SFMLGame::gameLoop()
         _window.clear(sf::Color::Black);
         _game.draw(_window);
         _window.display();
-
-        if (_game.getGameCloseRequested()) {
-            _window.close();
-        }
     }
 }
 
 
 sf::Font SFMLGame::loadFont()
 {
-    
     sf::Font font;
     if (!font.openFromFile(FONT_FILE_PATH)) {
         throw std::runtime_error("Font file not found");
