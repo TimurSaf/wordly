@@ -1,80 +1,141 @@
-#pragma once
+#ifndef WNDINTERFACE_H
+#define WNDINTERFACE_H
+
+/**
+ * \file
+ * \brief Заголовочный файл с базовым интерфейсом WndInterface для всех оконных интерфейсов.
+ *
+ * Этот файл содержит объявление класса WndInterface, который определяет общий интерфейс
+ * для всех окон (игровых, меню, диалогов) в приложении: методы обновления, отрисовки,
+ * обработки ввода и управления состоянием.
+ */
 
 #include <SFML/Graphics.hpp>
 
-// States available for returning from WndInterface::getResultState().
-enum WndResultState { NothingState, Finished, Restart };
+/**
+ * \enum WndResultState
+ * \brief Состояния, возвращаемые методом getResultState интерфейсов.
+ *
+ * Используется для определения результата работы интерфейса:
+ * - NothingState — нет изменений,
+ * - Finished    — интерфейс завершил свою работу,
+ * - Restart     — необходимо перезапустить текущий интерфейс или игру,
+ * - Menu        — перейти в меню,
+ * - Quit        — выход из приложения.
+ */
+enum WndResultState {
+    NothingState, /**< Нет изменений состояния. */
+    Finished,     /**< Интерфейс завершил свою работу. */
+    Restart,      /**< Требуется перезапуск интерфейса или игры. */
+};
 
+/**
+ * \class WndInterface
+ * \brief Абстрактный базовый класс для оконных интерфейсов.
+ *
+ * Определяет общий контракт для всех интерфейсов: обновление логики,
+ * отрисовка, обработка ввода мыши и клавиатуры, управление доступностью
+ * и получение результата работы интерфейса.
+ */
 class WndInterface
 {
 public:
-	/**
-	 * Initialise the interface with bounds and make it enabled.
-	 *
-	 * @param bounds Bounds of the interface.
-	 */
-	WndInterface(sf::IntRect bounds) : _bounds(bounds), _isEnabled(true) {};
+    /**
+     * \brief Конструктор.
+     *
+     * Инициализирует интерфейс заданными границами и делает его включённым.
+     *
+     * \param bounds Прямоугольная область, в которой будет отображаться интерфейс (sf::IntRect).
+     */
+    WndInterface(sf::IntRect bounds)
+        : _bounds(bounds), _isEnabled(true) {}
 
-	virtual ~WndInterface() = default;
+    /**
+     * \brief Виртуальный деструктор.
+     */
+    virtual ~WndInterface() = default;
 
-	/**
-	 * Update the interface elements.
-	 *
-	 * @param deltaTime Time since last update.
-	 */
-	virtual void update(const float deltaTime) = 0;
+    /**
+     * \brief Обновляет состояние интерфейса.
+     *
+     * Вызывается в каждом кадре игрового цикла для обновления логики.
+     *
+     * \param deltaTime Время (в секундах), прошедшее с предыдущего кадра.
+     * \return void
+     */
+    virtual void update(const float deltaTime) = 0;
 
-	/**
-	 * Draw all elements to the interface.
-	 *
-	 * @param renderWindow Reference to the target window for rendering.
-	 */
-	virtual void draw(sf::RenderWindow& renderWindow) const = 0;
+    /**
+     * \brief Отрисовывает элементы интерфейса.
+     *
+     * Вызывается каждый кадр для рендеринга всех графических элементов.
+     *
+     * \param renderWindow Ссылка на объект sf::RenderWindow для отрисовки.
+     * \return void
+     */
+    virtual void draw(sf::RenderWindow& renderWindow) const = 0;
 
-	/**
-	 * Handle updates related to the mouse pressing at the specified position.
-	 *
-	 * @param mousePosition Position of the mouse cursor during the press.
-	 * @param isLeft If true, the mouse button is left, otherwise is right.
-	 */
-	virtual void handleMousePress(const sf::Vector2i& mousePosition, bool isLeft) {};
+    /**
+     * \brief Обрабатывает нажатие кнопки мыши.
+     *
+     * По умолчанию не делает ничего, но может быть переопределён.
+     *
+     * \param mousePosition Координаты курсора мыши во время нажатия (sf::Vector2i).
+     * \param isLeft        Флаг: true, если нажата левая кнопка мыши; false — правая.
+     * \return void
+     */
+    virtual void handleMousePress(const sf::Vector2i& mousePosition, bool isLeft) {};
 
-	/**
-	 * Handle updates related to the mouse being moved.
-	 *
-	 * @param mousePosition Position of the mouse during this movement.
-	 */
-	virtual void handleMouseMove(const sf::Vector2i& mousePosition) {};
+    /**
+     * \brief Обрабатывает перемещение мыши.
+     *
+     * По умолчанию не делает ничего, но может быть переопределён.
+     *
+     * \param mousePosition Координаты курсора мыши при движении (sf::Vector2i).
+     * \return void
+     */
+    virtual void handleMouseMove(const sf::Vector2i& mousePosition) {};
 
-	/**
-	 * Handles the key input from a keyboard action.
-	 *
-	 * @param keyCode The key that was pressed.
-	 */
-	virtual void handleKeyInput(const sf::Keyboard::Key key) {};
+    /**
+     * \brief Обрабатывает нажатие клавиши клавиатуры.
+     *
+     * По умолчанию не делает ничего, но может быть переопределён.
+     *
+     * \param key Код нажатой клавиши (sf::Keyboard::Key).
+     * \return void
+     */
+    virtual void handleKeyInput(const sf::Keyboard::Key key) {};
 
-	/**
-	 * Change the enabled state of this object.
-	 *
-	 * @param enabled New state to set the enabled/disabled state of this object.
-	 */
-	void setEnabled(bool enabled) { _isEnabled = enabled; };
+    /**
+     * \brief Устанавливает доступность интерфейса.
+     *
+     * Если интерфейс отключён, его методы update/draw можно пропускать.
+     *
+     * \param enabled Новое состояние: true — включить интерфейс; false — отключить.
+     * \return void
+     */
+    void setEnabled(bool enabled) { _isEnabled = enabled; };
 
-	/**
-	 * Get the current enabled state of the object.
-	 *
-	 * @return True if the object is enabled.
-	 */
-	bool isEnabled() const { return _isEnabled; }
+    /**
+     * \brief Проверяет, включён ли интерфейс.
+     *
+     * \return bool True, если интерфейс включён и доступен; иначе false.
+     */
+    bool isEnabled() const { return _isEnabled; }
 
-	// By default this method returns WndResultState::Nothing unless overriden.
-	virtual WndResultState getResultState() const { return WndResultState::NothingState; };
+    /**
+     * \brief Возвращает результат работы интерфейса.
+     *
+     * По умолчанию возвращает NothingState. Может быть переопределён
+     * для сигнализации о завершении, необходимости перезапуска и т.д.
+     *
+     * \return WndResultState Текущее состояние интерфейса.
+     */
+    virtual WndResultState getResultState() const { return WndResultState::NothingState; };
 
 protected:
-	// Bounds of this interface.
-	sf::IntRect _bounds;
-	
-	// State of whether the object is enabled so it can be used for managing updates.
-	bool _isEnabled;
+    sf::IntRect _bounds;   /**< Границы интерфейса для позиционирования и проверки попаданий. */
+    bool        _isEnabled;/**< Флаг состояния: true, если интерфейс включён; false — если отключён. */
 };
 
+#endif // WNDINTERFACE_H

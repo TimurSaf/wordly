@@ -965,7 +965,9 @@ WARN_LOGFILE           =
 # spaces. See also FILE_PATTERNS and EXTENSION_MAPPING
 # Note: If this tag is empty the current directory is searched.
 
-INPUT                  = WordleSFML
+INPUT                  = WordleSFML server/check_word.cpp server/file_name.cpp server/get_word.cpp \
+                         server/main.cpp server/http_server.cpp server/http_server.hpp
+                         
 
 # This tag can be used to specify the character encoding of the source files
 # that Doxygen parses. Internally Doxygen uses the UTF-8 encoding. Doxygen uses
@@ -1070,7 +1072,16 @@ RECURSIVE              = YES
 # Note that relative paths are relative to the directory from which Doxygen is
 # run.
 
-EXCLUDE                =
+EXCLUDE                = WordleSFML/BeforeGameWnd_test.cpp \
+                         WordleSFML/Button_test.cpp \
+                         WordleSFML/CMakeLists.txt \
+                         WordleSFML/GuessGrid_test.txt \
+                         WordleSFML/KeyboardWnd_test.cpp \
+                         WordleSFML/PostGameWnd_test.cpp \
+                         WordleSFML/PuzzleLetter_test.cpp \
+                         WordleSFML/PuzzleWnd_test.cpp \
+                         WordleSFML/SFMLGame_test.cpp \
+
 
 # The EXCLUDE_SYMLINKS tag can be used to select whether or not files or
 # directories that are symbolic links (a Unix file system feature) are excluded
