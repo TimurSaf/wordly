@@ -3,7 +3,7 @@
 #include <SFML/Graphics.hpp>
 
 // States available for returning from WndInterface::getResultState().
-enum WndResultState { NothingState, Finished, Restart, Quit };
+enum WndResultState { NothingState, Finished, Restart };
 
 class WndInterface
 {
