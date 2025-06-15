@@ -95,16 +95,6 @@ public:
      */
     void handleKeyInput(const sf::Keyboard::Key key);
 
-    /**
-     * \brief Проверяет, был ли запрос на завершение игры.
-     *
-     * Возвращает true, если активный интерфейс или логика игры поставила флаг 
-     * на выход из основного цикла.
-     *
-     * \return bool True, если игра должна завершиться; false в противном случае.
-     */
-    bool getGameCloseRequested() const;
-
 private:
     const sf::IntRect            _bounds;          /**< Область игрового поля. */
     const sf::Font&              _font;            /**< Ссылка на шрифт для текста. */
