@@ -1,5 +1,5 @@
 #include "Game.h"
-#include <chrono>       // std::chrono::system_clock
+#include <chrono>      
 #include "PuzzleWnd.h"
 #include "PostGameWnd.h"
 #include "BeforeGameWnd.h"
@@ -10,18 +10,17 @@ Game::Game(const sf::IntRect & gameBounds, const sf::Font & font)
 {
 	unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
 	_randomEngine = std::default_random_engine(seed);
-	_terminateGame = false;
     _activeInterface = std::make_unique<BeforeGameWnd>(_bounds, _font);
     _activeOverlay   = nullptr;
 }
 
-Game::~Game() = default;  // unique_ptr всё удалит автоматически
+Game::~Game() = default;
 
 void Game::update(const float deltaTime) {
     if (_activeOverlay) {
         _activeOverlay->update(deltaTime);
         if (_activeOverlay->getResultState() == WndResultState::Restart) {
-            int wordLength = 6; // значение по умолчанию
+            int wordLength = 6;
             if (auto* postGame = dynamic_cast<PostGameWnd*>(_activeOverlay.get())) {
                 wordLength = 4 + postGame->getSelectedActionID();
             }
@@ -29,9 +28,7 @@ void Game::update(const float deltaTime) {
             _activeInterface = std::make_unique<PuzzleWnd>(_bounds, _font, 
                 request_to_server(static_cast<std::string>("get_word"), wordLength, static_cast<std::string>("")));
         }
-        else if (_activeOverlay->getResultState() == WndResultState::Quit) {
-            _terminateGame = true;
-        }
+
     }
     else if (_activeInterface) {
         if (auto* before = dynamic_cast<BeforeGameWnd*>(_activeInterface.get());
@@ -39,7 +36,7 @@ void Game::update(const float deltaTime) {
         {
             int btnID = before->getSelectedActionID();
             int wordLength = 4 + btnID;
-            // Получаем слово нужной длины
+
             std::string mode = "get_word";
             std::string word = request_to_server(mode, wordLength, mode);
             _activeInterface = std::make_unique<PuzzleWnd>(_bounds, _font, word);
@@ -94,9 +91,4 @@ void Game::handleKeyInput(const sf::Keyboard::Key key)
 	else if (_activeInterface) {
 		_activeInterface->handleKeyInput(key);
 	}
-}
-
-bool Game::getGameCloseRequested() const
-{
-	return _terminateGame;
 }
