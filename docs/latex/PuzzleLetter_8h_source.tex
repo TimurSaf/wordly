@@ -1,0 +1,40 @@
+\doxysection{Puzzle\+Letter.\+h}
+\hypertarget{PuzzleLetter_8h_source}{}\label{PuzzleLetter_8h_source}\index{WordleSFML/PuzzleLetter.h@{WordleSFML/PuzzleLetter.h}}
+\mbox{\hyperlink{PuzzleLetter_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PUZZLELETTER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PUZZLELETTER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPuzzleLetter}{PuzzleLetter}}}
+\DoxyCodeLine{00024\ \{}
+\DoxyCodeLine{00025\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{classPuzzleLetter_aed18be531bd480e5b1e252886b25759f}{SolutionState}}\ \{\ NO\_STATE,\ CORRECT,\ WRONG\_POS\ \};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{classPuzzleLetter}{PuzzleLetter}}(\textcolor{keyword}{const}\ sf::IntRect\&\ bounds,\ \textcolor{keyword}{const}\ sf::Font\&\ font);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classPuzzleLetter_a40f79b2fbb8b3f830a82b54fa0646de8}{\string~PuzzleLetter}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPuzzleLetter_aec8a6db119d69160e3627e554ec6b701}{draw}}(sf::RenderWindow\&\ renderWindow)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classPuzzleLetter_a6b6748d00d5e1e2d9121cf5f3f07e75e}{getLetter}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPuzzleLetter_a0c48c400f6121fc1b04bcd0cc435da5e}{setLetter}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ letter);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPuzzleLetter_a58447f0f80314f527671edfb2abacc64}{setSolutionState}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classPuzzleLetter_aed18be531bd480e5b1e252886b25759f}{SolutionState}}\&\ solutionState);}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00090\ \ \ \ \ \mbox{\hyperlink{classPuzzleLetter_aed18be531bd480e5b1e252886b25759f}{SolutionState}}\ \mbox{\hyperlink{classPuzzleLetter_a0241714d436568111f40fde5ee988434}{getSolutionState}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00093\ \ \ \ \ sf::IntRect\ \ \ \ \ \ \ \ \_bounds;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{char}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_letter;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00095\ \ \ \ \ sf::RectangleShape\ \_background;\ \ \ }
+\DoxyCodeLine{00096\ \ \ \ \ sf::Text\ \ \ \ \ \ \ \ \ \ \ \_textVisual;\ \ \ }
+\DoxyCodeLine{00097\ \ \ \ \ \mbox{\hyperlink{classPuzzleLetter_aed18be531bd480e5b1e252886b25759f}{SolutionState}}\ \ \ \ \ \ \_currentState;\ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{void}\ setBackgroundColour(\textcolor{keyword}{const}\ sf::Color\&\ colour);}
+\DoxyCodeLine{00105\ \};}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PUZZLELETTER\_H}}
+
+\end{DoxyCode}

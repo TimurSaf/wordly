@@ -1,0 +1,42 @@
+\doxysection{Before\+Game\+Wnd.\+h}
+\hypertarget{BeforeGameWnd_8h_source}{}\label{BeforeGameWnd_8h_source}\index{WordleSFML/BeforeGameWnd.h@{WordleSFML/BeforeGameWnd.h}}
+\mbox{\hyperlink{BeforeGameWnd_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ BEFOREGAMEWND\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ BEFOREGAMEWND\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{WndInterface_8h}{WndInterface.h}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Button_8h}{Button.h}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBeforeGameWnd}{BeforeGameWnd}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classWndInterface}{WndInterface}}\ \{}
+\DoxyCodeLine{00029\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{classBeforeGameWnd}{BeforeGameWnd}}(\textcolor{keyword}{const}\ sf::IntRect\&\ bounds,\ \textcolor{keyword}{const}\ sf::Font\&\ font);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBeforeGameWnd_ad38c1a25dfb97cadb3f9ccf5b2137d79}{draw}}(sf::RenderWindow\&\ renderWindow)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBeforeGameWnd_a13f1ba3788017d91d436c4038de76583}{update}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ deltaTime)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBeforeGameWnd_acbb0174c382fb1ae78a51ae6102f2fe5}{handleMousePress}}(\textcolor{keyword}{const}\ sf::Vector2i\&\ mousePosition,\ \textcolor{keywordtype}{bool}\ isLeft)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBeforeGameWnd_a30ed7ff61c4b901c845d91690e3fc790}{handleMouseMove}}(\textcolor{keyword}{const}\ sf::Vector2i\&\ mousePosition)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00071\ \ \ \ \ \mbox{\hyperlink{WndInterface_8h_a0ab26bd2624b188834cc7e71cd81f45f}{WndResultState}}\ \mbox{\hyperlink{classBeforeGameWnd_aded510748437cba7faf5ddd8f64c5ac3}{getResultState}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classBeforeGameWnd_ab9a98a965e58da44ee5a8aea9f3a0c70}{getSelectedActionID}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00082\ \ \ \ \ \mbox{\hyperlink{WndInterface_8h_a0ab26bd2624b188834cc7e71cd81f45f}{WndResultState}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_resultState;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00083\ \ \ \ \ std::unique\_ptr<sf::RectangleShape>\ \ \ \ \ \ \ \_fullScreenBackground;\ }
+\DoxyCodeLine{00084\ \ \ \ \ std::unique\_ptr<sf::RectangleShape>\ \ \ \ \ \ \ \_background;\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00085\ \ \ \ \ std::unique\_ptr<sf::Text>\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_titleText;\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00086\ \ \ \ \ std::vector<Button>\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_buttons;\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_selectedActionID\{\ -\/1\ \};\ }
+\DoxyCodeLine{00088\ \};}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ BEFOREGAMEWND\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,531 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Wordle Game SFML and Boost Beast C++: Класс WndInterface</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Wordle Game SFML and Boost Beast C++
+   </div>
+   <div id="projectbrief">Документация по коду игры Wordle на библиотеках SFML и Boost Beast</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pro-attribs">Защищенные данные</a> &#124;
+<a href="classWndInterface-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс WndInterface<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Абстрактный базовый класс для оконных интерфейсов.  
+ <a href="classWndInterface.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="WndInterface_8h_source.html">WndInterface.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:WndInterface:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classWndInterface.png" usemap="#WndInterface_map" alt=""/>
+  <map id="WndInterface_map" name="WndInterface_map">
+<area href="classBeforeGameWnd.html" title="Окно выбора длины слова перед началом игры." alt="BeforeGameWnd" shape="rect" coords="0,56,107,80"/>
+<area href="classKeyboardWnd.html" title="Класс виртуальной клавиатуры для ввода символов." alt="KeyboardWnd" shape="rect" coords="117,56,224,80"/>
+<area href="classPostGameWnd.html" title="Окно после завершения игры с информацией о результате и кнопками для дальнейших действий." alt="PostGameWnd" shape="rect" coords="234,56,341,80"/>
+<area href="classPuzzleWnd.html" title="Класс игрового окна пазла." alt="PuzzleWnd" shape="rect" coords="351,56,458,80"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a6b5c70af6e357fba833fbe6f1aebf6fb" id="r_a6b5c70af6e357fba833fbe6f1aebf6fb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWndInterface.html#a6b5c70af6e357fba833fbe6f1aebf6fb">WndInterface</a> (sf::IntRect bounds)</td></tr>
+<tr class="memdesc:a6b5c70af6e357fba833fbe6f1aebf6fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор.  <br /></td></tr>
+<tr class="separator:a6b5c70af6e357fba833fbe6f1aebf6fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a761ac33f53af1a2ae4b0989560411c55" id="r_a761ac33f53af1a2ae4b0989560411c55"><td class="memItemLeft" align="right" valign="top"><a id="a761ac33f53af1a2ae4b0989560411c55" name="a761ac33f53af1a2ae4b0989560411c55"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~WndInterface</b> ()=default</td></tr>
+<tr class="memdesc:a761ac33f53af1a2ae4b0989560411c55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Виртуальный деструктор. <br /></td></tr>
+<tr class="separator:a761ac33f53af1a2ae4b0989560411c55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc76841cf5afb7d69f6de1067eef2205" id="r_acc76841cf5afb7d69f6de1067eef2205"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWndInterface.html#acc76841cf5afb7d69f6de1067eef2205">update</a> (const float deltaTime)=0</td></tr>
+<tr class="memdesc:acc76841cf5afb7d69f6de1067eef2205"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновляет состояние интерфейса.  <br /></td></tr>
+<tr class="separator:acc76841cf5afb7d69f6de1067eef2205"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5de008f7e07364dfe66d86134aac3205" id="r_a5de008f7e07364dfe66d86134aac3205"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWndInterface.html#a5de008f7e07364dfe66d86134aac3205">draw</a> (sf::RenderWindow &amp;renderWindow) const =0</td></tr>
+<tr class="memdesc:a5de008f7e07364dfe66d86134aac3205"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отрисовывает элементы интерфейса.  <br /></td></tr>
+<tr class="separator:a5de008f7e07364dfe66d86134aac3205"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1e4788acacde35e30289172072142cc" id="r_ae1e4788acacde35e30289172072142cc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWndInterface.html#ae1e4788acacde35e30289172072142cc">handleMousePress</a> (const sf::Vector2i &amp;mousePosition, bool isLeft)</td></tr>
+<tr class="memdesc:ae1e4788acacde35e30289172072142cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обрабатывает нажатие кнопки мыши.  <br /></td></tr>
+<tr class="separator:ae1e4788acacde35e30289172072142cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae79682f95f4a4f3246146f0f47a4986e" id="r_ae79682f95f4a4f3246146f0f47a4986e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWndInterface.html#ae79682f95f4a4f3246146f0f47a4986e">handleMouseMove</a> (const sf::Vector2i &amp;mousePosition)</td></tr>
+<tr class="memdesc:ae79682f95f4a4f3246146f0f47a4986e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обрабатывает перемещение мыши.  <br /></td></tr>
+<tr class="separator:ae79682f95f4a4f3246146f0f47a4986e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e2d87ce45cd79a70810dc58fc736a06" id="r_a8e2d87ce45cd79a70810dc58fc736a06"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWndInterface.html#a8e2d87ce45cd79a70810dc58fc736a06">handleKeyInput</a> (const sf::Keyboard::Key key)</td></tr>
+<tr class="memdesc:a8e2d87ce45cd79a70810dc58fc736a06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обрабатывает нажатие клавиши клавиатуры.  <br /></td></tr>
+<tr class="separator:a8e2d87ce45cd79a70810dc58fc736a06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e37ec57b10bb1043159c483a571e257" id="r_a1e37ec57b10bb1043159c483a571e257"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWndInterface.html#a1e37ec57b10bb1043159c483a571e257">setEnabled</a> (bool enabled)</td></tr>
+<tr class="memdesc:a1e37ec57b10bb1043159c483a571e257"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает доступность интерфейса.  <br /></td></tr>
+<tr class="separator:a1e37ec57b10bb1043159c483a571e257"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb8e821db0944866fb774904413ffa04" id="r_acb8e821db0944866fb774904413ffa04"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWndInterface.html#acb8e821db0944866fb774904413ffa04">isEnabled</a> () const</td></tr>
+<tr class="memdesc:acb8e821db0944866fb774904413ffa04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет, включён ли интерфейс.  <br /></td></tr>
+<tr class="separator:acb8e821db0944866fb774904413ffa04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af856837a63f10858f3fb090ff82f19a0" id="r_af856837a63f10858f3fb090ff82f19a0"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="WndInterface_8h.html#a0ab26bd2624b188834cc7e71cd81f45f">WndResultState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWndInterface.html#af856837a63f10858f3fb090ff82f19a0">getResultState</a> () const</td></tr>
+<tr class="memdesc:af856837a63f10858f3fb090ff82f19a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает результат работы интерфейса.  <br /></td></tr>
+<tr class="separator:af856837a63f10858f3fb090ff82f19a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Защищенные данные</h2></td></tr>
+<tr class="memitem:acb35b469df0025733fd8faa037b14ffc" id="r_acb35b469df0025733fd8faa037b14ffc"><td class="memItemLeft" align="right" valign="top">sf::IntRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWndInterface.html#acb35b469df0025733fd8faa037b14ffc">_bounds</a></td></tr>
+<tr class="separator:acb35b469df0025733fd8faa037b14ffc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab96909811c3e8554476150fa5941d964" id="r_ab96909811c3e8554476150fa5941d964"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWndInterface.html#ab96909811c3e8554476150fa5941d964">_isEnabled</a></td></tr>
+<tr class="separator:ab96909811c3e8554476150fa5941d964"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Абстрактный базовый класс для оконных интерфейсов. </p>
+<p>Определяет общий контракт для всех интерфейсов: обновление логики, отрисовка, обработка ввода мыши и клавиатуры, управление доступностью и получение результата работы интерфейса. </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a6b5c70af6e357fba833fbe6f1aebf6fb" name="a6b5c70af6e357fba833fbe6f1aebf6fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b5c70af6e357fba833fbe6f1aebf6fb">&#9670;&#160;</a></span>WndInterface()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">WndInterface::WndInterface </td>
+          <td>(</td>
+          <td class="paramtype">sf::IntRect&#160;</td>
+          <td class="paramname"><em>bounds</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Конструктор. </p>
+<p>Инициализирует интерфейс заданными границами и делает его включённым.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bounds</td><td>Прямоугольная область, в которой будет отображаться интерфейс (sf::IntRect). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a5de008f7e07364dfe66d86134aac3205" name="a5de008f7e07364dfe66d86134aac3205"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5de008f7e07364dfe66d86134aac3205">&#9670;&#160;</a></span>draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void WndInterface::draw </td>
+          <td>(</td>
+          <td class="paramtype">sf::RenderWindow &amp;&#160;</td>
+          <td class="paramname"><em>renderWindow</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Отрисовывает элементы интерфейса. </p>
+<p>Вызывается каждый кадр для рендеринга всех графических элементов.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">renderWindow</td><td>Ссылка на объект sf::RenderWindow для отрисовки. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>void </dd></dl>
+
+<p>Замещается в <a class="el" href="classBeforeGameWnd.html#ad38c1a25dfb97cadb3f9ccf5b2137d79">BeforeGameWnd</a>, <a class="el" href="classKeyboardWnd.html#a94c15a9cfeab05d5e1d7479236990bcd">KeyboardWnd</a>, <a class="el" href="classPostGameWnd.html#a1aee53564bb15d3729b0da06d128656f">PostGameWnd</a> и <a class="el" href="classPuzzleWnd.html#ad7afecb34271785a7ac6fbc6837c0ee6">PuzzleWnd</a>.</p>
+
+</div>
+</div>
+<a id="af856837a63f10858f3fb090ff82f19a0" name="af856837a63f10858f3fb090ff82f19a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af856837a63f10858f3fb090ff82f19a0">&#9670;&#160;</a></span>getResultState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="WndInterface_8h.html#a0ab26bd2624b188834cc7e71cd81f45f">WndResultState</a> WndInterface::getResultState </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Возвращает результат работы интерфейса. </p>
+<p>По умолчанию возвращает NothingState. Может быть переопределён для сигнализации о завершении, необходимости перезапуска и т.д.</p>
+<dl class="section return"><dt>Возвращает</dt><dd>WndResultState Текущее состояние интерфейса. </dd></dl>
+
+<p>Переопределяется в <a class="el" href="classBeforeGameWnd.html#aded510748437cba7faf5ddd8f64c5ac3">BeforeGameWnd</a>, <a class="el" href="classPostGameWnd.html#afb76384f1ff123dd3d002154139524f5">PostGameWnd</a> и <a class="el" href="classPuzzleWnd.html#a5c450fdb37d54fbb07a76d450dec2bdd">PuzzleWnd</a>.</p>
+
+</div>
+</div>
+<a id="a8e2d87ce45cd79a70810dc58fc736a06" name="a8e2d87ce45cd79a70810dc58fc736a06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e2d87ce45cd79a70810dc58fc736a06">&#9670;&#160;</a></span>handleKeyInput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void WndInterface::handleKeyInput </td>
+          <td>(</td>
+          <td class="paramtype">const sf::Keyboard::Key&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Обрабатывает нажатие клавиши клавиатуры. </p>
+<p>По умолчанию не делает ничего, но может быть переопределён.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>Код нажатой клавиши (sf::Keyboard::Key). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>void </dd></dl>
+
+<p>Переопределяется в <a class="el" href="classPuzzleWnd.html#a13e13d68a7087f79f486ed125550640d">PuzzleWnd</a>.</p>
+
+</div>
+</div>
+<a id="ae79682f95f4a4f3246146f0f47a4986e" name="ae79682f95f4a4f3246146f0f47a4986e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae79682f95f4a4f3246146f0f47a4986e">&#9670;&#160;</a></span>handleMouseMove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void WndInterface::handleMouseMove </td>
+          <td>(</td>
+          <td class="paramtype">const sf::Vector2i &amp;&#160;</td>
+          <td class="paramname"><em>mousePosition</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Обрабатывает перемещение мыши. </p>
+<p>По умолчанию не делает ничего, но может быть переопределён.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mousePosition</td><td>Координаты курсора мыши при движении (sf::Vector2i). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>void </dd></dl>
+
+<p>Переопределяется в <a class="el" href="classBeforeGameWnd.html#a30ed7ff61c4b901c845d91690e3fc790">BeforeGameWnd</a>, <a class="el" href="classKeyboardWnd.html#a859da2b5ae718e1d06f60b368febad2c">KeyboardWnd</a>, <a class="el" href="classPostGameWnd.html#a9552558f217d878f61ecba75cf38d062">PostGameWnd</a> и <a class="el" href="classPuzzleWnd.html#a255d180e39795eaec5ead9b9c565baec">PuzzleWnd</a>.</p>
+
+</div>
+</div>
+<a id="ae1e4788acacde35e30289172072142cc" name="ae1e4788acacde35e30289172072142cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1e4788acacde35e30289172072142cc">&#9670;&#160;</a></span>handleMousePress()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void WndInterface::handleMousePress </td>
+          <td>(</td>
+          <td class="paramtype">const sf::Vector2i &amp;&#160;</td>
+          <td class="paramname"><em>mousePosition</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isLeft</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Обрабатывает нажатие кнопки мыши. </p>
+<p>По умолчанию не делает ничего, но может быть переопределён.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mousePosition</td><td>Координаты курсора мыши во время нажатия (sf::Vector2i). </td></tr>
+    <tr><td class="paramname">isLeft</td><td>Флаг: true, если нажата левая кнопка мыши; false — правая. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>void </dd></dl>
+
+<p>Переопределяется в <a class="el" href="classBeforeGameWnd.html#acbb0174c382fb1ae78a51ae6102f2fe5">BeforeGameWnd</a>, <a class="el" href="classKeyboardWnd.html#ae703e573f92240ebbe35337f3fcd194a">KeyboardWnd</a>, <a class="el" href="classPostGameWnd.html#a4175b3ab90aa8313ede23a9a466c7a97">PostGameWnd</a> и <a class="el" href="classPuzzleWnd.html#a252319a90ae6edb5e7b2c5ac56b7789e">PuzzleWnd</a>.</p>
+
+</div>
+</div>
+<a id="acb8e821db0944866fb774904413ffa04" name="acb8e821db0944866fb774904413ffa04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb8e821db0944866fb774904413ffa04">&#9670;&#160;</a></span>isEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool WndInterface::isEnabled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Проверяет, включён ли интерфейс. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>bool True, если интерфейс включён и доступен; иначе false. </dd></dl>
+
+</div>
+</div>
+<a id="a1e37ec57b10bb1043159c483a571e257" name="a1e37ec57b10bb1043159c483a571e257"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e37ec57b10bb1043159c483a571e257">&#9670;&#160;</a></span>setEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WndInterface::setEnabled </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>enabled</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Устанавливает доступность интерфейса. </p>
+<p>Если интерфейс отключён, его методы update/draw можно пропускать.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enabled</td><td>Новое состояние: true — включить интерфейс; false — отключить. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="acc76841cf5afb7d69f6de1067eef2205" name="acc76841cf5afb7d69f6de1067eef2205"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc76841cf5afb7d69f6de1067eef2205">&#9670;&#160;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void WndInterface::update </td>
+          <td>(</td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>deltaTime</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Обновляет состояние интерфейса. </p>
+<p>Вызывается в каждом кадре игрового цикла для обновления логики.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">deltaTime</td><td>Время (в секундах), прошедшее с предыдущего кадра. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>void </dd></dl>
+
+<p>Замещается в <a class="el" href="classBeforeGameWnd.html#a13f1ba3788017d91d436c4038de76583">BeforeGameWnd</a>, <a class="el" href="classKeyboardWnd.html#a5c574e59f4d6303a52b4380c95ec9037">KeyboardWnd</a>, <a class="el" href="classPostGameWnd.html#a93391a529197a4099674acc213bbeeab">PostGameWnd</a> и <a class="el" href="classPuzzleWnd.html#a60eaa7c671f1ec2326a6082fe5c66fce">PuzzleWnd</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="acb35b469df0025733fd8faa037b14ffc" name="acb35b469df0025733fd8faa037b14ffc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb35b469df0025733fd8faa037b14ffc">&#9670;&#160;</a></span>_bounds</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::IntRect WndInterface::_bounds</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Границы интерфейса для позиционирования и проверки попаданий. </p>
+
+</div>
+</div>
+<a id="ab96909811c3e8554476150fa5941d964" name="ab96909811c3e8554476150fa5941d964"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab96909811c3e8554476150fa5941d964">&#9670;&#160;</a></span>_isEnabled</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool WndInterface::_isEnabled</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Флаг состояния: true, если интерфейс включён; false — если отключён. </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>WordleSFML/<a class="el" href="WndInterface_8h_source.html">WndInterface.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

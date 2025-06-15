@@ -1,0 +1,337 @@
+\doxysection{Класс Guess\+Grid}
+\hypertarget{classGuessGrid}{}\label{classGuessGrid}\index{GuessGrid@{GuessGrid}}
+
+
+Класс для управления сеткой догадок в игровой механике.  
+
+
+
+
+{\ttfamily \#include $<$Guess\+Grid.\+h$>$}
+
+Граф наследования\+:Guess\+Grid\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classGuessGrid}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGuessGrid_a3ff151ecefbe501f23c1c6cf39096925}{Guess\+Grid}} (const sf\+::\+Int\+Rect \&bounds, const sf\+::\+Font \&font, const std\+::string \&solution, const int max\+Guesses)
+\begin{DoxyCompactList}\small\item\em Конструктор. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classGuessGrid_aabcc7fa3dc10651e788751b876c16bae}{\texorpdfstring{$\sim$}{\string~}\+Guess\+Grid}} ()=default
+\begin{DoxyCompactList}\small\item\em Деструктор. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classGuessGrid_a9d2738991a37ee32258a14b87bd21c15}{update}} (const float delta\+Time) override
+\begin{DoxyCompactList}\small\item\em Обновление логики сетки (не используется). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classGuessGrid_aa1aa24a79c48d2fe595b36be6d6daf7b}{draw}} (sf\+::\+Render\+Window \&render\+Window) const override
+\begin{DoxyCompactList}\small\item\em Рисует сетку догадок на экране. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classGuessGrid_a6f87ffccedd4a7c4d18bb8e7bec9f643}{handle\+Key\+Input}} (const sf\+::\+Keyboard\+::\+Key key) override
+\begin{DoxyCompactList}\small\item\em Обрабатывает ввод с аппаратной клавиатуры. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGuessGrid_a59bca21bfbcc341a089552e3f55c93b5}{try\+Insert\+Letter}} (const char letter)
+\begin{DoxyCompactList}\small\item\em Пытается вставить указанную букву в текущую попытку. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGuessGrid_a2b07ad3850a5972f4d9eb7bab988b563}{back\+Space}} ()
+\begin{DoxyCompactList}\small\item\em Удаляет последнюю букву в текущей попытке (Backspace). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGuessGrid_a5db096dddd8b7ec07618ae698c2de69a}{check\+Solution}} ()
+\begin{DoxyCompactList}\small\item\em Проверяет текущее слово-\/слово на совпадение с решением. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classGuessGrid_a2b0113ac5d863efbc3cbba140f8aa328}{is\+Solved}} () const
+\begin{DoxyCompactList}\small\item\em Проверяет, было ли решение найдено. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classGuessGrid_a6d53f499c80775f0fd709eff2aa324dc}{has\+More\+Guesses}} () const
+\begin{DoxyCompactList}\small\item\em Проверяет, остались ли ещё попытки. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classGuessGrid_a333ca8663e04213dbd879b571cec3af7}{get\+All\+Rules}} () const
+\begin{DoxyCompactList}\small\item\em Формирует все правила (цвета) на основе предыдущих догадок. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classGuessGrid_ae017f406f9fac6f4371e32e064a672e0}{get\+Key\+Check\+Reset}} ()
+\begin{DoxyCompactList}\small\item\em Возвращает и сбрасывает флаг изменения проверки клавиши (Enter). \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classGuessGrid_a6fa352d74879496e78238860936c866b}{get\+Solution}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает текущее слово-\/решение. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classGuessGrid_a8d3afbcd3e42c790ef5db61d493a202d}{get\+Share\+String}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает строку для расшаривания результата (Share String). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Открытые члены унаследованные от \mbox{\hyperlink{classWndInterface}{Wnd\+Interface}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWndInterface_a6b5c70af6e357fba833fbe6f1aebf6fb}{Wnd\+Interface}} (sf\+::\+Int\+Rect bounds)
+\item 
+virtual void \mbox{\hyperlink{classWndInterface_ae1e4788acacde35e30289172072142cc}{handle\+Mouse\+Press}} (const sf\+::\+Vector2i \&mouse\+Position, bool is\+Left)
+\item 
+virtual void \mbox{\hyperlink{classWndInterface_ae79682f95f4a4f3246146f0f47a4986e}{handle\+Mouse\+Move}} (const sf\+::\+Vector2i \&mouse\+Position)
+\item 
+void \mbox{\hyperlink{classWndInterface_a1e37ec57b10bb1043159c483a571e257}{set\+Enabled}} (bool enabled)
+\item 
+bool \mbox{\hyperlink{classWndInterface_acb8e821db0944866fb774904413ffa04}{is\+Enabled}} () const
+\item 
+virtual Wnd\+Result\+State \mbox{\hyperlink{classWndInterface_af856837a63f10858f3fb090ff82f19a0}{get\+Result\+State}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Дополнительные унаследованные члены}
+\doxysubsection*{Защищенные данные унаследованные от \mbox{\hyperlink{classWndInterface}{Wnd\+Interface}}}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Int\+Rect {\bfseries \+\_\+bounds}
+\item 
+bool {\bfseries \+\_\+is\+Enabled}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс для управления сеткой догадок в игровой механике. 
+
+\doxylink{classGuessGrid}{Guess\+Grid} создаёт сетку из \doxylink{classPuzzleLetter}{Puzzle\+Letter}, отображает её, обрабатывает ввод с аппаратной клавиатуры (буквы, удаление, Enter), проверяет догаданные слова и формирует результаты (цветовые правила) для виртуальной клавиатуры. 
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{classGuessGrid_a3ff151ecefbe501f23c1c6cf39096925}\label{classGuessGrid_a3ff151ecefbe501f23c1c6cf39096925} 
+\index{GuessGrid@{GuessGrid}!GuessGrid@{GuessGrid}}
+\index{GuessGrid@{GuessGrid}!GuessGrid@{GuessGrid}}
+\doxysubsubsection{\texorpdfstring{GuessGrid()}{GuessGrid()}}
+{\footnotesize\ttfamily Guess\+Grid\+::\+Guess\+Grid (\begin{DoxyParamCaption}\item[{const sf\+::\+Int\+Rect \&}]{bounds,  }\item[{const sf\+::\+Font \&}]{font,  }\item[{const std\+::string \&}]{solution,  }\item[{const int}]{max\+Guesses }\end{DoxyParamCaption})}
+
+
+
+Конструктор. 
+
+Инициализирует пустую сетку догадок заданных размеров и устанавливает слово-\/решение.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em bounds} & Область, в которой рисуется сетка (sf\+::\+Int\+Rect). \\
+\hline
+{\em font} & Шрифт для отображения букв (sf\+::\+Font). \\
+\hline
+{\em solution} & Строка-\/слово, которое игрок должен угадать (std\+::string). \\
+\hline
+{\em max\+Guesses} & Максимальное количество попыток (int).\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Исключения}
+{\em std\+::invalid\+\_\+argument} & Если bounds невалидны, solution пусто или max\+Guesses \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classGuessGrid_aabcc7fa3dc10651e788751b876c16bae}\label{classGuessGrid_aabcc7fa3dc10651e788751b876c16bae} 
+\index{GuessGrid@{GuessGrid}!````~GuessGrid@{\texorpdfstring{$\sim$}{\string~}GuessGrid}}
+\index{````~GuessGrid@{\texorpdfstring{$\sim$}{\string~}GuessGrid}!GuessGrid@{GuessGrid}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}GuessGrid()}{\string~GuessGrid()}}
+{\footnotesize\ttfamily virtual Guess\+Grid\+::\texorpdfstring{$\sim$}{\string~}\+Guess\+Grid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Деструктор. 
+
+Удаляет динамические ресурсы (если они есть). По умолчанию — пустая реализация. 
+
+\doxysubsection{Методы}
+\Hypertarget{classGuessGrid_a2b07ad3850a5972f4d9eb7bab988b563}\label{classGuessGrid_a2b07ad3850a5972f4d9eb7bab988b563} 
+\index{GuessGrid@{GuessGrid}!backSpace@{backSpace}}
+\index{backSpace@{backSpace}!GuessGrid@{GuessGrid}}
+\doxysubsubsection{\texorpdfstring{backSpace()}{backSpace()}}
+{\footnotesize\ttfamily void Guess\+Grid\+::back\+Space (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Удаляет последнюю букву в текущей попытке (Backspace). 
+
+Если текущая попытка не пуста, удаляет один символ.
+
+\begin{DoxyReturn}{Возвращает}
+void 
+\end{DoxyReturn}
+\Hypertarget{classGuessGrid_a5db096dddd8b7ec07618ae698c2de69a}\label{classGuessGrid_a5db096dddd8b7ec07618ae698c2de69a} 
+\index{GuessGrid@{GuessGrid}!checkSolution@{checkSolution}}
+\index{checkSolution@{checkSolution}!GuessGrid@{GuessGrid}}
+\doxysubsubsection{\texorpdfstring{checkSolution()}{checkSolution()}}
+{\footnotesize\ttfamily void Guess\+Grid\+::check\+Solution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Проверяет текущее слово-\/слово на совпадение с решением. 
+
+Сравнивает введённое слово с \+\_\+solution и обновляет состояние каждого \doxylink{classPuzzleLetter}{Puzzle\+Letter}. Если слово угадано, \+\_\+solved устанавливается в true.
+
+\begin{DoxyReturn}{Возвращает}
+void 
+\end{DoxyReturn}
+\Hypertarget{classGuessGrid_aa1aa24a79c48d2fe595b36be6d6daf7b}\label{classGuessGrid_aa1aa24a79c48d2fe595b36be6d6daf7b} 
+\index{GuessGrid@{GuessGrid}!draw@{draw}}
+\index{draw@{draw}!GuessGrid@{GuessGrid}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Guess\+Grid\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{render\+Window }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Рисует сетку догадок на экране. 
+
+Вызывает метод draw для каждого \doxylink{classPuzzleLetter}{Puzzle\+Letter} в сетке.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em render\+Window} & Ссылка на объект sf\+::\+Render\+Window для отрисовки. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+void 
+\end{DoxyReturn}
+
+
+Замещает \mbox{\hyperlink{classWndInterface_a5de008f7e07364dfe66d86134aac3205}{Wnd\+Interface}}.
+
+\Hypertarget{classGuessGrid_a333ca8663e04213dbd879b571cec3af7}\label{classGuessGrid_a333ca8663e04213dbd879b571cec3af7} 
+\index{GuessGrid@{GuessGrid}!getAllRules@{getAllRules}}
+\index{getAllRules@{getAllRules}!GuessGrid@{GuessGrid}}
+\doxysubsubsection{\texorpdfstring{getAllRules()}{getAllRules()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ Guess\+Grid\+::get\+All\+Rules (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Формирует все правила (цвета) на основе предыдущих догадок. 
+
+Возвращает вектор строк-\/правил, которые затем применяются к виртуальной клавиатуре.
+
+\begin{DoxyReturn}{Возвращает}
+std\+::vector$<$std\+::string$>$ Вектор правил (каждая строка соответствует символу). 
+\end{DoxyReturn}
+\Hypertarget{classGuessGrid_ae017f406f9fac6f4371e32e064a672e0}\label{classGuessGrid_ae017f406f9fac6f4371e32e064a672e0} 
+\index{GuessGrid@{GuessGrid}!getKeyCheckReset@{getKeyCheckReset}}
+\index{getKeyCheckReset@{getKeyCheckReset}!GuessGrid@{GuessGrid}}
+\doxysubsubsection{\texorpdfstring{getKeyCheckReset()}{getKeyCheckReset()}}
+{\footnotesize\ttfamily bool Guess\+Grid\+::get\+Key\+Check\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Возвращает и сбрасывает флаг изменения проверки клавиши (Enter). 
+
+Возвращает true, если только что было нажато Enter (сработала проверка). После вызова флаг \+\_\+used\+Key\+Check сбрасывается в false.
+
+\begin{DoxyReturn}{Возвращает}
+bool True, если проверка была выполнена; иначе false. 
+\end{DoxyReturn}
+\Hypertarget{classGuessGrid_a8d3afbcd3e42c790ef5db61d493a202d}\label{classGuessGrid_a8d3afbcd3e42c790ef5db61d493a202d} 
+\index{GuessGrid@{GuessGrid}!getShareString@{getShareString}}
+\index{getShareString@{getShareString}!GuessGrid@{GuessGrid}}
+\doxysubsubsection{\texorpdfstring{getShareString()}{getShareString()}}
+{\footnotesize\ttfamily std\+::string Guess\+Grid\+::get\+Share\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Возвращает строку для расшаривания результата (Share String). 
+
+Формирует строку, представляющую текущее состояние пазла (с цветами).
+
+\begin{DoxyReturn}{Возвращает}
+std\+::string Строка, отображающая завершённое состояние игры для публикаций. 
+\end{DoxyReturn}
+\Hypertarget{classGuessGrid_a6fa352d74879496e78238860936c866b}\label{classGuessGrid_a6fa352d74879496e78238860936c866b} 
+\index{GuessGrid@{GuessGrid}!getSolution@{getSolution}}
+\index{getSolution@{getSolution}!GuessGrid@{GuessGrid}}
+\doxysubsubsection{\texorpdfstring{getSolution()}{getSolution()}}
+{\footnotesize\ttfamily std\+::string Guess\+Grid\+::get\+Solution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Возвращает текущее слово-\/решение. 
+
+\begin{DoxyReturn}{Возвращает}
+std\+::string Строка с решением (\+\_\+solution). 
+\end{DoxyReturn}
+\Hypertarget{classGuessGrid_a6f87ffccedd4a7c4d18bb8e7bec9f643}\label{classGuessGrid_a6f87ffccedd4a7c4d18bb8e7bec9f643} 
+\index{GuessGrid@{GuessGrid}!handleKeyInput@{handleKeyInput}}
+\index{handleKeyInput@{handleKeyInput}!GuessGrid@{GuessGrid}}
+\doxysubsubsection{\texorpdfstring{handleKeyInput()}{handleKeyInput()}}
+{\footnotesize\ttfamily void Guess\+Grid\+::handle\+Key\+Input (\begin{DoxyParamCaption}\item[{const sf\+::\+Keyboard\+::\+Key}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Обрабатывает ввод с аппаратной клавиатуры. 
+
+При получении буквы вызывает try\+Insert\+Letter, If Backspace — back\+Space, если Enter — check\+Solution.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em key} & Код нажатой клавиши (sf\+::\+Keyboard\+::\+Key). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+void 
+\end{DoxyReturn}
+
+
+Переопределяет метод предка \mbox{\hyperlink{classWndInterface_a8e2d87ce45cd79a70810dc58fc736a06}{Wnd\+Interface}}.
+
+\Hypertarget{classGuessGrid_a6d53f499c80775f0fd709eff2aa324dc}\label{classGuessGrid_a6d53f499c80775f0fd709eff2aa324dc} 
+\index{GuessGrid@{GuessGrid}!hasMoreGuesses@{hasMoreGuesses}}
+\index{hasMoreGuesses@{hasMoreGuesses}!GuessGrid@{GuessGrid}}
+\doxysubsubsection{\texorpdfstring{hasMoreGuesses()}{hasMoreGuesses()}}
+{\footnotesize\ttfamily bool Guess\+Grid\+::has\+More\+Guesses (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Проверяет, остались ли ещё попытки. 
+
+\begin{DoxyReturn}{Возвращает}
+bool True, если число попыток меньше max\+Guesses; иначе false. 
+\end{DoxyReturn}
+\Hypertarget{classGuessGrid_a2b0113ac5d863efbc3cbba140f8aa328}\label{classGuessGrid_a2b0113ac5d863efbc3cbba140f8aa328} 
+\index{GuessGrid@{GuessGrid}!isSolved@{isSolved}}
+\index{isSolved@{isSolved}!GuessGrid@{GuessGrid}}
+\doxysubsubsection{\texorpdfstring{isSolved()}{isSolved()}}
+{\footnotesize\ttfamily bool Guess\+Grid\+::is\+Solved (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Проверяет, было ли решение найдено. 
+
+\begin{DoxyReturn}{Возвращает}
+bool True, если слово угадано (\+\_\+solved == true); иначе false. 
+\end{DoxyReturn}
+\Hypertarget{classGuessGrid_a59bca21bfbcc341a089552e3f55c93b5}\label{classGuessGrid_a59bca21bfbcc341a089552e3f55c93b5} 
+\index{GuessGrid@{GuessGrid}!tryInsertLetter@{tryInsertLetter}}
+\index{tryInsertLetter@{tryInsertLetter}!GuessGrid@{GuessGrid}}
+\doxysubsubsection{\texorpdfstring{tryInsertLetter()}{tryInsertLetter()}}
+{\footnotesize\ttfamily void Guess\+Grid\+::try\+Insert\+Letter (\begin{DoxyParamCaption}\item[{const char}]{letter }\end{DoxyParamCaption})}
+
+
+
+Пытается вставить указанную букву в текущую попытку. 
+
+Если в текущей строке есть свободное место, буква добавляется.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em letter} & Символ, который нужно вставить (char). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+void 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em std\+::invalid\+\_\+argument} & Если символ не является буквой. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classGuessGrid_a9d2738991a37ee32258a14b87bd21c15}\label{classGuessGrid_a9d2738991a37ee32258a14b87bd21c15} 
+\index{GuessGrid@{GuessGrid}!update@{update}}
+\index{update@{update}!GuessGrid@{GuessGrid}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily virtual void Guess\+Grid\+::update (\begin{DoxyParamCaption}\item[{const float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Обновление логики сетки (не используется). 
+
+В текущей реализации метод не выполняет никаких действий, но требуется переопределить его от базового класса.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em delta\+Time} & Время (в секундах), прошедшее с предыдущего кадра. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+void 
+\end{DoxyReturn}
+
+
+Замещает \mbox{\hyperlink{classWndInterface_acc76841cf5afb7d69f6de1067eef2205}{Wnd\+Interface}}.
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+Wordle\+SFML/\mbox{\hyperlink{GuessGrid_8h}{Guess\+Grid.\+h}}\item 
+Wordle\+SFML/Guess\+Grid.\+cpp\end{DoxyCompactItemize}

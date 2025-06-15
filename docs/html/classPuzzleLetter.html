@@ -1,0 +1,329 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Wordle Game SFML and Boost Beast C++: Класс PuzzleLetter</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Wordle Game SFML and Boost Beast C++
+   </div>
+   <div id="projectbrief">Документация по коду игры Wordle на библиотеках SFML и Boost Beast</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="classPuzzleLetter-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс PuzzleLetter</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Класс, представляющий одну букву в игровом поле пазла.  
+ <a href="classPuzzleLetter.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="PuzzleLetter_8h_source.html">PuzzleLetter.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:aed18be531bd480e5b1e252886b25759f" id="r_aed18be531bd480e5b1e252886b25759f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPuzzleLetter.html#aed18be531bd480e5b1e252886b25759f">SolutionState</a> { <b>NO_STATE</b>
+, <b>CORRECT</b>
+, <b>WRONG_POS</b>
+ }</td></tr>
+<tr class="memdesc:aed18be531bd480e5b1e252886b25759f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перечисление возможных состояний буквы при решении пазла.  <a href="classPuzzleLetter.html#aed18be531bd480e5b1e252886b25759f">Подробнее...</a><br /></td></tr>
+<tr class="separator:aed18be531bd480e5b1e252886b25759f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:aa172d7ab114894637fef39127d30f9b3" id="r_aa172d7ab114894637fef39127d30f9b3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPuzzleLetter.html#aa172d7ab114894637fef39127d30f9b3">PuzzleLetter</a> (const sf::IntRect &amp;bounds, const sf::Font &amp;font)</td></tr>
+<tr class="memdesc:aa172d7ab114894637fef39127d30f9b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор по умолчанию.  <br /></td></tr>
+<tr class="separator:aa172d7ab114894637fef39127d30f9b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40f79b2fbb8b3f830a82b54fa0646de8" id="r_a40f79b2fbb8b3f830a82b54fa0646de8"><td class="memItemLeft" align="right" valign="top"><a id="a40f79b2fbb8b3f830a82b54fa0646de8" name="a40f79b2fbb8b3f830a82b54fa0646de8"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~PuzzleLetter</b> ()=default</td></tr>
+<tr class="memdesc:a40f79b2fbb8b3f830a82b54fa0646de8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Деструктор по умолчанию. <br /></td></tr>
+<tr class="separator:a40f79b2fbb8b3f830a82b54fa0646de8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec8a6db119d69160e3627e554ec6b701" id="r_aec8a6db119d69160e3627e554ec6b701"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPuzzleLetter.html#aec8a6db119d69160e3627e554ec6b701">draw</a> (sf::RenderWindow &amp;renderWindow) const</td></tr>
+<tr class="memdesc:aec8a6db119d69160e3627e554ec6b701"><td class="mdescLeft">&#160;</td><td class="mdescRight">Рисует букву на указанном окне.  <br /></td></tr>
+<tr class="separator:aec8a6db119d69160e3627e554ec6b701"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b6748d00d5e1e2d9121cf5f3f07e75e" id="r_a6b6748d00d5e1e2d9121cf5f3f07e75e"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPuzzleLetter.html#a6b6748d00d5e1e2d9121cf5f3f07e75e">getLetter</a> () const</td></tr>
+<tr class="memdesc:a6b6748d00d5e1e2d9121cf5f3f07e75e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает текущий символ буквы.  <br /></td></tr>
+<tr class="separator:a6b6748d00d5e1e2d9121cf5f3f07e75e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c48c400f6121fc1b04bcd0cc435da5e" id="r_a0c48c400f6121fc1b04bcd0cc435da5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPuzzleLetter.html#a0c48c400f6121fc1b04bcd0cc435da5e">setLetter</a> (const char letter)</td></tr>
+<tr class="memdesc:a0c48c400f6121fc1b04bcd0cc435da5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает символ для отображения.  <br /></td></tr>
+<tr class="separator:a0c48c400f6121fc1b04bcd0cc435da5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58447f0f80314f527671edfb2abacc64" id="r_a58447f0f80314f527671edfb2abacc64"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPuzzleLetter.html#a58447f0f80314f527671edfb2abacc64">setSolutionState</a> (const <a class="el" href="classPuzzleLetter.html#aed18be531bd480e5b1e252886b25759f">SolutionState</a> &amp;solutionState)</td></tr>
+<tr class="memdesc:a58447f0f80314f527671edfb2abacc64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает состояние решения для этой буквы.  <br /></td></tr>
+<tr class="separator:a58447f0f80314f527671edfb2abacc64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0241714d436568111f40fde5ee988434" id="r_a0241714d436568111f40fde5ee988434"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPuzzleLetter.html#aed18be531bd480e5b1e252886b25759f">SolutionState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPuzzleLetter.html#a0241714d436568111f40fde5ee988434">getSolutionState</a> () const</td></tr>
+<tr class="memdesc:a0241714d436568111f40fde5ee988434"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает текущее состояние решения этой буквы.  <br /></td></tr>
+<tr class="separator:a0241714d436568111f40fde5ee988434"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Класс, представляющий одну букву в игровом поле пазла. </p>
+<p>Класс <a class="el" href="classPuzzleLetter.html" title="Класс, представляющий одну букву в игровом поле пазла.">PuzzleLetter</a> позволяет отображать символ в прямоугольной области, задавать его значение, изменять цвет фона в зависимости от состояния решения (CORRECT, WRONG_POS или NO_STATE) и получать текущее состояние буквы. </p>
+</div><h2 class="groupheader">Перечисления</h2>
+<a id="aed18be531bd480e5b1e252886b25759f" name="aed18be531bd480e5b1e252886b25759f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed18be531bd480e5b1e252886b25759f">&#9670;&#160;</a></span>SolutionState</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classPuzzleLetter.html#aed18be531bd480e5b1e252886b25759f">PuzzleLetter::SolutionState</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Перечисление возможных состояний буквы при решении пазла. </p>
+<p>NO_STATE - состояние по умолчанию (буква ещё не проверялась), CORRECT - буква стоит на правильном месте, WRONG_POS - буква присутствует в слове, но в неправильной позиции. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="aa172d7ab114894637fef39127d30f9b3" name="aa172d7ab114894637fef39127d30f9b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa172d7ab114894637fef39127d30f9b3">&#9670;&#160;</a></span>PuzzleLetter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PuzzleLetter::PuzzleLetter </td>
+          <td>(</td>
+          <td class="paramtype">const sf::IntRect &amp;&#160;</td>
+          <td class="paramname"><em>bounds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const sf::Font &amp;&#160;</td>
+          <td class="paramname"><em>font</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Конструктор по умолчанию. </p>
+<p>Инициализирует букву пустым символом ('\0') в заданных границах и создаёт соответствующие объекты для отображения фона и текста.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bounds</td><td>Прямоугольная область, в которой будет отображаться буква (sf::IntRect). </td></tr>
+    <tr><td class="paramname">font</td><td>Шрифт для отображения символа (sf::Font). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Если bounds имеют неположительные размеры. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="aec8a6db119d69160e3627e554ec6b701" name="aec8a6db119d69160e3627e554ec6b701"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec8a6db119d69160e3627e554ec6b701">&#9670;&#160;</a></span>draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PuzzleLetter::draw </td>
+          <td>(</td>
+          <td class="paramtype">sf::RenderWindow &amp;&#160;</td>
+          <td class="paramname"><em>renderWindow</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Рисует букву на указанном окне. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">renderWindow</td><td>Ссылка на объект sf::RenderWindow для отрисовки элементов. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a6b6748d00d5e1e2d9121cf5f3f07e75e" name="a6b6748d00d5e1e2d9121cf5f3f07e75e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b6748d00d5e1e2d9121cf5f3f07e75e">&#9670;&#160;</a></span>getLetter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char PuzzleLetter::getLetter </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает текущий символ буквы. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>char Символ, установленный для этой буквы. Если символ не задан, возвращается '\0'. </dd></dl>
+
+</div>
+</div>
+<a id="a0241714d436568111f40fde5ee988434" name="a0241714d436568111f40fde5ee988434"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0241714d436568111f40fde5ee988434">&#9670;&#160;</a></span>getSolutionState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPuzzleLetter.html#aed18be531bd480e5b1e252886b25759f">PuzzleLetter::SolutionState</a> PuzzleLetter::getSolutionState </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает текущее состояние решения этой буквы. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>SolutionState Текущее состояние (_currentState). </dd></dl>
+
+</div>
+</div>
+<a id="a0c48c400f6121fc1b04bcd0cc435da5e" name="a0c48c400f6121fc1b04bcd0cc435da5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c48c400f6121fc1b04bcd0cc435da5e">&#9670;&#160;</a></span>setLetter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PuzzleLetter::setLetter </td>
+          <td>(</td>
+          <td class="paramtype">const char&#160;</td>
+          <td class="paramname"><em>letter</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Устанавливает символ для отображения. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">letter</td><td>Символ, который будет отображён (char). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a58447f0f80314f527671edfb2abacc64" name="a58447f0f80314f527671edfb2abacc64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58447f0f80314f527671edfb2abacc64">&#9670;&#160;</a></span>setSolutionState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PuzzleLetter::setSolutionState </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classPuzzleLetter.html#aed18be531bd480e5b1e252886b25759f">SolutionState</a> &amp;&#160;</td>
+          <td class="paramname"><em>solutionState</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Устанавливает состояние решения для этой буквы. </p>
+<p>Изменяет цвет фона в зависимости от переданного состояния:</p><ul>
+<li>CORRECT: фон зелёный (буква на своём месте),</li>
+<li>WRONG_POS: фон жёлтый (буква есть в слове, но не на этой позиции),</li>
+<li>NO_STATE: фон серый (состояние по умолчанию).</li>
+</ul>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">solutionState</td><td>Состояние решения для буквы (SolutionState). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>void </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::out_of_range</td><td>Если solutionState недопустим. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>WordleSFML/<a class="el" href="PuzzleLetter_8h_source.html">PuzzleLetter.h</a></li>
+<li>WordleSFML/<b>PuzzleLetter.cpp</b></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

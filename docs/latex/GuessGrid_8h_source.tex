@@ -1,0 +1,58 @@
+\doxysection{Guess\+Grid.\+h}
+\hypertarget{GuessGrid_8h_source}{}\label{GuessGrid_8h_source}\index{WordleSFML/GuessGrid.h@{WordleSFML/GuessGrid.h}}
+\mbox{\hyperlink{GuessGrid_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ GUESSGRID\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ GUESSGRID\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}WndInterface.h"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{PuzzleLetter_8h}{PuzzleLetter.h}}"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classGuessGrid}{GuessGrid}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classWndInterface}{WndInterface}}}
+\DoxyCodeLine{00029\ \{}
+\DoxyCodeLine{00030\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{classGuessGrid}{GuessGrid}}(\textcolor{keyword}{const}\ sf::IntRect\&\ bounds,\ \textcolor{keyword}{const}\ sf::Font\&\ font,\ \textcolor{keyword}{const}\ std::string\&\ solution,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ maxGuesses);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classGuessGrid_aabcc7fa3dc10651e788751b876c16bae}{\string~GuessGrid}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGuessGrid_a9d2738991a37ee32258a14b87bd21c15}{update}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ deltaTime)\textcolor{keyword}{\ override\ }\{\}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGuessGrid_aa1aa24a79c48d2fe595b36be6d6daf7b}{draw}}(sf::RenderWindow\&\ renderWindow)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGuessGrid_a6f87ffccedd4a7c4d18bb8e7bec9f643}{handleKeyInput}}(\textcolor{keyword}{const}\ sf::Keyboard::Key\ key)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGuessGrid_a59bca21bfbcc341a089552e3f55c93b5}{tryInsertLetter}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ letter);}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGuessGrid_a2b07ad3850a5972f4d9eb7bab988b563}{backSpace}}();}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGuessGrid_a5db096dddd8b7ec07618ae698c2de69a}{checkSolution}}();}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classGuessGrid_a2b0113ac5d863efbc3cbba140f8aa328}{isSolved}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classGuessGrid_a6d53f499c80775f0fd709eff2aa324dc}{hasMoreGuesses}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00135\ \ \ \ \ std::vector<std::string>\ \mbox{\hyperlink{classGuessGrid_a333ca8663e04213dbd879b571cec3af7}{getAllRules}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classGuessGrid_ae017f406f9fac6f4371e32e064a672e0}{getKeyCheckReset}}();}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00152\ \ \ \ \ std::string\ \mbox{\hyperlink{classGuessGrid_a6fa352d74879496e78238860936c866b}{getSolution}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00161\ \ \ \ \ std::string\ \mbox{\hyperlink{classGuessGrid_a8d3afbcd3e42c790ef5db61d493a202d}{getShareString}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00164\ \ \ \ \ std::vector<std::vector<PuzzleLetter>>\ \_guessLetters;\ }
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_insertPosition;\ }
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_currentWordIndex;\ }
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_solved;\ }
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_usedKeyCheck;\ }
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_solution;\ }
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{keywordtype}{void}\ initialiseAllGuesses(\textcolor{keyword}{const}\ sf::Font\&\ font,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ wordLength,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ maxGuesses);}
+\DoxyCodeLine{00183\ \};}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00185\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ GUESSGRID\_H}}
+
+\end{DoxyCode}

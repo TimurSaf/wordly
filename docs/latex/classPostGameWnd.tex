@@ -1,0 +1,245 @@
+\doxysection{Класс Post\+Game\+Wnd}
+\hypertarget{classPostGameWnd}{}\label{classPostGameWnd}\index{PostGameWnd@{PostGameWnd}}
+
+
+Окно после завершения игры с информацией о результате и кнопками для дальнейших действий.  
+
+
+
+
+{\ttfamily \#include $<$Post\+Game\+Wnd.\+h$>$}
+
+Граф наследования\+:Post\+Game\+Wnd\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classPostGameWnd}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPostGameWnd_a0698c2f927feb64eb53a7ca292ce110a}{Post\+Game\+Wnd}} (const sf\+::\+Int\+Rect \&bounds, const sf\+::\+Font \&font, const std\+::string \&solution, const bool won\+Game, const int attempts)
+\begin{DoxyCompactList}\small\item\em Конструктор класса \doxylink{classPostGameWnd}{Post\+Game\+Wnd}. \end{DoxyCompactList}\item 
+\Hypertarget{classPostGameWnd_ad29c6b916ad2fd6f3ab42ff497e13541}\label{classPostGameWnd_ad29c6b916ad2fd6f3ab42ff497e13541} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Post\+Game\+Wnd} ()=default
+\begin{DoxyCompactList}\small\item\em Деструктор по умолчанию. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classPostGameWnd_a93391a529197a4099674acc213bbeeab}{update}} (const float delta\+Time) override
+\begin{DoxyCompactList}\small\item\em Обновление логики окна (не используется в текущей реализации). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classPostGameWnd_a1aee53564bb15d3729b0da06d128656f}{draw}} (sf\+::\+Render\+Window \&render\+Window) const override
+\begin{DoxyCompactList}\small\item\em Отрисовывает фоновую затемнённую область, центральный фон, тексты и кнопки. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classPostGameWnd_a4175b3ab90aa8313ede23a9a466c7a97}{handle\+Mouse\+Press}} (const sf\+::\+Vector2i \&mouse\+Position, bool is\+Left) override
+\begin{DoxyCompactList}\small\item\em Обрабатывает нажатие кнопки мыши. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classPostGameWnd_a9552558f217d878f61ecba75cf38d062}{handle\+Mouse\+Move}} (const sf\+::\+Vector2i \&mouse\+Position) override
+\begin{DoxyCompactList}\small\item\em Обрабатывает перемещение мыши по окну. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{WndInterface_8h_a0ab26bd2624b188834cc7e71cd81f45f}{Wnd\+Result\+State}} \mbox{\hyperlink{classPostGameWnd_afb76384f1ff123dd3d002154139524f5}{get\+Result\+State}} () const override
+\begin{DoxyCompactList}\small\item\em Возвращает текущее состояние окна. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classPostGameWnd_ae790dd7dfadfaac966ad188836d758f5}{get\+Selected\+Action\+ID}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает ID выбранной кнопки. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Открытые члены унаследованные от \mbox{\hyperlink{classWndInterface}{Wnd\+Interface}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWndInterface_a6b5c70af6e357fba833fbe6f1aebf6fb}{Wnd\+Interface}} (sf\+::\+Int\+Rect bounds)
+\begin{DoxyCompactList}\small\item\em Конструктор. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Wnd\+Interface} ()=default
+\begin{DoxyCompactList}\small\item\em Виртуальный деструктор. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWndInterface_a8e2d87ce45cd79a70810dc58fc736a06}{handle\+Key\+Input}} (const sf\+::\+Keyboard\+::\+Key key)
+\begin{DoxyCompactList}\small\item\em Обрабатывает нажатие клавиши клавиатуры. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWndInterface_a1e37ec57b10bb1043159c483a571e257}{set\+Enabled}} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Устанавливает доступность интерфейса. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWndInterface_acb8e821db0944866fb774904413ffa04}{is\+Enabled}} () const
+\begin{DoxyCompactList}\small\item\em Проверяет, включён ли интерфейс. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Дополнительные унаследованные члены}
+\doxysubsection*{Защищенные данные унаследованные от \mbox{\hyperlink{classWndInterface}{Wnd\+Interface}}}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Int\+Rect \mbox{\hyperlink{classWndInterface_acb35b469df0025733fd8faa037b14ffc}{\+\_\+bounds}}
+\item 
+bool \mbox{\hyperlink{classWndInterface_ab96909811c3e8554476150fa5941d964}{\+\_\+is\+Enabled}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Окно после завершения игры с информацией о результате и кнопками для дальнейших действий. 
+
+Класс \doxylink{classPostGameWnd}{Post\+Game\+Wnd} наследует интерфейс \doxylink{classWndInterface}{Wnd\+Interface} и реализует окно, в котором показывается, было ли слово угадано, или нет, выводится решение, а также предлагаются кнопки для начала новой игры или выхода. 
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{classPostGameWnd_a0698c2f927feb64eb53a7ca292ce110a}\label{classPostGameWnd_a0698c2f927feb64eb53a7ca292ce110a} 
+\index{PostGameWnd@{PostGameWnd}!PostGameWnd@{PostGameWnd}}
+\index{PostGameWnd@{PostGameWnd}!PostGameWnd@{PostGameWnd}}
+\doxysubsubsection{\texorpdfstring{PostGameWnd()}{PostGameWnd()}}
+{\footnotesize\ttfamily Post\+Game\+Wnd\+::\+Post\+Game\+Wnd (\begin{DoxyParamCaption}\item[{const sf\+::\+Int\+Rect \&}]{bounds,  }\item[{const sf\+::\+Font \&}]{font,  }\item[{const std\+::string \&}]{solution,  }\item[{const bool}]{won\+Game,  }\item[{const int}]{attempts }\end{DoxyParamCaption})}
+
+
+
+Конструктор класса \doxylink{classPostGameWnd}{Post\+Game\+Wnd}. 
+
+Инициализирует фон, тексты и кнопки на основании параметров игры.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em bounds} & Область, в которой рисуется окно (sf\+::\+Int\+Rect). \\
+\hline
+{\em font} & Шрифт для отображения текста (sf\+::\+Font). \\
+\hline
+{\em solution} & Строка с разгаданным (или неудачно отгаданным) словом. \\
+\hline
+{\em won\+Game} & Логический флаг\+: true, если пользователь угадал слово; false в противном случае. \\
+\hline
+{\em attempts} & Количество попыток, которое потребовалось для угадывания слова. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Исключения}
+{\em std\+::invalid\+\_\+argument} & Если bounds невалидны или attempts \texorpdfstring{$<$}{<} 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Методы}
+\Hypertarget{classPostGameWnd_a1aee53564bb15d3729b0da06d128656f}\label{classPostGameWnd_a1aee53564bb15d3729b0da06d128656f} 
+\index{PostGameWnd@{PostGameWnd}!draw@{draw}}
+\index{draw@{draw}!PostGameWnd@{PostGameWnd}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Post\+Game\+Wnd\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{render\+Window }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Отрисовывает фоновую затемнённую область, центральный фон, тексты и кнопки. 
+
+Вызывается каждый кадр для отображения элементов окна.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em render\+Window} & Ссылка на объект sf\+::\+Render\+Window для рендеринга. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+void 
+\end{DoxyReturn}
+
+
+Замещает \mbox{\hyperlink{classWndInterface_a5de008f7e07364dfe66d86134aac3205}{Wnd\+Interface}}.
+
+\Hypertarget{classPostGameWnd_afb76384f1ff123dd3d002154139524f5}\label{classPostGameWnd_afb76384f1ff123dd3d002154139524f5} 
+\index{PostGameWnd@{PostGameWnd}!getResultState@{getResultState}}
+\index{getResultState@{getResultState}!PostGameWnd@{PostGameWnd}}
+\doxysubsubsection{\texorpdfstring{getResultState()}{getResultState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{WndInterface_8h_a0ab26bd2624b188834cc7e71cd81f45f}{Wnd\+Result\+State}} Post\+Game\+Wnd\+::get\+Result\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Возвращает текущее состояние окна. 
+
+После нажатия на одну из кнопок состояние меняется с Nothing\+State на Restart, что сигнализирует основной логике о необходимости перехода.
+
+\begin{DoxyReturn}{Возвращает}
+Wnd\+Result\+State Текущее состояние окна (Nothing\+State или Restart). 
+\end{DoxyReturn}
+
+
+Переопределяет метод предка \mbox{\hyperlink{classWndInterface_af856837a63f10858f3fb090ff82f19a0}{Wnd\+Interface}}.
+
+\Hypertarget{classPostGameWnd_ae790dd7dfadfaac966ad188836d758f5}\label{classPostGameWnd_ae790dd7dfadfaac966ad188836d758f5} 
+\index{PostGameWnd@{PostGameWnd}!getSelectedActionID@{getSelectedActionID}}
+\index{getSelectedActionID@{getSelectedActionID}!PostGameWnd@{PostGameWnd}}
+\doxysubsubsection{\texorpdfstring{getSelectedActionID()}{getSelectedActionID()}}
+{\footnotesize\ttfamily int Post\+Game\+Wnd\+::get\+Selected\+Action\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Возвращает ID выбранной кнопки. 
+
+Данный метод следует вызывать только после того, как \doxylink{classPostGameWnd_afb76384f1ff123dd3d002154139524f5}{get\+Result\+State()} вернуло Restart.
+
+\begin{DoxyReturn}{Возвращает}
+int ID нажатой кнопки (0, 1 или 2) или -\/1, если ни одна кнопка не была нажата. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em std\+::logic\+\_\+error} & Если выбор значения ID произошел до выбора кнопки. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classPostGameWnd_a9552558f217d878f61ecba75cf38d062}\label{classPostGameWnd_a9552558f217d878f61ecba75cf38d062} 
+\index{PostGameWnd@{PostGameWnd}!handleMouseMove@{handleMouseMove}}
+\index{handleMouseMove@{handleMouseMove}!PostGameWnd@{PostGameWnd}}
+\doxysubsubsection{\texorpdfstring{handleMouseMove()}{handleMouseMove()}}
+{\footnotesize\ttfamily void Post\+Game\+Wnd\+::handle\+Mouse\+Move (\begin{DoxyParamCaption}\item[{const sf\+::\+Vector2i \&}]{mouse\+Position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Обрабатывает перемещение мыши по окну. 
+
+При движении курсора проверяет, находится ли он над одной из кнопок, и устанавливает эффект наведения (hover) для этой кнопки.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em mouse\+Position} & Координаты курсора мыши при перемещении (sf\+::\+Vector2i). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+void 
+\end{DoxyReturn}
+
+
+Переопределяет метод предка \mbox{\hyperlink{classWndInterface_ae79682f95f4a4f3246146f0f47a4986e}{Wnd\+Interface}}.
+
+\Hypertarget{classPostGameWnd_a4175b3ab90aa8313ede23a9a466c7a97}\label{classPostGameWnd_a4175b3ab90aa8313ede23a9a466c7a97} 
+\index{PostGameWnd@{PostGameWnd}!handleMousePress@{handleMousePress}}
+\index{handleMousePress@{handleMousePress}!PostGameWnd@{PostGameWnd}}
+\doxysubsubsection{\texorpdfstring{handleMousePress()}{handleMousePress()}}
+{\footnotesize\ttfamily void Post\+Game\+Wnd\+::handle\+Mouse\+Press (\begin{DoxyParamCaption}\item[{const sf\+::\+Vector2i \&}]{mouse\+Position,  }\item[{bool}]{is\+Left }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Обрабатывает нажатие кнопки мыши. 
+
+При клике левой кнопкой мыши проверяет положение курсора, и если оно попадает в область одной из кнопок, сохраняет её идентификатор и меняет состояние окна на Restart для перехода к новому действию.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em mouse\+Position} & Координаты курсора мыши во время клика (sf\+::\+Vector2i). \\
+\hline
+{\em is\+Left} & Флаг\+: true, если нажата левая кнопка мыши; false — в противном случае. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+void 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em std\+::out\+\_\+of\+\_\+range} & Если action\+ID меньше 0 или больше 2. \\
+\hline
+\end{DoxyExceptions}
+
+
+Переопределяет метод предка \mbox{\hyperlink{classWndInterface_ae1e4788acacde35e30289172072142cc}{Wnd\+Interface}}.
+
+\Hypertarget{classPostGameWnd_a93391a529197a4099674acc213bbeeab}\label{classPostGameWnd_a93391a529197a4099674acc213bbeeab} 
+\index{PostGameWnd@{PostGameWnd}!update@{update}}
+\index{update@{update}!PostGameWnd@{PostGameWnd}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily virtual void Post\+Game\+Wnd\+::update (\begin{DoxyParamCaption}\item[{const float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Обновление логики окна (не используется в текущей реализации). 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em delta\+Time} & Время, прошедшее с предыдущего кадра (в секундах). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+void 
+\end{DoxyReturn}
+
+
+Замещает \mbox{\hyperlink{classWndInterface_acc76841cf5afb7d69f6de1067eef2205}{Wnd\+Interface}}.
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+Wordle\+SFML/\mbox{\hyperlink{PostGameWnd_8h}{Post\+Game\+Wnd.\+h}}\item 
+Wordle\+SFML/Post\+Game\+Wnd.\+cpp\end{DoxyCompactItemize}

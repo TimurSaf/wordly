@@ -1,0 +1,43 @@
+\doxysection{Game.\+h}
+\hypertarget{Game_8h_source}{}\label{Game_8h_source}\index{WordleSFML/Game.h@{WordleSFML/Game.h}}
+\mbox{\hyperlink{Game_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ GAME\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ GAME\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <random>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{WndInterface_8h}{WndInterface.h}}"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{client__http_8hpp}{client\_http.hpp}}"{}}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classGame}{Game}}}
+\DoxyCodeLine{00027\ \{}
+\DoxyCodeLine{00028\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{classGame}{Game}}(\textcolor{keyword}{const}\ sf::IntRect\&\ gameBounds,\ \textcolor{keyword}{const}\ sf::Font\&\ font);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classGame_ae3d112ca6e0e55150d2fdbc704474530}{\string~Game}}();}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGame_ac68764e711349196e5d3280b2297d268}{update}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ deltaTime);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGame_af7fa3ba78a92c287630e208351b385e8}{draw}}(sf::RenderWindow\&\ renderWindow)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGame_af88ff5082328cdda3522f37d414f0b7c}{handleMousePress}}(\textcolor{keyword}{const}\ sf::Vector2i\&\ mousePosition,\ \textcolor{keywordtype}{bool}\ isLeft);}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGame_a89b29a06a5688030adb42145f3e29045}{handleMouseMove}}(\textcolor{keyword}{const}\ sf::Vector2i\&\ mousePosition);}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGame_a2f54175ffc21dabc504e30981d23fced}{handleKeyInput}}(\textcolor{keyword}{const}\ sf::Keyboard::Key\ key);}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classGame_a36b4d1d19119767546de5ac8bbe46d46}{getGameCloseRequested}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keyword}{const}\ sf::IntRect\ \ \ \ \ \ \ \ \ \ \ \ \_bounds;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keyword}{const}\ sf::Font\&\ \ \ \ \ \ \ \ \ \ \ \ \ \ \_font;\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00111\ \ \ \ \ std::default\_random\_engine\ \ \ \_randomEngine;\ \ \ \ }
+\DoxyCodeLine{00112\ \ \ \ \ std::unique\_ptr<WndInterface>\ \_activeInterface;\ }
+\DoxyCodeLine{00113\ \ \ \ \ std::unique\_ptr<WndInterface>\ \_activeOverlay;\ \ \ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_terminateGame;\ \ \ }
+\DoxyCodeLine{00115\ \};}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ GAME\_H}}
+
+\end{DoxyCode}

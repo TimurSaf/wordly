@@ -1,0 +1,576 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Wordle Game SFML and Boost Beast C++: Класс GuessGrid</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Wordle Game SFML and Boost Beast C++
+   </div>
+   <div id="projectbrief">Документация по коду игры Wordle на библиотеках SFML и Boost Beast</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="classGuessGrid-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс GuessGrid</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Класс для управления сеткой догадок в игровой механике.  
+ <a href="classGuessGrid.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="GuessGrid_8h_source.html">GuessGrid.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:GuessGrid:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classGuessGrid.png" usemap="#GuessGrid_map" alt=""/>
+  <map id="GuessGrid_map" name="GuessGrid_map">
+<area href="classWndInterface.html" alt="WndInterface" shape="rect" coords="0,0,87,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a3ff151ecefbe501f23c1c6cf39096925" id="r_a3ff151ecefbe501f23c1c6cf39096925"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGuessGrid.html#a3ff151ecefbe501f23c1c6cf39096925">GuessGrid</a> (const sf::IntRect &amp;bounds, const sf::Font &amp;font, const std::string &amp;solution, const int maxGuesses)</td></tr>
+<tr class="memdesc:a3ff151ecefbe501f23c1c6cf39096925"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор.  <br /></td></tr>
+<tr class="separator:a3ff151ecefbe501f23c1c6cf39096925"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabcc7fa3dc10651e788751b876c16bae" id="r_aabcc7fa3dc10651e788751b876c16bae"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGuessGrid.html#aabcc7fa3dc10651e788751b876c16bae">~GuessGrid</a> ()=default</td></tr>
+<tr class="memdesc:aabcc7fa3dc10651e788751b876c16bae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Деструктор.  <br /></td></tr>
+<tr class="separator:aabcc7fa3dc10651e788751b876c16bae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d2738991a37ee32258a14b87bd21c15" id="r_a9d2738991a37ee32258a14b87bd21c15"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGuessGrid.html#a9d2738991a37ee32258a14b87bd21c15">update</a> (const float deltaTime) override</td></tr>
+<tr class="memdesc:a9d2738991a37ee32258a14b87bd21c15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновление логики сетки (не используется).  <br /></td></tr>
+<tr class="separator:a9d2738991a37ee32258a14b87bd21c15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1aa24a79c48d2fe595b36be6d6daf7b" id="r_aa1aa24a79c48d2fe595b36be6d6daf7b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGuessGrid.html#aa1aa24a79c48d2fe595b36be6d6daf7b">draw</a> (sf::RenderWindow &amp;renderWindow) const override</td></tr>
+<tr class="memdesc:aa1aa24a79c48d2fe595b36be6d6daf7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Рисует сетку догадок на экране.  <br /></td></tr>
+<tr class="separator:aa1aa24a79c48d2fe595b36be6d6daf7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f87ffccedd4a7c4d18bb8e7bec9f643" id="r_a6f87ffccedd4a7c4d18bb8e7bec9f643"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGuessGrid.html#a6f87ffccedd4a7c4d18bb8e7bec9f643">handleKeyInput</a> (const sf::Keyboard::Key key) override</td></tr>
+<tr class="memdesc:a6f87ffccedd4a7c4d18bb8e7bec9f643"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обрабатывает ввод с аппаратной клавиатуры.  <br /></td></tr>
+<tr class="separator:a6f87ffccedd4a7c4d18bb8e7bec9f643"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59bca21bfbcc341a089552e3f55c93b5" id="r_a59bca21bfbcc341a089552e3f55c93b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGuessGrid.html#a59bca21bfbcc341a089552e3f55c93b5">tryInsertLetter</a> (const char letter)</td></tr>
+<tr class="memdesc:a59bca21bfbcc341a089552e3f55c93b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Пытается вставить указанную букву в текущую попытку.  <br /></td></tr>
+<tr class="separator:a59bca21bfbcc341a089552e3f55c93b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b07ad3850a5972f4d9eb7bab988b563" id="r_a2b07ad3850a5972f4d9eb7bab988b563"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGuessGrid.html#a2b07ad3850a5972f4d9eb7bab988b563">backSpace</a> ()</td></tr>
+<tr class="memdesc:a2b07ad3850a5972f4d9eb7bab988b563"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаляет последнюю букву в текущей попытке (Backspace).  <br /></td></tr>
+<tr class="separator:a2b07ad3850a5972f4d9eb7bab988b563"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5db096dddd8b7ec07618ae698c2de69a" id="r_a5db096dddd8b7ec07618ae698c2de69a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGuessGrid.html#a5db096dddd8b7ec07618ae698c2de69a">checkSolution</a> ()</td></tr>
+<tr class="memdesc:a5db096dddd8b7ec07618ae698c2de69a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет текущее слово-слово на совпадение с решением.  <br /></td></tr>
+<tr class="separator:a5db096dddd8b7ec07618ae698c2de69a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b0113ac5d863efbc3cbba140f8aa328" id="r_a2b0113ac5d863efbc3cbba140f8aa328"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGuessGrid.html#a2b0113ac5d863efbc3cbba140f8aa328">isSolved</a> () const</td></tr>
+<tr class="memdesc:a2b0113ac5d863efbc3cbba140f8aa328"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет, было ли решение найдено.  <br /></td></tr>
+<tr class="separator:a2b0113ac5d863efbc3cbba140f8aa328"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d53f499c80775f0fd709eff2aa324dc" id="r_a6d53f499c80775f0fd709eff2aa324dc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGuessGrid.html#a6d53f499c80775f0fd709eff2aa324dc">hasMoreGuesses</a> () const</td></tr>
+<tr class="memdesc:a6d53f499c80775f0fd709eff2aa324dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет, остались ли ещё попытки.  <br /></td></tr>
+<tr class="separator:a6d53f499c80775f0fd709eff2aa324dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a333ca8663e04213dbd879b571cec3af7" id="r_a333ca8663e04213dbd879b571cec3af7"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGuessGrid.html#a333ca8663e04213dbd879b571cec3af7">getAllRules</a> () const</td></tr>
+<tr class="memdesc:a333ca8663e04213dbd879b571cec3af7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Формирует все правила (цвета) на основе предыдущих догадок.  <br /></td></tr>
+<tr class="separator:a333ca8663e04213dbd879b571cec3af7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae017f406f9fac6f4371e32e064a672e0" id="r_ae017f406f9fac6f4371e32e064a672e0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGuessGrid.html#ae017f406f9fac6f4371e32e064a672e0">getKeyCheckReset</a> ()</td></tr>
+<tr class="memdesc:ae017f406f9fac6f4371e32e064a672e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает и сбрасывает флаг изменения проверки клавиши (Enter).  <br /></td></tr>
+<tr class="separator:ae017f406f9fac6f4371e32e064a672e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fa352d74879496e78238860936c866b" id="r_a6fa352d74879496e78238860936c866b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGuessGrid.html#a6fa352d74879496e78238860936c866b">getSolution</a> () const</td></tr>
+<tr class="memdesc:a6fa352d74879496e78238860936c866b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает текущее слово-решение.  <br /></td></tr>
+<tr class="separator:a6fa352d74879496e78238860936c866b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d3afbcd3e42c790ef5db61d493a202d" id="r_a8d3afbcd3e42c790ef5db61d493a202d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGuessGrid.html#a8d3afbcd3e42c790ef5db61d493a202d">getShareString</a> () const</td></tr>
+<tr class="memdesc:a8d3afbcd3e42c790ef5db61d493a202d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает строку для расшаривания результата (Share String).  <br /></td></tr>
+<tr class="separator:a8d3afbcd3e42c790ef5db61d493a202d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classWndInterface"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classWndInterface')"><img src="closed.png" alt="-"/>&#160;Открытые члены унаследованные от <a class="el" href="classWndInterface.html">WndInterface</a></td></tr>
+<tr class="memitem:a6b5c70af6e357fba833fbe6f1aebf6fb inherit pub_methods_classWndInterface" id="r_a6b5c70af6e357fba833fbe6f1aebf6fb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWndInterface.html#a6b5c70af6e357fba833fbe6f1aebf6fb">WndInterface</a> (sf::IntRect bounds)</td></tr>
+<tr class="separator:a6b5c70af6e357fba833fbe6f1aebf6fb inherit pub_methods_classWndInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1e4788acacde35e30289172072142cc inherit pub_methods_classWndInterface" id="r_ae1e4788acacde35e30289172072142cc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWndInterface.html#ae1e4788acacde35e30289172072142cc">handleMousePress</a> (const sf::Vector2i &amp;mousePosition, bool isLeft)</td></tr>
+<tr class="separator:ae1e4788acacde35e30289172072142cc inherit pub_methods_classWndInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae79682f95f4a4f3246146f0f47a4986e inherit pub_methods_classWndInterface" id="r_ae79682f95f4a4f3246146f0f47a4986e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWndInterface.html#ae79682f95f4a4f3246146f0f47a4986e">handleMouseMove</a> (const sf::Vector2i &amp;mousePosition)</td></tr>
+<tr class="separator:ae79682f95f4a4f3246146f0f47a4986e inherit pub_methods_classWndInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e37ec57b10bb1043159c483a571e257 inherit pub_methods_classWndInterface" id="r_a1e37ec57b10bb1043159c483a571e257"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWndInterface.html#a1e37ec57b10bb1043159c483a571e257">setEnabled</a> (bool enabled)</td></tr>
+<tr class="separator:a1e37ec57b10bb1043159c483a571e257 inherit pub_methods_classWndInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb8e821db0944866fb774904413ffa04 inherit pub_methods_classWndInterface" id="r_acb8e821db0944866fb774904413ffa04"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWndInterface.html#acb8e821db0944866fb774904413ffa04">isEnabled</a> () const</td></tr>
+<tr class="separator:acb8e821db0944866fb774904413ffa04 inherit pub_methods_classWndInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af856837a63f10858f3fb090ff82f19a0 inherit pub_methods_classWndInterface" id="r_af856837a63f10858f3fb090ff82f19a0"><td class="memItemLeft" align="right" valign="top">virtual WndResultState&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWndInterface.html#af856837a63f10858f3fb090ff82f19a0">getResultState</a> () const</td></tr>
+<tr class="separator:af856837a63f10858f3fb090ff82f19a0 inherit pub_methods_classWndInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Дополнительные унаследованные члены</h2></td></tr>
+<tr class="inherit_header pro_attribs_classWndInterface"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classWndInterface')"><img src="closed.png" alt="-"/>&#160;Защищенные данные унаследованные от <a class="el" href="classWndInterface.html">WndInterface</a></td></tr>
+<tr class="memitem:acb35b469df0025733fd8faa037b14ffc inherit pro_attribs_classWndInterface" id="r_acb35b469df0025733fd8faa037b14ffc"><td class="memItemLeft" align="right" valign="top">
+sf::IntRect&#160;</td><td class="memItemRight" valign="bottom"><b>_bounds</b></td></tr>
+<tr class="separator:acb35b469df0025733fd8faa037b14ffc inherit pro_attribs_classWndInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab96909811c3e8554476150fa5941d964 inherit pro_attribs_classWndInterface" id="r_ab96909811c3e8554476150fa5941d964"><td class="memItemLeft" align="right" valign="top">
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>_isEnabled</b></td></tr>
+<tr class="separator:ab96909811c3e8554476150fa5941d964 inherit pro_attribs_classWndInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Класс для управления сеткой догадок в игровой механике. </p>
+<p><a class="el" href="classGuessGrid.html" title="Класс для управления сеткой догадок в игровой механике.">GuessGrid</a> создаёт сетку из <a class="el" href="classPuzzleLetter.html" title="Класс, представляющий одну букву в игровом поле пазла.">PuzzleLetter</a>, отображает её, обрабатывает ввод с аппаратной клавиатуры (буквы, удаление, Enter), проверяет догаданные слова и формирует результаты (цветовые правила) для виртуальной клавиатуры. </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a3ff151ecefbe501f23c1c6cf39096925" name="a3ff151ecefbe501f23c1c6cf39096925"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ff151ecefbe501f23c1c6cf39096925">&#9670;&#160;</a></span>GuessGrid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GuessGrid::GuessGrid </td>
+          <td>(</td>
+          <td class="paramtype">const sf::IntRect &amp;&#160;</td>
+          <td class="paramname"><em>bounds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const sf::Font &amp;&#160;</td>
+          <td class="paramname"><em>font</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>solution</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>maxGuesses</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Конструктор. </p>
+<p>Инициализирует пустую сетку догадок заданных размеров и устанавливает слово-решение.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bounds</td><td>Область, в которой рисуется сетка (sf::IntRect). </td></tr>
+    <tr><td class="paramname">font</td><td>Шрифт для отображения букв (sf::Font). </td></tr>
+    <tr><td class="paramname">solution</td><td>Строка-слово, которое игрок должен угадать (std::string). </td></tr>
+    <tr><td class="paramname">maxGuesses</td><td>Максимальное количество попыток (int).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Если bounds невалидны, solution пусто или maxGuesses &lt;= 0. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aabcc7fa3dc10651e788751b876c16bae" name="aabcc7fa3dc10651e788751b876c16bae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabcc7fa3dc10651e788751b876c16bae">&#9670;&#160;</a></span>~GuessGrid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual GuessGrid::~GuessGrid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Деструктор. </p>
+<p>Удаляет динамические ресурсы (если они есть). По умолчанию — пустая реализация. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a2b07ad3850a5972f4d9eb7bab988b563" name="a2b07ad3850a5972f4d9eb7bab988b563"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b07ad3850a5972f4d9eb7bab988b563">&#9670;&#160;</a></span>backSpace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GuessGrid::backSpace </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Удаляет последнюю букву в текущей попытке (Backspace). </p>
+<p>Если текущая попытка не пуста, удаляет один символ.</p>
+<dl class="section return"><dt>Возвращает</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a5db096dddd8b7ec07618ae698c2de69a" name="a5db096dddd8b7ec07618ae698c2de69a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5db096dddd8b7ec07618ae698c2de69a">&#9670;&#160;</a></span>checkSolution()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GuessGrid::checkSolution </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Проверяет текущее слово-слово на совпадение с решением. </p>
+<p>Сравнивает введённое слово с _solution и обновляет состояние каждого <a class="el" href="classPuzzleLetter.html" title="Класс, представляющий одну букву в игровом поле пазла.">PuzzleLetter</a>. Если слово угадано, _solved устанавливается в true.</p>
+<dl class="section return"><dt>Возвращает</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="aa1aa24a79c48d2fe595b36be6d6daf7b" name="aa1aa24a79c48d2fe595b36be6d6daf7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1aa24a79c48d2fe595b36be6d6daf7b">&#9670;&#160;</a></span>draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GuessGrid::draw </td>
+          <td>(</td>
+          <td class="paramtype">sf::RenderWindow &amp;&#160;</td>
+          <td class="paramname"><em>renderWindow</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Рисует сетку догадок на экране. </p>
+<p>Вызывает метод draw для каждого <a class="el" href="classPuzzleLetter.html" title="Класс, представляющий одну букву в игровом поле пазла.">PuzzleLetter</a> в сетке.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">renderWindow</td><td>Ссылка на объект sf::RenderWindow для отрисовки. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>void </dd></dl>
+
+<p>Замещает <a class="el" href="classWndInterface.html#a5de008f7e07364dfe66d86134aac3205">WndInterface</a>.</p>
+
+</div>
+</div>
+<a id="a333ca8663e04213dbd879b571cec3af7" name="a333ca8663e04213dbd879b571cec3af7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a333ca8663e04213dbd879b571cec3af7">&#9670;&#160;</a></span>getAllRules()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::string &gt; GuessGrid::getAllRules </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Формирует все правила (цвета) на основе предыдущих догадок. </p>
+<p>Возвращает вектор строк-правил, которые затем применяются к виртуальной клавиатуре.</p>
+<dl class="section return"><dt>Возвращает</dt><dd>std::vector&lt;std::string&gt; Вектор правил (каждая строка соответствует символу). </dd></dl>
+
+</div>
+</div>
+<a id="ae017f406f9fac6f4371e32e064a672e0" name="ae017f406f9fac6f4371e32e064a672e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae017f406f9fac6f4371e32e064a672e0">&#9670;&#160;</a></span>getKeyCheckReset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GuessGrid::getKeyCheckReset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает и сбрасывает флаг изменения проверки клавиши (Enter). </p>
+<p>Возвращает true, если только что было нажато Enter (сработала проверка). После вызова флаг _usedKeyCheck сбрасывается в false.</p>
+<dl class="section return"><dt>Возвращает</dt><dd>bool True, если проверка была выполнена; иначе false. </dd></dl>
+
+</div>
+</div>
+<a id="a8d3afbcd3e42c790ef5db61d493a202d" name="a8d3afbcd3e42c790ef5db61d493a202d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d3afbcd3e42c790ef5db61d493a202d">&#9670;&#160;</a></span>getShareString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string GuessGrid::getShareString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает строку для расшаривания результата (Share String). </p>
+<p>Формирует строку, представляющую текущее состояние пазла (с цветами).</p>
+<dl class="section return"><dt>Возвращает</dt><dd>std::string Строка, отображающая завершённое состояние игры для публикаций. </dd></dl>
+
+</div>
+</div>
+<a id="a6fa352d74879496e78238860936c866b" name="a6fa352d74879496e78238860936c866b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fa352d74879496e78238860936c866b">&#9670;&#160;</a></span>getSolution()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string GuessGrid::getSolution </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает текущее слово-решение. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>std::string Строка с решением (_solution). </dd></dl>
+
+</div>
+</div>
+<a id="a6f87ffccedd4a7c4d18bb8e7bec9f643" name="a6f87ffccedd4a7c4d18bb8e7bec9f643"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f87ffccedd4a7c4d18bb8e7bec9f643">&#9670;&#160;</a></span>handleKeyInput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GuessGrid::handleKeyInput </td>
+          <td>(</td>
+          <td class="paramtype">const sf::Keyboard::Key&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Обрабатывает ввод с аппаратной клавиатуры. </p>
+<p>При получении буквы вызывает tryInsertLetter, If Backspace — backSpace, если Enter — checkSolution.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>Код нажатой клавиши (sf::Keyboard::Key). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>void </dd></dl>
+
+<p>Переопределяет метод предка <a class="el" href="classWndInterface.html#a8e2d87ce45cd79a70810dc58fc736a06">WndInterface</a>.</p>
+
+</div>
+</div>
+<a id="a6d53f499c80775f0fd709eff2aa324dc" name="a6d53f499c80775f0fd709eff2aa324dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d53f499c80775f0fd709eff2aa324dc">&#9670;&#160;</a></span>hasMoreGuesses()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GuessGrid::hasMoreGuesses </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Проверяет, остались ли ещё попытки. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>bool True, если число попыток меньше maxGuesses; иначе false. </dd></dl>
+
+</div>
+</div>
+<a id="a2b0113ac5d863efbc3cbba140f8aa328" name="a2b0113ac5d863efbc3cbba140f8aa328"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b0113ac5d863efbc3cbba140f8aa328">&#9670;&#160;</a></span>isSolved()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GuessGrid::isSolved </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Проверяет, было ли решение найдено. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>bool True, если слово угадано (_solved == true); иначе false. </dd></dl>
+
+</div>
+</div>
+<a id="a59bca21bfbcc341a089552e3f55c93b5" name="a59bca21bfbcc341a089552e3f55c93b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59bca21bfbcc341a089552e3f55c93b5">&#9670;&#160;</a></span>tryInsertLetter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GuessGrid::tryInsertLetter </td>
+          <td>(</td>
+          <td class="paramtype">const char&#160;</td>
+          <td class="paramname"><em>letter</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Пытается вставить указанную букву в текущую попытку. </p>
+<p>Если в текущей строке есть свободное место, буква добавляется.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">letter</td><td>Символ, который нужно вставить (char). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>void </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Если символ не является буквой. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9d2738991a37ee32258a14b87bd21c15" name="a9d2738991a37ee32258a14b87bd21c15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d2738991a37ee32258a14b87bd21c15">&#9670;&#160;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void GuessGrid::update </td>
+          <td>(</td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>deltaTime</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Обновление логики сетки (не используется). </p>
+<p>В текущей реализации метод не выполняет никаких действий, но требуется переопределить его от базового класса.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">deltaTime</td><td>Время (в секундах), прошедшее с предыдущего кадра. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>void </dd></dl>
+
+<p>Замещает <a class="el" href="classWndInterface.html#acc76841cf5afb7d69f6de1067eef2205">WndInterface</a>.</p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>WordleSFML/<a class="el" href="GuessGrid_8h_source.html">GuessGrid.h</a></li>
+<li>WordleSFML/<b>GuessGrid.cpp</b></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

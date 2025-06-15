@@ -1,0 +1,182 @@
+\doxysection{Класс Button}
+\hypertarget{classButton}{}\label{classButton}\index{Button@{Button}}
+
+
+Класс, реализующий интерактивную кнопку с текстом.  
+
+
+
+
+{\ttfamily \#include $<$Button.\+h$>$}
+
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classButton_a8d2dde9166cb88dcc728eaf5c5c50e84}{Button}} (const sf\+::\+Int\+Rect \&bounds, const std\+::string \&text, const int action\+ID, const sf\+::\+Font \&font)
+\begin{DoxyCompactList}\small\item\em Конструктор. \end{DoxyCompactList}\item 
+\Hypertarget{classButton_afb6a5e927ef20e4017939af3524eed69}\label{classButton_afb6a5e927ef20e4017939af3524eed69} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Button} ()=default
+\begin{DoxyCompactList}\small\item\em Деструктор по умолчанию. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classButton_a18dbe881d4ce14cc10f09f92cfb6608e}{draw}} (sf\+::\+Render\+Window \&render\+Window) const
+\begin{DoxyCompactList}\small\item\em Отрисовывает кнопку на указанном окне. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classButton_a7e0d465b9cd2312e920d6e70b1d50142}{get\+Action\+ID}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает идентификатор действия кнопки. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classButton_af8a588df880659a28c9ba110891c977b}{set\+Hovering}} (const bool is\+Hovering)
+\begin{DoxyCompactList}\small\item\em Обновляет состояние "{}hover"{} (наведение мыши). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classButton_ab2df79103f318c7cb98efc68af67637b}{is\+Position\+Inside}} (const sf\+::\+Vector2i \&mouse\+Position) const
+\begin{DoxyCompactList}\small\item\em Проверяет, находится ли указанная позиция внутри границ кнопки. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classButton_ad1635e4e0093b545da4d250a815b68a7}{set\+Background\+Colour}} (const sf\+::\+Color \&colour)
+\begin{DoxyCompactList}\small\item\em Устанавливает цвет фона кнопки. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classButton_aaef3d2e0270aaa91012436dd1e99f442}{apply\+Colour\+ID}} (const int colour\+ID)
+\begin{DoxyCompactList}\small\item\em Применяет предустановленный цвет по идентификатору. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс, реализующий интерактивную кнопку с текстом. 
+
+Класс \doxylink{classButton}{Button} предоставляет функциональность для создания графической кнопки с возможностью отображения, изменения цвета при наведении и клике. Каждая кнопка имеет уникальный action\+ID, который позволяет различать действия при её нажатии. 
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{classButton_a8d2dde9166cb88dcc728eaf5c5c50e84}\label{classButton_a8d2dde9166cb88dcc728eaf5c5c50e84} 
+\index{Button@{Button}!Button@{Button}}
+\index{Button@{Button}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{Button()}{Button()}}
+{\footnotesize\ttfamily Button\+::\+Button (\begin{DoxyParamCaption}\item[{const sf\+::\+Int\+Rect \&}]{bounds,  }\item[{const std\+::string \&}]{text,  }\item[{const int}]{action\+ID,  }\item[{const sf\+::\+Font \&}]{font }\end{DoxyParamCaption})}
+
+
+
+Конструктор. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em bounds} & Область (прямоугольник), в которой будет находиться кнопка (sf\+::\+Int\+Rect). \\
+\hline
+{\em text} & Текст, отображаемый на кнопке (std\+::string). \\
+\hline
+{\em action\+ID} & Целочисленный идентификатор, используемый для определения действия при клике. \\
+\hline
+{\em font} & Ссылка на шрифт (sf\+::\+Font), используемый для рендеринга текста на кнопке. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Исключения}
+{\em std\+::invalid\+\_\+argument} & Если bounds имеют неположительные размеры или текст пуст. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Методы}
+\Hypertarget{classButton_aaef3d2e0270aaa91012436dd1e99f442}\label{classButton_aaef3d2e0270aaa91012436dd1e99f442} 
+\index{Button@{Button}!applyColourID@{applyColourID}}
+\index{applyColourID@{applyColourID}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{applyColourID()}{applyColourID()}}
+{\footnotesize\ttfamily void Button\+::apply\+Colour\+ID (\begin{DoxyParamCaption}\item[{const int}]{colour\+ID }\end{DoxyParamCaption})}
+
+
+
+Применяет предустановленный цвет по идентификатору. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em colour\+ID} & Идентификатор цвета, определяющий новый фон, если он выше текущего. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+void 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em std\+::out\+\_\+of\+\_\+range} & Если colour\+ID имеет значение меньше 0 или больше 3. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classButton_a18dbe881d4ce14cc10f09f92cfb6608e}\label{classButton_a18dbe881d4ce14cc10f09f92cfb6608e} 
+\index{Button@{Button}!draw@{draw}}
+\index{draw@{draw}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Button\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{render\+Window }\end{DoxyParamCaption}) const}
+
+
+
+Отрисовывает кнопку на указанном окне. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em render\+Window} & Ссылка на объект sf\+::\+Render\+Window, в котором происходит рендеринг. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+void 
+\end{DoxyReturn}
+\Hypertarget{classButton_a7e0d465b9cd2312e920d6e70b1d50142}\label{classButton_a7e0d465b9cd2312e920d6e70b1d50142} 
+\index{Button@{Button}!getActionID@{getActionID}}
+\index{getActionID@{getActionID}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{getActionID()}{getActionID()}}
+{\footnotesize\ttfamily int Button\+::get\+Action\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Возвращает идентификатор действия кнопки. 
+
+\begin{DoxyReturn}{Возвращает}
+int Текущий action\+ID кнопки. 
+\end{DoxyReturn}
+\Hypertarget{classButton_ab2df79103f318c7cb98efc68af67637b}\label{classButton_ab2df79103f318c7cb98efc68af67637b} 
+\index{Button@{Button}!isPositionInside@{isPositionInside}}
+\index{isPositionInside@{isPositionInside}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{isPositionInside()}{isPositionInside()}}
+{\footnotesize\ttfamily bool Button\+::is\+Position\+Inside (\begin{DoxyParamCaption}\item[{const sf\+::\+Vector2i \&}]{mouse\+Position }\end{DoxyParamCaption}) const}
+
+
+
+Проверяет, находится ли указанная позиция внутри границ кнопки. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em mouse\+Position} & Координаты курсора мыши в окне (sf\+::\+Vector2i). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+bool Возвращает true, если точка находится внутри границ кнопки, иначе false. 
+\end{DoxyReturn}
+\Hypertarget{classButton_ad1635e4e0093b545da4d250a815b68a7}\label{classButton_ad1635e4e0093b545da4d250a815b68a7} 
+\index{Button@{Button}!setBackgroundColour@{setBackgroundColour}}
+\index{setBackgroundColour@{setBackgroundColour}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{setBackgroundColour()}{setBackgroundColour()}}
+{\footnotesize\ttfamily void Button\+::set\+Background\+Colour (\begin{DoxyParamCaption}\item[{const sf\+::\+Color \&}]{colour }\end{DoxyParamCaption})}
+
+
+
+Устанавливает цвет фона кнопки. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em colour} & Цвет (sf\+::\+Color), задаваемый для фона кнопки. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+void 
+\end{DoxyReturn}
+\Hypertarget{classButton_af8a588df880659a28c9ba110891c977b}\label{classButton_af8a588df880659a28c9ba110891c977b} 
+\index{Button@{Button}!setHovering@{setHovering}}
+\index{setHovering@{setHovering}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{setHovering()}{setHovering()}}
+{\footnotesize\ttfamily void Button\+::set\+Hovering (\begin{DoxyParamCaption}\item[{const bool}]{is\+Hovering }\end{DoxyParamCaption})}
+
+
+
+Обновляет состояние "{}hover"{} (наведение мыши). 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em is\+Hovering} & Логическое значение\+: true, если курсор находится над кнопкой; false в противном случае. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+void 
+\end{DoxyReturn}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+Wordle\+SFML/\mbox{\hyperlink{Button_8h}{Button.\+h}}\item 
+Wordle\+SFML/Button.\+cpp\end{DoxyCompactItemize}

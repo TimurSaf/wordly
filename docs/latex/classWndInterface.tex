@@ -1,0 +1,270 @@
+\doxysection{Класс Wnd\+Interface}
+\hypertarget{classWndInterface}{}\label{classWndInterface}\index{WndInterface@{WndInterface}}
+
+
+Абстрактный базовый класс для оконных интерфейсов.  
+
+
+
+
+{\ttfamily \#include $<$Wnd\+Interface.\+h$>$}
+
+Граф наследования\+:Wnd\+Interface\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classWndInterface}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWndInterface_a6b5c70af6e357fba833fbe6f1aebf6fb}{Wnd\+Interface}} (sf\+::\+Int\+Rect bounds)
+\begin{DoxyCompactList}\small\item\em Конструктор. \end{DoxyCompactList}\item 
+\Hypertarget{classWndInterface_a761ac33f53af1a2ae4b0989560411c55}\label{classWndInterface_a761ac33f53af1a2ae4b0989560411c55} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Wnd\+Interface} ()=default
+\begin{DoxyCompactList}\small\item\em Виртуальный деструктор. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWndInterface_acc76841cf5afb7d69f6de1067eef2205}{update}} (const float delta\+Time)=0
+\begin{DoxyCompactList}\small\item\em Обновляет состояние интерфейса. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWndInterface_a5de008f7e07364dfe66d86134aac3205}{draw}} (sf\+::\+Render\+Window \&render\+Window) const =0
+\begin{DoxyCompactList}\small\item\em Отрисовывает элементы интерфейса. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWndInterface_ae1e4788acacde35e30289172072142cc}{handle\+Mouse\+Press}} (const sf\+::\+Vector2i \&mouse\+Position, bool is\+Left)
+\begin{DoxyCompactList}\small\item\em Обрабатывает нажатие кнопки мыши. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWndInterface_ae79682f95f4a4f3246146f0f47a4986e}{handle\+Mouse\+Move}} (const sf\+::\+Vector2i \&mouse\+Position)
+\begin{DoxyCompactList}\small\item\em Обрабатывает перемещение мыши. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWndInterface_a8e2d87ce45cd79a70810dc58fc736a06}{handle\+Key\+Input}} (const sf\+::\+Keyboard\+::\+Key key)
+\begin{DoxyCompactList}\small\item\em Обрабатывает нажатие клавиши клавиатуры. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWndInterface_a1e37ec57b10bb1043159c483a571e257}{set\+Enabled}} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Устанавливает доступность интерфейса. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWndInterface_acb8e821db0944866fb774904413ffa04}{is\+Enabled}} () const
+\begin{DoxyCompactList}\small\item\em Проверяет, включён ли интерфейс. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{WndInterface_8h_a0ab26bd2624b188834cc7e71cd81f45f}{Wnd\+Result\+State}} \mbox{\hyperlink{classWndInterface_af856837a63f10858f3fb090ff82f19a0}{get\+Result\+State}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает результат работы интерфейса. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Защищенные данные}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Int\+Rect \mbox{\hyperlink{classWndInterface_acb35b469df0025733fd8faa037b14ffc}{\+\_\+bounds}}
+\item 
+bool \mbox{\hyperlink{classWndInterface_ab96909811c3e8554476150fa5941d964}{\+\_\+is\+Enabled}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Абстрактный базовый класс для оконных интерфейсов. 
+
+Определяет общий контракт для всех интерфейсов\+: обновление логики, отрисовка, обработка ввода мыши и клавиатуры, управление доступностью и получение результата работы интерфейса. 
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{classWndInterface_a6b5c70af6e357fba833fbe6f1aebf6fb}\label{classWndInterface_a6b5c70af6e357fba833fbe6f1aebf6fb} 
+\index{WndInterface@{WndInterface}!WndInterface@{WndInterface}}
+\index{WndInterface@{WndInterface}!WndInterface@{WndInterface}}
+\doxysubsubsection{\texorpdfstring{WndInterface()}{WndInterface()}}
+{\footnotesize\ttfamily Wnd\+Interface\+::\+Wnd\+Interface (\begin{DoxyParamCaption}\item[{sf\+::\+Int\+Rect}]{bounds }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Конструктор. 
+
+Инициализирует интерфейс заданными границами и делает его включённым.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em bounds} & Прямоугольная область, в которой будет отображаться интерфейс (sf\+::\+Int\+Rect). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Методы}
+\Hypertarget{classWndInterface_a5de008f7e07364dfe66d86134aac3205}\label{classWndInterface_a5de008f7e07364dfe66d86134aac3205} 
+\index{WndInterface@{WndInterface}!draw@{draw}}
+\index{draw@{draw}!WndInterface@{WndInterface}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily virtual void Wnd\+Interface\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{render\+Window }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Отрисовывает элементы интерфейса. 
+
+Вызывается каждый кадр для рендеринга всех графических элементов.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em render\+Window} & Ссылка на объект sf\+::\+Render\+Window для отрисовки. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+void 
+\end{DoxyReturn}
+
+
+Замещается в \mbox{\hyperlink{classBeforeGameWnd_ad38c1a25dfb97cadb3f9ccf5b2137d79}{Before\+Game\+Wnd}}, \mbox{\hyperlink{classKeyboardWnd_a94c15a9cfeab05d5e1d7479236990bcd}{Keyboard\+Wnd}}, \mbox{\hyperlink{classPostGameWnd_a1aee53564bb15d3729b0da06d128656f}{Post\+Game\+Wnd}} и \mbox{\hyperlink{classPuzzleWnd_ad7afecb34271785a7ac6fbc6837c0ee6}{Puzzle\+Wnd}}.
+
+\Hypertarget{classWndInterface_af856837a63f10858f3fb090ff82f19a0}\label{classWndInterface_af856837a63f10858f3fb090ff82f19a0} 
+\index{WndInterface@{WndInterface}!getResultState@{getResultState}}
+\index{getResultState@{getResultState}!WndInterface@{WndInterface}}
+\doxysubsubsection{\texorpdfstring{getResultState()}{getResultState()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{WndInterface_8h_a0ab26bd2624b188834cc7e71cd81f45f}{Wnd\+Result\+State}} Wnd\+Interface\+::get\+Result\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Возвращает результат работы интерфейса. 
+
+По умолчанию возвращает Nothing\+State. Может быть переопределён для сигнализации о завершении, необходимости перезапуска и т.\+д.
+
+\begin{DoxyReturn}{Возвращает}
+Wnd\+Result\+State Текущее состояние интерфейса. 
+\end{DoxyReturn}
+
+
+Переопределяется в \mbox{\hyperlink{classBeforeGameWnd_aded510748437cba7faf5ddd8f64c5ac3}{Before\+Game\+Wnd}}, \mbox{\hyperlink{classPostGameWnd_afb76384f1ff123dd3d002154139524f5}{Post\+Game\+Wnd}} и \mbox{\hyperlink{classPuzzleWnd_a5c450fdb37d54fbb07a76d450dec2bdd}{Puzzle\+Wnd}}.
+
+\Hypertarget{classWndInterface_a8e2d87ce45cd79a70810dc58fc736a06}\label{classWndInterface_a8e2d87ce45cd79a70810dc58fc736a06} 
+\index{WndInterface@{WndInterface}!handleKeyInput@{handleKeyInput}}
+\index{handleKeyInput@{handleKeyInput}!WndInterface@{WndInterface}}
+\doxysubsubsection{\texorpdfstring{handleKeyInput()}{handleKeyInput()}}
+{\footnotesize\ttfamily virtual void Wnd\+Interface\+::handle\+Key\+Input (\begin{DoxyParamCaption}\item[{const sf\+::\+Keyboard\+::\+Key}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Обрабатывает нажатие клавиши клавиатуры. 
+
+По умолчанию не делает ничего, но может быть переопределён.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em key} & Код нажатой клавиши (sf\+::\+Keyboard\+::\+Key). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+void 
+\end{DoxyReturn}
+
+
+Переопределяется в \mbox{\hyperlink{classPuzzleWnd_a13e13d68a7087f79f486ed125550640d}{Puzzle\+Wnd}}.
+
+\Hypertarget{classWndInterface_ae79682f95f4a4f3246146f0f47a4986e}\label{classWndInterface_ae79682f95f4a4f3246146f0f47a4986e} 
+\index{WndInterface@{WndInterface}!handleMouseMove@{handleMouseMove}}
+\index{handleMouseMove@{handleMouseMove}!WndInterface@{WndInterface}}
+\doxysubsubsection{\texorpdfstring{handleMouseMove()}{handleMouseMove()}}
+{\footnotesize\ttfamily virtual void Wnd\+Interface\+::handle\+Mouse\+Move (\begin{DoxyParamCaption}\item[{const sf\+::\+Vector2i \&}]{mouse\+Position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Обрабатывает перемещение мыши. 
+
+По умолчанию не делает ничего, но может быть переопределён.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em mouse\+Position} & Координаты курсора мыши при движении (sf\+::\+Vector2i). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+void 
+\end{DoxyReturn}
+
+
+Переопределяется в \mbox{\hyperlink{classBeforeGameWnd_a30ed7ff61c4b901c845d91690e3fc790}{Before\+Game\+Wnd}}, \mbox{\hyperlink{classKeyboardWnd_a859da2b5ae718e1d06f60b368febad2c}{Keyboard\+Wnd}}, \mbox{\hyperlink{classPostGameWnd_a9552558f217d878f61ecba75cf38d062}{Post\+Game\+Wnd}} и \mbox{\hyperlink{classPuzzleWnd_a255d180e39795eaec5ead9b9c565baec}{Puzzle\+Wnd}}.
+
+\Hypertarget{classWndInterface_ae1e4788acacde35e30289172072142cc}\label{classWndInterface_ae1e4788acacde35e30289172072142cc} 
+\index{WndInterface@{WndInterface}!handleMousePress@{handleMousePress}}
+\index{handleMousePress@{handleMousePress}!WndInterface@{WndInterface}}
+\doxysubsubsection{\texorpdfstring{handleMousePress()}{handleMousePress()}}
+{\footnotesize\ttfamily virtual void Wnd\+Interface\+::handle\+Mouse\+Press (\begin{DoxyParamCaption}\item[{const sf\+::\+Vector2i \&}]{mouse\+Position,  }\item[{bool}]{is\+Left }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Обрабатывает нажатие кнопки мыши. 
+
+По умолчанию не делает ничего, но может быть переопределён.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em mouse\+Position} & Координаты курсора мыши во время нажатия (sf\+::\+Vector2i). \\
+\hline
+{\em is\+Left} & Флаг\+: true, если нажата левая кнопка мыши; false — правая. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+void 
+\end{DoxyReturn}
+
+
+Переопределяется в \mbox{\hyperlink{classBeforeGameWnd_acbb0174c382fb1ae78a51ae6102f2fe5}{Before\+Game\+Wnd}}, \mbox{\hyperlink{classKeyboardWnd_ae703e573f92240ebbe35337f3fcd194a}{Keyboard\+Wnd}}, \mbox{\hyperlink{classPostGameWnd_a4175b3ab90aa8313ede23a9a466c7a97}{Post\+Game\+Wnd}} и \mbox{\hyperlink{classPuzzleWnd_a252319a90ae6edb5e7b2c5ac56b7789e}{Puzzle\+Wnd}}.
+
+\Hypertarget{classWndInterface_acb8e821db0944866fb774904413ffa04}\label{classWndInterface_acb8e821db0944866fb774904413ffa04} 
+\index{WndInterface@{WndInterface}!isEnabled@{isEnabled}}
+\index{isEnabled@{isEnabled}!WndInterface@{WndInterface}}
+\doxysubsubsection{\texorpdfstring{isEnabled()}{isEnabled()}}
+{\footnotesize\ttfamily bool Wnd\+Interface\+::is\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Проверяет, включён ли интерфейс. 
+
+\begin{DoxyReturn}{Возвращает}
+bool True, если интерфейс включён и доступен; иначе false. 
+\end{DoxyReturn}
+\Hypertarget{classWndInterface_a1e37ec57b10bb1043159c483a571e257}\label{classWndInterface_a1e37ec57b10bb1043159c483a571e257} 
+\index{WndInterface@{WndInterface}!setEnabled@{setEnabled}}
+\index{setEnabled@{setEnabled}!WndInterface@{WndInterface}}
+\doxysubsubsection{\texorpdfstring{setEnabled()}{setEnabled()}}
+{\footnotesize\ttfamily void Wnd\+Interface\+::set\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Устанавливает доступность интерфейса. 
+
+Если интерфейс отключён, его методы update/draw можно пропускать.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em enabled} & Новое состояние\+: true — включить интерфейс; false — отключить. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+void 
+\end{DoxyReturn}
+\Hypertarget{classWndInterface_acc76841cf5afb7d69f6de1067eef2205}\label{classWndInterface_acc76841cf5afb7d69f6de1067eef2205} 
+\index{WndInterface@{WndInterface}!update@{update}}
+\index{update@{update}!WndInterface@{WndInterface}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily virtual void Wnd\+Interface\+::update (\begin{DoxyParamCaption}\item[{const float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Обновляет состояние интерфейса. 
+
+Вызывается в каждом кадре игрового цикла для обновления логики.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em delta\+Time} & Время (в секундах), прошедшее с предыдущего кадра. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+void 
+\end{DoxyReturn}
+
+
+Замещается в \mbox{\hyperlink{classBeforeGameWnd_a13f1ba3788017d91d436c4038de76583}{Before\+Game\+Wnd}}, \mbox{\hyperlink{classKeyboardWnd_a5c574e59f4d6303a52b4380c95ec9037}{Keyboard\+Wnd}}, \mbox{\hyperlink{classPostGameWnd_a93391a529197a4099674acc213bbeeab}{Post\+Game\+Wnd}} и \mbox{\hyperlink{classPuzzleWnd_a60eaa7c671f1ec2326a6082fe5c66fce}{Puzzle\+Wnd}}.
+
+
+
+\doxysubsection{Данные класса}
+\Hypertarget{classWndInterface_acb35b469df0025733fd8faa037b14ffc}\label{classWndInterface_acb35b469df0025733fd8faa037b14ffc} 
+\index{WndInterface@{WndInterface}!\_bounds@{\_bounds}}
+\index{\_bounds@{\_bounds}!WndInterface@{WndInterface}}
+\doxysubsubsection{\texorpdfstring{\_bounds}{\_bounds}}
+{\footnotesize\ttfamily sf\+::\+Int\+Rect Wnd\+Interface\+::\+\_\+bounds\hspace{0.3cm}{\ttfamily [protected]}}
+
+Границы интерфейса для позиционирования и проверки попаданий. \Hypertarget{classWndInterface_ab96909811c3e8554476150fa5941d964}\label{classWndInterface_ab96909811c3e8554476150fa5941d964} 
+\index{WndInterface@{WndInterface}!\_isEnabled@{\_isEnabled}}
+\index{\_isEnabled@{\_isEnabled}!WndInterface@{WndInterface}}
+\doxysubsubsection{\texorpdfstring{\_isEnabled}{\_isEnabled}}
+{\footnotesize\ttfamily bool Wnd\+Interface\+::\+\_\+is\+Enabled\hspace{0.3cm}{\ttfamily [protected]}}
+
+Флаг состояния\+: true, если интерфейс включён; false — если отключён. 
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Wordle\+SFML/\mbox{\hyperlink{WndInterface_8h}{Wnd\+Interface.\+h}}\end{DoxyCompactItemize}

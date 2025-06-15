@@ -1,0 +1,193 @@
+\doxysection{Класс Game}
+\hypertarget{classGame}{}\label{classGame}\index{Game@{Game}}
+
+
+Основной класс, управляющий логикой и интерфейсами игры.  
+
+
+
+
+{\ttfamily \#include $<$Game.\+h$>$}
+
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGame_a3f4526e5d1d018f0a47226e8bada0b99}{Game}} (const sf\+::\+Int\+Rect \&game\+Bounds, const sf\+::\+Font \&font)
+\begin{DoxyCompactList}\small\item\em Конструктор. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classGame_ae3d112ca6e0e55150d2fdbc704474530}{\texorpdfstring{$\sim$}{\string~}\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Деструктор. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGame_ac68764e711349196e5d3280b2297d268}{update}} (const float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Обновляет текущее состояние активного окна. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGame_af7fa3ba78a92c287630e208351b385e8}{draw}} (sf\+::\+Render\+Window \&render\+Window) const
+\begin{DoxyCompactList}\small\item\em Рисует текущее активное окно. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGame_af88ff5082328cdda3522f37d414f0b7c}{handle\+Mouse\+Press}} (const sf\+::\+Vector2i \&mouse\+Position, bool is\+Left)
+\begin{DoxyCompactList}\small\item\em Обрабатывает нажатие кнопки мыши. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGame_a89b29a06a5688030adb42145f3e29045}{handle\+Mouse\+Move}} (const sf\+::\+Vector2i \&mouse\+Position)
+\begin{DoxyCompactList}\small\item\em Обрабатывает движение мыши. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGame_a2f54175ffc21dabc504e30981d23fced}{handle\+Key\+Input}} (const sf\+::\+Keyboard\+::\+Key key)
+\begin{DoxyCompactList}\small\item\em Обрабатывает нажатие клавиши клавиатуры. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classGame_a36b4d1d19119767546de5ac8bbe46d46}{get\+Game\+Close\+Requested}} () const
+\begin{DoxyCompactList}\small\item\em Проверяет, был ли запрос на завершение игры. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Основной класс, управляющий логикой и интерфейсами игры. 
+
+Класс \doxylink{classGame}{Game} инициализирует игровые окна (интерфейсы), обрабатывает события от мыши и клавиатуры, обновляет текущее состояние активного интерфейса и отслеживает запрос на завершение игры. 
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{classGame_a3f4526e5d1d018f0a47226e8bada0b99}\label{classGame_a3f4526e5d1d018f0a47226e8bada0b99} 
+\index{Game@{Game}!Game@{Game}}
+\index{Game@{Game}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{Game()}{Game()}}
+{\footnotesize\ttfamily Game\+::\+Game (\begin{DoxyParamCaption}\item[{const sf\+::\+Int\+Rect \&}]{game\+Bounds,  }\item[{const sf\+::\+Font \&}]{font }\end{DoxyParamCaption})}
+
+
+
+Конструктор. 
+
+Инициализирует игру, создаёт начальный интерфейс (Lobby) и настраивает генератор случайных чисел.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em game\+Bounds} & Прямоугольная область, в которой будет происходить игра (sf\+::\+Int\+Rect). \\
+\hline
+{\em font} & Ссылка на шрифт (sf\+::\+Font) для всех текстовых элементов. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classGame_ae3d112ca6e0e55150d2fdbc704474530}\label{classGame_ae3d112ca6e0e55150d2fdbc704474530} 
+\index{Game@{Game}!````~Game@{\texorpdfstring{$\sim$}{\string~}Game}}
+\index{````~Game@{\texorpdfstring{$\sim$}{\string~}Game}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Game()}{\string~Game()}}
+{\footnotesize\ttfamily Game\+::\texorpdfstring{$\sim$}{\string~}\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Деструктор. 
+
+Освобождает ресурсы, связанные с активными интерфейсами. 
+
+\doxysubsection{Методы}
+\Hypertarget{classGame_af7fa3ba78a92c287630e208351b385e8}\label{classGame_af7fa3ba78a92c287630e208351b385e8} 
+\index{Game@{Game}!draw@{draw}}
+\index{draw@{draw}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Game\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{render\+Window }\end{DoxyParamCaption}) const}
+
+
+
+Рисует текущее активное окно. 
+
+Вызывается каждый кадр для отрисовки элементов активного интерфейса.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em render\+Window} & Ссылка на объект sf\+::\+Render\+Window для отрисовки. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+void 
+\end{DoxyReturn}
+\Hypertarget{classGame_a36b4d1d19119767546de5ac8bbe46d46}\label{classGame_a36b4d1d19119767546de5ac8bbe46d46} 
+\index{Game@{Game}!getGameCloseRequested@{getGameCloseRequested}}
+\index{getGameCloseRequested@{getGameCloseRequested}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{getGameCloseRequested()}{getGameCloseRequested()}}
+{\footnotesize\ttfamily bool Game\+::get\+Game\+Close\+Requested (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Проверяет, был ли запрос на завершение игры. 
+
+Возвращает true, если активный интерфейс или логика игры поставила флаг на выход из основного цикла.
+
+\begin{DoxyReturn}{Возвращает}
+bool True, если игра должна завершиться; false в противном случае. 
+\end{DoxyReturn}
+\Hypertarget{classGame_a2f54175ffc21dabc504e30981d23fced}\label{classGame_a2f54175ffc21dabc504e30981d23fced} 
+\index{Game@{Game}!handleKeyInput@{handleKeyInput}}
+\index{handleKeyInput@{handleKeyInput}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{handleKeyInput()}{handleKeyInput()}}
+{\footnotesize\ttfamily void Game\+::handle\+Key\+Input (\begin{DoxyParamCaption}\item[{const sf\+::\+Keyboard\+::\+Key}]{key }\end{DoxyParamCaption})}
+
+
+
+Обрабатывает нажатие клавиши клавиатуры. 
+
+Перенаправляет событие нажатия клавиши в активный интерфейс (окно или оверлей).
+
+
+\begin{DoxyParams}{Аргументы}
+{\em key} & Код нажатой клавиши (sf\+::\+Keyboard\+::\+Key). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+void 
+\end{DoxyReturn}
+\Hypertarget{classGame_a89b29a06a5688030adb42145f3e29045}\label{classGame_a89b29a06a5688030adb42145f3e29045} 
+\index{Game@{Game}!handleMouseMove@{handleMouseMove}}
+\index{handleMouseMove@{handleMouseMove}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{handleMouseMove()}{handleMouseMove()}}
+{\footnotesize\ttfamily void Game\+::handle\+Mouse\+Move (\begin{DoxyParamCaption}\item[{const sf\+::\+Vector2i \&}]{mouse\+Position }\end{DoxyParamCaption})}
+
+
+
+Обрабатывает движение мыши. 
+
+Перенаправляет событие перемещения курсора в активный интерфейс (окно или оверлей).
+
+
+\begin{DoxyParams}{Аргументы}
+{\em mouse\+Position} & Координаты курсора мыши в окне (sf\+::\+Vector2i). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+void 
+\end{DoxyReturn}
+\Hypertarget{classGame_af88ff5082328cdda3522f37d414f0b7c}\label{classGame_af88ff5082328cdda3522f37d414f0b7c} 
+\index{Game@{Game}!handleMousePress@{handleMousePress}}
+\index{handleMousePress@{handleMousePress}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{handleMousePress()}{handleMousePress()}}
+{\footnotesize\ttfamily void Game\+::handle\+Mouse\+Press (\begin{DoxyParamCaption}\item[{const sf\+::\+Vector2i \&}]{mouse\+Position,  }\item[{bool}]{is\+Left }\end{DoxyParamCaption})}
+
+
+
+Обрабатывает нажатие кнопки мыши. 
+
+Перенаправляет событие клика в активный интерфейс (окно или оверлей).
+
+
+\begin{DoxyParams}{Аргументы}
+{\em mouse\+Position} & Координаты курсора мыши в окне (sf\+::\+Vector2i). \\
+\hline
+{\em is\+Left} & Флаг, указывающий, была ли нажата левая кнопка мыши (true) или нет (false). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+void 
+\end{DoxyReturn}
+\Hypertarget{classGame_ac68764e711349196e5d3280b2297d268}\label{classGame_ac68764e711349196e5d3280b2297d268} 
+\index{Game@{Game}!update@{update}}
+\index{update@{update}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Game\+::update (\begin{DoxyParamCaption}\item[{const float}]{delta\+Time }\end{DoxyParamCaption})}
+
+
+
+Обновляет текущее состояние активного окна. 
+
+Вызывается каждый кадр игрового цикла для обновления логики активного интерфейса.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em delta\+Time} & Время (в секундах), прошедшее с предыдущего кадра. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+void 
+\end{DoxyReturn}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+Wordle\+SFML/\mbox{\hyperlink{Game_8h}{Game.\+h}}\item 
+Wordle\+SFML/Game.\+cpp\end{DoxyCompactItemize}

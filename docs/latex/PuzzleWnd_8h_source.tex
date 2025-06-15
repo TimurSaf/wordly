@@ -1,0 +1,52 @@
+\doxysection{Puzzle\+Wnd.\+h}
+\hypertarget{PuzzleWnd_8h_source}{}\label{PuzzleWnd_8h_source}\index{WordleSFML/PuzzleWnd.h@{WordleSFML/PuzzleWnd.h}}
+\mbox{\hyperlink{PuzzleWnd_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PUZZLEWND\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PUZZLEWND\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{WndInterface_8h}{WndInterface.h}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{KeyboardWnd_8h}{KeyboardWnd.h}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}GuessGrid.h"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPuzzleWnd}{PuzzleWnd}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classWndInterface}{WndInterface}}}
+\DoxyCodeLine{00031\ \{}
+\DoxyCodeLine{00032\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{classPuzzleWnd}{PuzzleWnd}}(\textcolor{keyword}{const}\ sf::IntRect\&\ bounds,}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ sf::Font\&\ font,}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ solution);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classPuzzleWnd_a369ad4478474724aeac3ae27321db8d0}{\string~PuzzleWnd}}();}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPuzzleWnd_a60eaa7c671f1ec2326a6082fe5c66fce}{update}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ deltaTime)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPuzzleWnd_ad7afecb34271785a7ac6fbc6837c0ee6}{draw}}(sf::RenderWindow\&\ renderWindow)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPuzzleWnd_a252319a90ae6edb5e7b2c5ac56b7789e}{handleMousePress}}(\textcolor{keyword}{const}\ sf::Vector2i\&\ mousePosition,\ \textcolor{keywordtype}{bool}\ isLeft)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPuzzleWnd_a255d180e39795eaec5ead9b9c565baec}{handleMouseMove}}(\textcolor{keyword}{const}\ sf::Vector2i\&\ mousePosition)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPuzzleWnd_a13e13d68a7087f79f486ed125550640d}{handleKeyInput}}(\textcolor{keyword}{const}\ sf::Keyboard::Key\ keyCode)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keyword}{const}\ GuessGrid\&\ \mbox{\hyperlink{classPuzzleWnd_af8858d8e2d45c0feca835a158c2ff736}{getGuessGrid}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00126\ \ \ \ \ \mbox{\hyperlink{WndInterface_8h_a0ab26bd2624b188834cc7e71cd81f45f}{WndResultState}}\ \mbox{\hyperlink{classPuzzleWnd_a5c450fdb37d54fbb07a76d450dec2bdd}{getResultState}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keyword}{const}\ sf::Font\&\ \_font;}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00137\ \ \ \ \ sf::Text\ \_gameTitle;}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00142\ \ \ \ \ \mbox{\hyperlink{classKeyboardWnd}{KeyboardWnd}}\ \_keyboard;}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00147\ \ \ \ \ GuessGrid\ \_guessGrid;}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00152\ \ \ \ \ \mbox{\hyperlink{WndInterface_8h_a0ab26bd2624b188834cc7e71cd81f45f}{WndResultState}}\ \_currentState;}
+\DoxyCodeLine{00153\ \};}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PUZZLEWND\_H}}
+
+\end{DoxyCode}

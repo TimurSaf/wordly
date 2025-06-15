@@ -1,0 +1,47 @@
+\doxysection{Wnd\+Interface.\+h}
+\hypertarget{WndInterface_8h_source}{}\label{WndInterface_8h_source}\index{WordleSFML/WndInterface.h@{WordleSFML/WndInterface.h}}
+\mbox{\hyperlink{WndInterface_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ WNDINTERFACE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ WNDINTERFACE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{WndInterface_8h_a0ab26bd2624b188834cc7e71cd81f45f}{WndResultState}}\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{WndInterface_8h_a0ab26bd2624b188834cc7e71cd81f45fac5a18bdcc1252d65aae0c9303f8ac88b}{NothingState}},\ }
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{WndInterface_8h_a0ab26bd2624b188834cc7e71cd81f45fab68c130eb6caa378c2c394e9054bbb63}{Finished}},\ \ \ \ \ }
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{WndInterface_8h_a0ab26bd2624b188834cc7e71cd81f45fa3e85c2379b8c2d5a0a32e0eb7cec0c7d}{Restart}},\ \ \ \ \ \ }
+\DoxyCodeLine{00030\ \};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classWndInterface}{WndInterface}}}
+\DoxyCodeLine{00041\ \{}
+\DoxyCodeLine{00042\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{classWndInterface_a6b5c70af6e357fba833fbe6f1aebf6fb}{WndInterface}}(sf::IntRect\ bounds)}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classWndInterface_acb35b469df0025733fd8faa037b14ffc}{\_bounds}}(bounds),\ \mbox{\hyperlink{classWndInterface_ab96909811c3e8554476150fa5941d964}{\_isEnabled}}(true)\ \{\}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classWndInterface_a761ac33f53af1a2ae4b0989560411c55}{\string~WndInterface}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classWndInterface_acc76841cf5afb7d69f6de1067eef2205}{update}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ deltaTime)\ =\ 0;}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classWndInterface_a5de008f7e07364dfe66d86134aac3205}{draw}}(sf::RenderWindow\&\ renderWindow)\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classWndInterface_ae1e4788acacde35e30289172072142cc}{handleMousePress}}(\textcolor{keyword}{const}\ sf::Vector2i\&\ mousePosition,\ \textcolor{keywordtype}{bool}\ isLeft)\ \{\};}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classWndInterface_ae79682f95f4a4f3246146f0f47a4986e}{handleMouseMove}}(\textcolor{keyword}{const}\ sf::Vector2i\&\ mousePosition)\ \{\};}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classWndInterface_a8e2d87ce45cd79a70810dc58fc736a06}{handleKeyInput}}(\textcolor{keyword}{const}\ sf::Keyboard::Key\ key)\ \{\};}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classWndInterface_a1e37ec57b10bb1043159c483a571e257}{setEnabled}}(\textcolor{keywordtype}{bool}\ enabled)\ \{\ \mbox{\hyperlink{classWndInterface_ab96909811c3e8554476150fa5941d964}{\_isEnabled}}\ =\ enabled;\ \};}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classWndInterface_acb8e821db0944866fb774904413ffa04}{isEnabled}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classWndInterface_ab96909811c3e8554476150fa5941d964}{\_isEnabled}};\ \}}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{WndInterface_8h_a0ab26bd2624b188834cc7e71cd81f45f}{WndResultState}}\ \mbox{\hyperlink{classWndInterface_af856837a63f10858f3fb090ff82f19a0}{getResultState}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{WndInterface_8h_a0ab26bd2624b188834cc7e71cd81f45fac5a18bdcc1252d65aae0c9303f8ac88b}{WndResultState::NothingState}};\ \};}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00137\ \ \ \ \ sf::IntRect\ \mbox{\hyperlink{classWndInterface_acb35b469df0025733fd8faa037b14ffc}{\_bounds}};\ \ \ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \mbox{\hyperlink{classWndInterface_ab96909811c3e8554476150fa5941d964}{\_isEnabled}};}
+\DoxyCodeLine{00139\ \};}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ WNDINTERFACE\_H}}
+
+\end{DoxyCode}

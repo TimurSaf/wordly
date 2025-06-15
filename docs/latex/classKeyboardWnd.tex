@@ -1,0 +1,234 @@
+\doxysection{Класс Keyboard\+Wnd}
+\hypertarget{classKeyboardWnd}{}\label{classKeyboardWnd}\index{KeyboardWnd@{KeyboardWnd}}
+
+
+Класс виртуальной клавиатуры для ввода символов.  
+
+
+
+
+{\ttfamily \#include $<$Keyboard\+Wnd.\+h$>$}
+
+Граф наследования\+:Keyboard\+Wnd\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classKeyboardWnd}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classKeyboardWnd_a34e6c7aaeb43b1ba956bc5e9b0cca611}{Keyboard\+Wnd}} (const sf\+::\+Int\+Rect \&bounds, const sf\+::\+Font \&font)
+\begin{DoxyCompactList}\small\item\em Конструктор класса \doxylink{classKeyboardWnd}{Keyboard\+Wnd}. \end{DoxyCompactList}\item 
+\Hypertarget{classKeyboardWnd_ac48faea353c8ed2c429f69fef4f43396}\label{classKeyboardWnd_ac48faea353c8ed2c429f69fef4f43396} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Keyboard\+Wnd} ()=default
+\begin{DoxyCompactList}\small\item\em Деструктор по умолчанию. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classKeyboardWnd_a5c574e59f4d6303a52b4380c95ec9037}{update}} (const float delta\+Time) override
+\begin{DoxyCompactList}\small\item\em Обновление логики виртуальной клавиатуры. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classKeyboardWnd_a94c15a9cfeab05d5e1d7479236990bcd}{draw}} (sf\+::\+Render\+Window \&render\+Window) const override
+\begin{DoxyCompactList}\small\item\em Отрисовывает все кнопки виртуальной клавиатуры. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classKeyboardWnd_ae703e573f92240ebbe35337f3fcd194a}{handle\+Mouse\+Press}} (const sf\+::\+Vector2i \&mouse\+Position, bool is\+Left) override
+\begin{DoxyCompactList}\small\item\em Обрабатывает нажатие мыши по кнопкам клавиатуры. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classKeyboardWnd_a859da2b5ae718e1d06f60b368febad2c}{handle\+Mouse\+Move}} (const sf\+::\+Vector2i \&mouse\+Position) override
+\begin{DoxyCompactList}\small\item\em Обрабатывает перемещение мыши по области клавиатуры. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classKeyboardWnd_a389a4cf0e23846c12758f9d6c7d6e7c3}{get\+Action\+IDReset}} ()
+\begin{DoxyCompactList}\small\item\em Возвращает идентификатор нажатой кнопки и сбрасывает его на -\/1. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKeyboardWnd_a912554346f06167779ae2b41b3535661}{apply\+Rules}} (const std\+::vector$<$ std\+::string $>$ \&rules)
+\begin{DoxyCompactList}\small\item\em Применяет правила окрашивания для клавиш. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Открытые члены унаследованные от \mbox{\hyperlink{classWndInterface}{Wnd\+Interface}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWndInterface_a6b5c70af6e357fba833fbe6f1aebf6fb}{Wnd\+Interface}} (sf\+::\+Int\+Rect bounds)
+\begin{DoxyCompactList}\small\item\em Конструктор. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Wnd\+Interface} ()=default
+\begin{DoxyCompactList}\small\item\em Виртуальный деструктор. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWndInterface_a8e2d87ce45cd79a70810dc58fc736a06}{handle\+Key\+Input}} (const sf\+::\+Keyboard\+::\+Key key)
+\begin{DoxyCompactList}\small\item\em Обрабатывает нажатие клавиши клавиатуры. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWndInterface_a1e37ec57b10bb1043159c483a571e257}{set\+Enabled}} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Устанавливает доступность интерфейса. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWndInterface_acb8e821db0944866fb774904413ffa04}{is\+Enabled}} () const
+\begin{DoxyCompactList}\small\item\em Проверяет, включён ли интерфейс. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{WndInterface_8h_a0ab26bd2624b188834cc7e71cd81f45f}{Wnd\+Result\+State}} \mbox{\hyperlink{classWndInterface_af856837a63f10858f3fb090ff82f19a0}{get\+Result\+State}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает результат работы интерфейса. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Дополнительные унаследованные члены}
+\doxysubsection*{Защищенные данные унаследованные от \mbox{\hyperlink{classWndInterface}{Wnd\+Interface}}}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Int\+Rect \mbox{\hyperlink{classWndInterface_acb35b469df0025733fd8faa037b14ffc}{\+\_\+bounds}}
+\item 
+bool \mbox{\hyperlink{classWndInterface_ab96909811c3e8554476150fa5941d964}{\+\_\+is\+Enabled}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс виртуальной клавиатуры для ввода символов. 
+
+Класс \doxylink{classKeyboardWnd}{Keyboard\+Wnd} наследуется от \doxylink{classWndInterface}{Wnd\+Interface} и реализует окно с набором кнопок, расположенных по форме клавиатуры внизу экрана. Позволяет обрабатывать клики и наведение мыши по кнопкам, возвращает идентификатор нажатой клавиши и окрашивает кнопки по правилам. 
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{classKeyboardWnd_a34e6c7aaeb43b1ba956bc5e9b0cca611}\label{classKeyboardWnd_a34e6c7aaeb43b1ba956bc5e9b0cca611} 
+\index{KeyboardWnd@{KeyboardWnd}!KeyboardWnd@{KeyboardWnd}}
+\index{KeyboardWnd@{KeyboardWnd}!KeyboardWnd@{KeyboardWnd}}
+\doxysubsubsection{\texorpdfstring{KeyboardWnd()}{KeyboardWnd()}}
+{\footnotesize\ttfamily Keyboard\+Wnd\+::\+Keyboard\+Wnd (\begin{DoxyParamCaption}\item[{const sf\+::\+Int\+Rect \&}]{bounds,  }\item[{const sf\+::\+Font \&}]{font }\end{DoxyParamCaption})}
+
+
+
+Конструктор класса \doxylink{classKeyboardWnd}{Keyboard\+Wnd}. 
+
+Инициализирует все кнопки виртуальной клавиатуры и располагает их по центру внизу в пределах переданных границ.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em bounds} & Область, в которой рисуется окно клавиатуры (sf\+::\+Int\+Rect). \\
+\hline
+{\em font} & Шрифт для отображения текста на кнопках (sf\+::\+Font). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Методы}
+\Hypertarget{classKeyboardWnd_a912554346f06167779ae2b41b3535661}\label{classKeyboardWnd_a912554346f06167779ae2b41b3535661} 
+\index{KeyboardWnd@{KeyboardWnd}!applyRules@{applyRules}}
+\index{applyRules@{applyRules}!KeyboardWnd@{KeyboardWnd}}
+\doxysubsubsection{\texorpdfstring{applyRules()}{applyRules()}}
+{\footnotesize\ttfamily void Keyboard\+Wnd\+::apply\+Rules (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{rules }\end{DoxyParamCaption})}
+
+
+
+Применяет правила окрашивания для клавиш. 
+
+По переданному вектору строк-\/правил изменяет цвет фона каждой кнопки в соответствии с заданными правилами (например, для игры-\/головоломки).
+
+
+\begin{DoxyParams}{Аргументы}
+{\em rules} & Вектор строковых правил, определяющих цветовые состояния клавиш. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+void 
+\end{DoxyReturn}
+\Hypertarget{classKeyboardWnd_a94c15a9cfeab05d5e1d7479236990bcd}\label{classKeyboardWnd_a94c15a9cfeab05d5e1d7479236990bcd} 
+\index{KeyboardWnd@{KeyboardWnd}!draw@{draw}}
+\index{draw@{draw}!KeyboardWnd@{KeyboardWnd}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Keyboard\+Wnd\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{render\+Window }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Отрисовывает все кнопки виртуальной клавиатуры. 
+
+Проходит по всем элементам \+\_\+buttons и вызывает у них метод draw.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em render\+Window} & Ссылка на объект sf\+::\+Render\+Window для рендеринга. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+void 
+\end{DoxyReturn}
+
+
+Замещает \mbox{\hyperlink{classWndInterface_a5de008f7e07364dfe66d86134aac3205}{Wnd\+Interface}}.
+
+\Hypertarget{classKeyboardWnd_a389a4cf0e23846c12758f9d6c7d6e7c3}\label{classKeyboardWnd_a389a4cf0e23846c12758f9d6c7d6e7c3} 
+\index{KeyboardWnd@{KeyboardWnd}!getActionIDReset@{getActionIDReset}}
+\index{getActionIDReset@{getActionIDReset}!KeyboardWnd@{KeyboardWnd}}
+\doxysubsubsection{\texorpdfstring{getActionIDReset()}{getActionIDReset()}}
+{\footnotesize\ttfamily int Keyboard\+Wnd\+::get\+Action\+IDReset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Возвращает идентификатор нажатой кнопки и сбрасывает его на -\/1. 
+
+Позволяет получить action\+ID последнего нажатия, после чего оно сбрасывается, чтобы не обрабатывалось повторно.
+
+\begin{DoxyReturn}{Возвращает}
+int Идентификатор действия (action\+ID). 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em std\+::logic\+\_\+error} & Если action\+ID не был установлен (т.\+е. -\/1). \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classKeyboardWnd_a859da2b5ae718e1d06f60b368febad2c}\label{classKeyboardWnd_a859da2b5ae718e1d06f60b368febad2c} 
+\index{KeyboardWnd@{KeyboardWnd}!handleMouseMove@{handleMouseMove}}
+\index{handleMouseMove@{handleMouseMove}!KeyboardWnd@{KeyboardWnd}}
+\doxysubsubsection{\texorpdfstring{handleMouseMove()}{handleMouseMove()}}
+{\footnotesize\ttfamily void Keyboard\+Wnd\+::handle\+Mouse\+Move (\begin{DoxyParamCaption}\item[{const sf\+::\+Vector2i \&}]{mouse\+Position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Обрабатывает перемещение мыши по области клавиатуры. 
+
+При движении курсора определяет, находится ли он над одной из кнопок, и устанавливает соответствующий эффект наведения (hover).
+
+
+\begin{DoxyParams}{Аргументы}
+{\em mouse\+Position} & Координаты курсора мыши при перемещении (sf\+::\+Vector2i). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+void 
+\end{DoxyReturn}
+
+
+Переопределяет метод предка \mbox{\hyperlink{classWndInterface_ae79682f95f4a4f3246146f0f47a4986e}{Wnd\+Interface}}.
+
+\Hypertarget{classKeyboardWnd_ae703e573f92240ebbe35337f3fcd194a}\label{classKeyboardWnd_ae703e573f92240ebbe35337f3fcd194a} 
+\index{KeyboardWnd@{KeyboardWnd}!handleMousePress@{handleMousePress}}
+\index{handleMousePress@{handleMousePress}!KeyboardWnd@{KeyboardWnd}}
+\doxysubsubsection{\texorpdfstring{handleMousePress()}{handleMousePress()}}
+{\footnotesize\ttfamily void Keyboard\+Wnd\+::handle\+Mouse\+Press (\begin{DoxyParamCaption}\item[{const sf\+::\+Vector2i \&}]{mouse\+Position,  }\item[{bool}]{is\+Left }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Обрабатывает нажатие мыши по кнопкам клавиатуры. 
+
+При клике левой кнопкой мыши проверяет, попадает ли курсор в область одной из кнопок. Если да, сохраняет action\+ID этой кнопки и сбрасывает остальные.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em mouse\+Position} & Координаты курсора мыши во время клика (sf\+::\+Vector2i). \\
+\hline
+{\em is\+Left} & Логический флаг\+: true, если нажата левая кнопка мыши. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+void 
+\end{DoxyReturn}
+
+
+Переопределяет метод предка \mbox{\hyperlink{classWndInterface_ae1e4788acacde35e30289172072142cc}{Wnd\+Interface}}.
+
+\Hypertarget{classKeyboardWnd_a5c574e59f4d6303a52b4380c95ec9037}\label{classKeyboardWnd_a5c574e59f4d6303a52b4380c95ec9037} 
+\index{KeyboardWnd@{KeyboardWnd}!update@{update}}
+\index{update@{update}!KeyboardWnd@{KeyboardWnd}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily virtual void Keyboard\+Wnd\+::update (\begin{DoxyParamCaption}\item[{const float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Обновление логики виртуальной клавиатуры. 
+
+В текущей реализации метод не выполняет никаких действий, но требует переопределения от базового класса.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em delta\+Time} & Время, прошедшее с предыдущего кадра (в секундах). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+void 
+\end{DoxyReturn}
+
+
+Замещает \mbox{\hyperlink{classWndInterface_acc76841cf5afb7d69f6de1067eef2205}{Wnd\+Interface}}.
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+Wordle\+SFML/\mbox{\hyperlink{KeyboardWnd_8h}{Keyboard\+Wnd.\+h}}\item 
+Wordle\+SFML/Keyboard\+Wnd.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,52 @@
+\doxysection{Post\+Game\+Wnd.\+h}
+\hypertarget{PostGameWnd_8h_source}{}\label{PostGameWnd_8h_source}\index{WordleSFML/PostGameWnd.h@{WordleSFML/PostGameWnd.h}}
+\mbox{\hyperlink{PostGameWnd_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ POSTGAMEWND\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ POSTGAMEWND\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{WndInterface_8h}{WndInterface.h}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Button_8h}{Button.h}}"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPostGameWnd}{PostGameWnd}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classWndInterface}{WndInterface}}}
+\DoxyCodeLine{00030\ \{}
+\DoxyCodeLine{00031\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{classPostGameWnd}{PostGameWnd}}(\textcolor{keyword}{const}\ sf::IntRect\&\ bounds,}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ sf::Font\&\ font,}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ solution,}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ wonGame,}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ attempts);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classPostGameWnd_ad29c6b916ad2fd6f3ab42ff497e13541}{\string~PostGameWnd}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPostGameWnd_a93391a529197a4099674acc213bbeeab}{update}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ deltaTime)\textcolor{keyword}{\ override\ }\{\}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPostGameWnd_a1aee53564bb15d3729b0da06d128656f}{draw}}(sf::RenderWindow\&\ renderWindow)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPostGameWnd_a4175b3ab90aa8313ede23a9a466c7a97}{handleMousePress}}(\textcolor{keyword}{const}\ sf::Vector2i\&\ mousePosition,\ \textcolor{keywordtype}{bool}\ isLeft)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPostGameWnd_a9552558f217d878f61ecba75cf38d062}{handleMouseMove}}(\textcolor{keyword}{const}\ sf::Vector2i\&\ mousePosition)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00106\ \ \ \ \ \mbox{\hyperlink{WndInterface_8h_a0ab26bd2624b188834cc7e71cd81f45f}{WndResultState}}\ \mbox{\hyperlink{classPostGameWnd_afb76384f1ff123dd3d002154139524f5}{getResultState}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPostGameWnd_ae790dd7dfadfaac966ad188836d758f5}{getSelectedActionID}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00119\ \ \ \ \ \mbox{\hyperlink{WndInterface_8h_a0ab26bd2624b188834cc7e71cd81f45f}{WndResultState}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_resultState;\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00120\ \ \ \ \ std::vector<Button>\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_buttons;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00121\ \ \ \ \ std::unique\_ptr<sf::RectangleShape>\ \ \ \ \ \ \ \ \_fullScreenBackground;\ \ }
+\DoxyCodeLine{00122\ \ \ \ \ std::unique\_ptr<sf::RectangleShape>\ \ \ \ \ \ \ \ \_background;\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00123\ \ \ \ \ std::unique\_ptr<sf::Text>\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_titleText1;\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00124\ \ \ \ \ std::unique\_ptr<sf::Text>\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_titleText2;\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00125\ \ \ \ \ std::unique\_ptr<sf::Text>\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_solutionText;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_selectedActionID\{\ -\/1\ \};\ }
+\DoxyCodeLine{00127\ \};}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ POSTGAMEWND\_H}}
+
+\end{DoxyCode}

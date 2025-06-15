@@ -1,0 +1,60 @@
+\doxysection{Файл Wordle\+SFML/\+Wnd\+Interface.h}
+\hypertarget{WndInterface_8h}{}\label{WndInterface_8h}\index{WordleSFML/WndInterface.h@{WordleSFML/WndInterface.h}}
+
+
+Заголовочный файл с базовым интерфейсом \doxylink{classWndInterface}{Wnd\+Interface} для всех оконных интерфейсов.  
+
+
+{\ttfamily \#include $<$SFML/\+Graphics.\+hpp$>$}\newline
+\doxysubsubsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classWndInterface}{Wnd\+Interface}}
+\begin{DoxyCompactList}\small\item\em Абстрактный базовый класс для оконных интерфейсов. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Перечисления}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{WndInterface_8h_a0ab26bd2624b188834cc7e71cd81f45f}{Wnd\+Result\+State}} \{ \mbox{\hyperlink{WndInterface_8h_a0ab26bd2624b188834cc7e71cd81f45fac5a18bdcc1252d65aae0c9303f8ac88b}{Nothing\+State}}
+, \mbox{\hyperlink{WndInterface_8h_a0ab26bd2624b188834cc7e71cd81f45fab68c130eb6caa378c2c394e9054bbb63}{Finished}}
+, \mbox{\hyperlink{WndInterface_8h_a0ab26bd2624b188834cc7e71cd81f45fa3e85c2379b8c2d5a0a32e0eb7cec0c7d}{Restart}}
+ \}
+\begin{DoxyCompactList}\small\item\em Состояния, возвращаемые методом get\+Result\+State интерфейсов. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Заголовочный файл с базовым интерфейсом \doxylink{classWndInterface}{Wnd\+Interface} для всех оконных интерфейсов. 
+
+Этот файл содержит объявление класса \doxylink{classWndInterface}{Wnd\+Interface}, который определяет общий интерфейс для всех окон (игровых, меню, диалогов) в приложении\+: методы обновления, отрисовки, обработки ввода и управления состоянием. 
+
+\doxysubsection{Перечисления}
+\Hypertarget{WndInterface_8h_a0ab26bd2624b188834cc7e71cd81f45f}\label{WndInterface_8h_a0ab26bd2624b188834cc7e71cd81f45f} 
+\index{WndInterface.h@{WndInterface.h}!WndResultState@{WndResultState}}
+\index{WndResultState@{WndResultState}!WndInterface.h@{WndInterface.h}}
+\doxysubsubsection{\texorpdfstring{WndResultState}{WndResultState}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{WndInterface_8h_a0ab26bd2624b188834cc7e71cd81f45f}{Wnd\+Result\+State}}}
+
+
+
+Состояния, возвращаемые методом get\+Result\+State интерфейсов. 
+
+Используется для определения результата работы интерфейса\+:
+\begin{DoxyItemize}
+\item Nothing\+State — нет изменений,
+\item Finished — интерфейс завершил свою работу,
+\item Restart — необходимо перезапустить текущий интерфейс или игру,
+\item Menu — перейти в меню,
+\item Quit — выход из приложения. 
+\end{DoxyItemize}\begin{DoxyEnumFields}{Элементы перечислений}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NothingState@{NothingState}!WndInterface.h@{WndInterface.h}}\index{WndInterface.h@{WndInterface.h}!NothingState@{NothingState}}}\Hypertarget{WndInterface_8h_a0ab26bd2624b188834cc7e71cd81f45fac5a18bdcc1252d65aae0c9303f8ac88b}\label{WndInterface_8h_a0ab26bd2624b188834cc7e71cd81f45fac5a18bdcc1252d65aae0c9303f8ac88b} 
+Nothing\+State&Нет изменений состояния. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Finished@{Finished}!WndInterface.h@{WndInterface.h}}\index{WndInterface.h@{WndInterface.h}!Finished@{Finished}}}\Hypertarget{WndInterface_8h_a0ab26bd2624b188834cc7e71cd81f45fab68c130eb6caa378c2c394e9054bbb63}\label{WndInterface_8h_a0ab26bd2624b188834cc7e71cd81f45fab68c130eb6caa378c2c394e9054bbb63} 
+Finished&Интерфейс завершил свою работу. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Restart@{Restart}!WndInterface.h@{WndInterface.h}}\index{WndInterface.h@{WndInterface.h}!Restart@{Restart}}}\Hypertarget{WndInterface_8h_a0ab26bd2624b188834cc7e71cd81f45fa3e85c2379b8c2d5a0a32e0eb7cec0c7d}\label{WndInterface_8h_a0ab26bd2624b188834cc7e71cd81f45fa3e85c2379b8c2d5a0a32e0eb7cec0c7d} 
+Restart&Требуется перезапуск интерфейса или игры. \\
+\hline
+
+\end{DoxyEnumFields}

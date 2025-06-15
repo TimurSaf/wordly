@@ -1,0 +1,44 @@
+\doxysection{Keyboard\+Wnd.\+h}
+\hypertarget{KeyboardWnd_8h_source}{}\label{KeyboardWnd_8h_source}\index{WordleSFML/KeyboardWnd.h@{WordleSFML/KeyboardWnd.h}}
+\mbox{\hyperlink{KeyboardWnd_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ KEYBOARDWND\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ KEYBOARDWND\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{WndInterface_8h}{WndInterface.h}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Button_8h}{Button.h}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classKeyboardWnd}{KeyboardWnd}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classWndInterface}{WndInterface}}}
+\DoxyCodeLine{00028\ \{}
+\DoxyCodeLine{00029\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{classKeyboardWnd}{KeyboardWnd}}(\textcolor{keyword}{const}\ sf::IntRect\&\ bounds,\ \textcolor{keyword}{const}\ sf::Font\&\ font);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classKeyboardWnd_ac48faea353c8ed2c429f69fef4f43396}{\string~KeyboardWnd}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classKeyboardWnd_a5c574e59f4d6303a52b4380c95ec9037}{update}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ deltaTime)\textcolor{keyword}{\ override\ }\{\}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classKeyboardWnd_a94c15a9cfeab05d5e1d7479236990bcd}{draw}}(sf::RenderWindow\&\ renderWindow)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classKeyboardWnd_ae703e573f92240ebbe35337f3fcd194a}{handleMousePress}}(\textcolor{keyword}{const}\ sf::Vector2i\&\ mousePosition,\ \textcolor{keywordtype}{bool}\ isLeft)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classKeyboardWnd_a859da2b5ae718e1d06f60b368febad2c}{handleMouseMove}}(\textcolor{keyword}{const}\ sf::Vector2i\&\ mousePosition)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classKeyboardWnd_a389a4cf0e23846c12758f9d6c7d6e7c3}{getActionIDReset}}();}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classKeyboardWnd_a912554346f06167779ae2b41b3535661}{applyRules}}(\textcolor{keyword}{const}\ std::vector<std::string>\&\ rules);}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00117\ \ \ \ \ std::vector<Button>\ \_buttons;}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{int}\ \_actionID\{\ -\/1\ \};}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{void}\ initialiseButtons(\textcolor{keyword}{const}\ sf::Font\&\ font);}
+\DoxyCodeLine{00134\ \};}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ KEYBOARDWND\_H}}
+
+\end{DoxyCode}

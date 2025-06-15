@@ -1,0 +1,219 @@
+\doxysection{Класс Before\+Game\+Wnd}
+\hypertarget{classBeforeGameWnd}{}\label{classBeforeGameWnd}\index{BeforeGameWnd@{BeforeGameWnd}}
+
+
+Окно выбора длины слова перед началом игры.  
+
+
+
+
+{\ttfamily \#include $<$Before\+Game\+Wnd.\+h$>$}
+
+Граф наследования\+:Before\+Game\+Wnd\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classBeforeGameWnd}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBeforeGameWnd_a52f1f3526c24be42b267a9c6f94af37d}{Before\+Game\+Wnd}} (const sf\+::\+Int\+Rect \&bounds, const sf\+::\+Font \&font)
+\begin{DoxyCompactList}\small\item\em Конструктор. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBeforeGameWnd_ad38c1a25dfb97cadb3f9ccf5b2137d79}{draw}} (sf\+::\+Render\+Window \&render\+Window) const override
+\begin{DoxyCompactList}\small\item\em Рисует фон, заголовок и кнопки. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBeforeGameWnd_a13f1ba3788017d91d436c4038de76583}{update}} (const float delta\+Time) override
+\begin{DoxyCompactList}\small\item\em Обновляет логику окна каждый кадр. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBeforeGameWnd_acbb0174c382fb1ae78a51ae6102f2fe5}{handle\+Mouse\+Press}} (const sf\+::\+Vector2i \&mouse\+Position, bool is\+Left) override
+\begin{DoxyCompactList}\small\item\em Обрабатывает нажатие мыши по одной из кнопок. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBeforeGameWnd_a30ed7ff61c4b901c845d91690e3fc790}{handle\+Mouse\+Move}} (const sf\+::\+Vector2i \&mouse\+Position) override
+\begin{DoxyCompactList}\small\item\em Подсвечивает кнопку при наведении. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{WndInterface_8h_a0ab26bd2624b188834cc7e71cd81f45f}{Wnd\+Result\+State}} \mbox{\hyperlink{classBeforeGameWnd_aded510748437cba7faf5ddd8f64c5ac3}{get\+Result\+State}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает состояние окна. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classBeforeGameWnd_ab9a98a965e58da44ee5a8aea9f3a0c70}{get\+Selected\+Action\+ID}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает ID нажатой кнопки. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Открытые члены унаследованные от \mbox{\hyperlink{classWndInterface}{Wnd\+Interface}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWndInterface_a6b5c70af6e357fba833fbe6f1aebf6fb}{Wnd\+Interface}} (sf\+::\+Int\+Rect bounds)
+\begin{DoxyCompactList}\small\item\em Конструктор. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Wnd\+Interface} ()=default
+\begin{DoxyCompactList}\small\item\em Виртуальный деструктор. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWndInterface_a8e2d87ce45cd79a70810dc58fc736a06}{handle\+Key\+Input}} (const sf\+::\+Keyboard\+::\+Key key)
+\begin{DoxyCompactList}\small\item\em Обрабатывает нажатие клавиши клавиатуры. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWndInterface_a1e37ec57b10bb1043159c483a571e257}{set\+Enabled}} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Устанавливает доступность интерфейса. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWndInterface_acb8e821db0944866fb774904413ffa04}{is\+Enabled}} () const
+\begin{DoxyCompactList}\small\item\em Проверяет, включён ли интерфейс. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Дополнительные унаследованные члены}
+\doxysubsection*{Защищенные данные унаследованные от \mbox{\hyperlink{classWndInterface}{Wnd\+Interface}}}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Int\+Rect \mbox{\hyperlink{classWndInterface_acb35b469df0025733fd8faa037b14ffc}{\+\_\+bounds}}
+\item 
+bool \mbox{\hyperlink{classWndInterface_ab96909811c3e8554476150fa5941d964}{\+\_\+is\+Enabled}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Окно выбора длины слова перед началом игры. 
+
+Класс \doxylink{classBeforeGameWnd}{Before\+Game\+Wnd} наследуется от \doxylink{classWndInterface}{Wnd\+Interface} и реализует интерфейс для отображения окна, в котором пользователь может выбрать длину слова перед стартом игры. Внутри окна рисуется фон, заголовок, а также кнопки, соответствующие разным вариантам длины слова. 
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{classBeforeGameWnd_a52f1f3526c24be42b267a9c6f94af37d}\label{classBeforeGameWnd_a52f1f3526c24be42b267a9c6f94af37d} 
+\index{BeforeGameWnd@{BeforeGameWnd}!BeforeGameWnd@{BeforeGameWnd}}
+\index{BeforeGameWnd@{BeforeGameWnd}!BeforeGameWnd@{BeforeGameWnd}}
+\doxysubsubsection{\texorpdfstring{BeforeGameWnd()}{BeforeGameWnd()}}
+{\footnotesize\ttfamily Before\+Game\+Wnd\+::\+Before\+Game\+Wnd (\begin{DoxyParamCaption}\item[{const sf\+::\+Int\+Rect \&}]{bounds,  }\item[{const sf\+::\+Font \&}]{font }\end{DoxyParamCaption})}
+
+
+
+Конструктор. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em bounds} & Область, в которой рисуется окно (sf\+::\+Int\+Rect). \\
+\hline
+{\em font} & Шрифт, используемый для отображения текста и кнопок (sf\+::\+Font). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Методы}
+\Hypertarget{classBeforeGameWnd_ad38c1a25dfb97cadb3f9ccf5b2137d79}\label{classBeforeGameWnd_ad38c1a25dfb97cadb3f9ccf5b2137d79} 
+\index{BeforeGameWnd@{BeforeGameWnd}!draw@{draw}}
+\index{draw@{draw}!BeforeGameWnd@{BeforeGameWnd}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Before\+Game\+Wnd\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{render\+Window }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Рисует фон, заголовок и кнопки. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em render\+Window} & Ссылка на объект sf\+::\+Render\+Window для отрисовки элементов окна. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+void 
+\end{DoxyReturn}
+
+
+Замещает \mbox{\hyperlink{classWndInterface_a5de008f7e07364dfe66d86134aac3205}{Wnd\+Interface}}.
+
+\Hypertarget{classBeforeGameWnd_aded510748437cba7faf5ddd8f64c5ac3}\label{classBeforeGameWnd_aded510748437cba7faf5ddd8f64c5ac3} 
+\index{BeforeGameWnd@{BeforeGameWnd}!getResultState@{getResultState}}
+\index{getResultState@{getResultState}!BeforeGameWnd@{BeforeGameWnd}}
+\doxysubsubsection{\texorpdfstring{getResultState()}{getResultState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{WndInterface_8h_a0ab26bd2624b188834cc7e71cd81f45f}{Wnd\+Result\+State}} Before\+Game\+Wnd\+::get\+Result\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Возвращает состояние окна. 
+
+\begin{DoxyReturn}{Возвращает}
+Wnd\+Result\+State Текущее состояние окна (Nothing\+State или Restart после нажатия кнопки). 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em std\+::logic\+\_\+error} & Если окно было закрыто до вызова функции. \\
+\hline
+\end{DoxyExceptions}
+
+
+Переопределяет метод предка \mbox{\hyperlink{classWndInterface_af856837a63f10858f3fb090ff82f19a0}{Wnd\+Interface}}.
+
+\Hypertarget{classBeforeGameWnd_ab9a98a965e58da44ee5a8aea9f3a0c70}\label{classBeforeGameWnd_ab9a98a965e58da44ee5a8aea9f3a0c70} 
+\index{BeforeGameWnd@{BeforeGameWnd}!getSelectedActionID@{getSelectedActionID}}
+\index{getSelectedActionID@{getSelectedActionID}!BeforeGameWnd@{BeforeGameWnd}}
+\doxysubsubsection{\texorpdfstring{getSelectedActionID()}{getSelectedActionID()}}
+{\footnotesize\ttfamily int Before\+Game\+Wnd\+::get\+Selected\+Action\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Возвращает ID нажатой кнопки. 
+
+Данный метод следует вызывать только после того, как \doxylink{classBeforeGameWnd_aded510748437cba7faf5ddd8f64c5ac3}{get\+Result\+State()} вернуло Restart. \begin{DoxyReturn}{Возвращает}
+int ID нажатой кнопки (0, 1 или 2) 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em std\+::logic\+\_\+error} & Если метод вызывается до клика (\+\_\+selected\+Action\+ID == -\/1). \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classBeforeGameWnd_a30ed7ff61c4b901c845d91690e3fc790}\label{classBeforeGameWnd_a30ed7ff61c4b901c845d91690e3fc790} 
+\index{BeforeGameWnd@{BeforeGameWnd}!handleMouseMove@{handleMouseMove}}
+\index{handleMouseMove@{handleMouseMove}!BeforeGameWnd@{BeforeGameWnd}}
+\doxysubsubsection{\texorpdfstring{handleMouseMove()}{handleMouseMove()}}
+{\footnotesize\ttfamily void Before\+Game\+Wnd\+::handle\+Mouse\+Move (\begin{DoxyParamCaption}\item[{const sf\+::\+Vector2i \&}]{mouse\+Position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Подсвечивает кнопку при наведении. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em mouse\+Position} & Координаты курсора мыши в окне (sf\+::\+Vector2i). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+void 
+\end{DoxyReturn}
+
+
+Переопределяет метод предка \mbox{\hyperlink{classWndInterface_ae79682f95f4a4f3246146f0f47a4986e}{Wnd\+Interface}}.
+
+\Hypertarget{classBeforeGameWnd_acbb0174c382fb1ae78a51ae6102f2fe5}\label{classBeforeGameWnd_acbb0174c382fb1ae78a51ae6102f2fe5} 
+\index{BeforeGameWnd@{BeforeGameWnd}!handleMousePress@{handleMousePress}}
+\index{handleMousePress@{handleMousePress}!BeforeGameWnd@{BeforeGameWnd}}
+\doxysubsubsection{\texorpdfstring{handleMousePress()}{handleMousePress()}}
+{\footnotesize\ttfamily void Before\+Game\+Wnd\+::handle\+Mouse\+Press (\begin{DoxyParamCaption}\item[{const sf\+::\+Vector2i \&}]{mouse\+Position,  }\item[{bool}]{is\+Left }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Обрабатывает нажатие мыши по одной из кнопок. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em mouse\+Position} & Координаты курсора мыши в окне (sf\+::\+Vector2i). \\
+\hline
+{\em is\+Left} & Флаг, указывающий, была ли нажата левая кнопка мыши (true) или нет (false). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+void 
+\end{DoxyReturn}
+
+
+Переопределяет метод предка \mbox{\hyperlink{classWndInterface_ae1e4788acacde35e30289172072142cc}{Wnd\+Interface}}.
+
+\Hypertarget{classBeforeGameWnd_a13f1ba3788017d91d436c4038de76583}\label{classBeforeGameWnd_a13f1ba3788017d91d436c4038de76583} 
+\index{BeforeGameWnd@{BeforeGameWnd}!update@{update}}
+\index{update@{update}!BeforeGameWnd@{BeforeGameWnd}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Before\+Game\+Wnd\+::update (\begin{DoxyParamCaption}\item[{const float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Обновляет логику окна каждый кадр. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em delta\+Time} & Время, прошедшее с предыдущего кадра (в секундах). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+void 
+\end{DoxyReturn}
+
+
+Замещает \mbox{\hyperlink{classWndInterface_acc76841cf5afb7d69f6de1067eef2205}{Wnd\+Interface}}.
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+Wordle\+SFML/\mbox{\hyperlink{BeforeGameWnd_8h}{Before\+Game\+Wnd.\+h}}\item 
+Wordle\+SFML/Before\+Game\+Wnd.\+cpp\end{DoxyCompactItemize}

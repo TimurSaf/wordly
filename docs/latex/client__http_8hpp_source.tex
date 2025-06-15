@@ -1,0 +1,34 @@
+\doxysection{client\+\_\+http.\+hpp}
+\hypertarget{client__http_8hpp_source}{}\label{client__http_8hpp_source}\index{WordleSFML/client\_http.hpp@{WordleSFML/client\_http.hpp}}
+\mbox{\hyperlink{client__http_8hpp}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CLIENT\_HTTP\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CLIENT\_HTTP\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <boost/beast/core.hpp>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <boost/beast/http.hpp>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <boost/beast/version.hpp>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <boost/asio/connect.hpp>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <boost/asio/ip/tcp.hpp>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <cstdlib>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{namespace\ }beast\ =\ boost::beast;\ \ \ \ \ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{namespace\ }http\ \ =\ beast::http;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{namespace\ }net\ \ \ =\ boost::asio;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{using\ }\mbox{\hyperlink{client__http_8hpp_a60a92ea513bd2f25705cdd673983c5a8}{tcp}}\ \ \ \ \ \ \ =\ net::ip::tcp;\ \ \ \ \ \ }
+\DoxyCodeLine{00035\ std::string\ \mbox{\hyperlink{client__http_8hpp_aaea2d82c891b95aa00cefe39d32efe0e}{file\_name}}(\textcolor{keywordtype}{int}\ len\_w);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00047\ http::request<http::string\_body>\ \mbox{\hyperlink{client__http_8hpp_a71bc5ee987b6c96c4c523b49b6683214}{make\_request}}(std::string\ \textcolor{keyword}{const}\&\ mode,}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ len\_w,}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ \textcolor{keyword}{const}\&\ word,}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ \textcolor{keyword}{const}\&\ host,}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ version);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00060\ std::string\ \mbox{\hyperlink{client__http_8hpp_ab11530110d38abe0dadc1f122626de55}{request\_to\_server}}(std::string\ mode,\ \textcolor{keywordtype}{int}\ len\_w,\ std::string\ word);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CLIENT\_HTTP\_HPP}}
+
+\end{DoxyCode}

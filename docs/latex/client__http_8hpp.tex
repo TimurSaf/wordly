@@ -1,0 +1,128 @@
+\doxysection{Файл Wordle\+SFML/client\+\_\+http.hpp}
+\hypertarget{client__http_8hpp}{}\label{client__http_8hpp}\index{WordleSFML/client\_http.hpp@{WordleSFML/client\_http.hpp}}
+
+
+Заголовочный файл с функциями HTTP-\/клиента для взаимодействия с сервером.  
+
+
+{\ttfamily \#include $<$boost/beast/core.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/beast/http.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/beast/version.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/asio/connect.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/asio/ip/tcp.\+hpp$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+\doxysubsubsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{client__http_8hpp_a60a92ea513bd2f25705cdd673983c5a8}{tcp}} = net\+::ip\+::tcp
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{client__http_8hpp_aaea2d82c891b95aa00cefe39d32efe0e}{file\+\_\+name}} (int len\+\_\+w)
+\begin{DoxyCompactList}\small\item\em Формирует имя файла-\/словаря по длине слова. \end{DoxyCompactList}\item 
+http\+::request$<$ http\+::string\+\_\+body $>$ \mbox{\hyperlink{client__http_8hpp_a71bc5ee987b6c96c4c523b49b6683214}{make\+\_\+request}} (std\+::string const \&mode, int len\+\_\+w, std\+::string const \&word, std\+::string const \&host, int version)
+\begin{DoxyCompactList}\small\item\em Создаёт HTTP-\/запрос к серверу. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{client__http_8hpp_ab11530110d38abe0dadc1f122626de55}{request\+\_\+to\+\_\+server}} (std\+::string mode, int len\+\_\+w, std\+::string word)
+\begin{DoxyCompactList}\small\item\em Отправляет HTTP-\/запрос на сервер и возвращает текст ответа. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Заголовочный файл с функциями HTTP-\/клиента для взаимодействия с сервером. 
+
+В этом файле объявлены функции\+:
+\begin{DoxyItemize}
+\item file\+\_\+name\+: формирование имени файла-\/словаря по длине слова;
+\item make\+\_\+request\+: создание HTTP-\/запроса к серверу с указанием host и версии;
+\item request\+\_\+to\+\_\+server\+: отправка HTTP-\/запроса и получение строки ответа. 
+\end{DoxyItemize}
+
+\doxysubsection{Типы}
+\Hypertarget{client__http_8hpp_a60a92ea513bd2f25705cdd673983c5a8}\label{client__http_8hpp_a60a92ea513bd2f25705cdd673983c5a8} 
+\index{client\_http.hpp@{client\_http.hpp}!tcp@{tcp}}
+\index{tcp@{tcp}!client\_http.hpp@{client\_http.hpp}}
+\doxysubsubsection{\texorpdfstring{tcp}{tcp}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{client__http_8hpp_a60a92ea513bd2f25705cdd673983c5a8}{tcp}} =  net\+::ip\+::tcp}
+
+Тип TCP-\/сокета из Boost.\+Asio. 
+
+\doxysubsection{Функции}
+\Hypertarget{client__http_8hpp_aaea2d82c891b95aa00cefe39d32efe0e}\label{client__http_8hpp_aaea2d82c891b95aa00cefe39d32efe0e} 
+\index{client\_http.hpp@{client\_http.hpp}!file\_name@{file\_name}}
+\index{file\_name@{file\_name}!client\_http.hpp@{client\_http.hpp}}
+\doxysubsubsection{\texorpdfstring{file\_name()}{file\_name()}}
+{\footnotesize\ttfamily std\+::string file\+\_\+name (\begin{DoxyParamCaption}\item[{int}]{len\+\_\+w }\end{DoxyParamCaption})}
+
+
+
+Формирует имя файла-\/словаря по длине слова. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em len\+\_\+w} & Длина проверяемого слова. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+std\+::string Имя файла-\/словаря (например, "{}dict\+\_\+5.\+txt"{}). 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em std\+::runtime\+\_\+error} & Если len\+\_\+w не равна 4, 5, 6. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{client__http_8hpp_a71bc5ee987b6c96c4c523b49b6683214}\label{client__http_8hpp_a71bc5ee987b6c96c4c523b49b6683214} 
+\index{client\_http.hpp@{client\_http.hpp}!make\_request@{make\_request}}
+\index{make\_request@{make\_request}!client\_http.hpp@{client\_http.hpp}}
+\doxysubsubsection{\texorpdfstring{make\_request()}{make\_request()}}
+{\footnotesize\ttfamily http\+::request$<$ http\+::string\+\_\+body $>$ make\+\_\+request (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{mode,  }\item[{int}]{len\+\_\+w,  }\item[{std\+::string const \&}]{word,  }\item[{std\+::string const \&}]{host,  }\item[{int}]{version }\end{DoxyParamCaption})}
+
+
+
+Создаёт HTTP-\/запрос к серверу. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em mode} & Режим запроса\+: "{}check\+\_\+word"{} для проверки или "{}get\+\_\+word"{} для получения слова. \\
+\hline
+{\em len\+\_\+w} & Длина слова. \\
+\hline
+{\em word} & Слово для проверки (mode == "{}check\+\_\+word"{}) или пустая строка (mode == "{}get\+\_\+word"{}). \\
+\hline
+{\em host} & Адрес HTTP-\/сервера (например, "{}localhost"{}). \\
+\hline
+{\em version} & Версия HTTP (например, 11 для HTTP/1.\+1). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+http\+::request$<$http\+::string\+\_\+body$>$ Сформированный HTTP-\/запрос. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em http\+::runtime\+\_\+error} & Если введен не верный параметр mode(не "{}get\+\_\+word"{} и "{}check\+\_\+word"{}) \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{client__http_8hpp_ab11530110d38abe0dadc1f122626de55}\label{client__http_8hpp_ab11530110d38abe0dadc1f122626de55} 
+\index{client\_http.hpp@{client\_http.hpp}!request\_to\_server@{request\_to\_server}}
+\index{request\_to\_server@{request\_to\_server}!client\_http.hpp@{client\_http.hpp}}
+\doxysubsubsection{\texorpdfstring{request\_to\_server()}{request\_to\_server()}}
+{\footnotesize\ttfamily std\+::string request\+\_\+to\+\_\+server (\begin{DoxyParamCaption}\item[{std\+::string}]{mode,  }\item[{int}]{len\+\_\+w,  }\item[{std\+::string}]{word }\end{DoxyParamCaption})}
+
+
+
+Отправляет HTTP-\/запрос на сервер и возвращает текст ответа. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em mode} & Режим запроса\+: "{}check\+\_\+word"{} или "{}get\+\_\+word"{}. \\
+\hline
+{\em len\+\_\+w} & Длина слова. \\
+\hline
+{\em word} & Слово для отправки. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+std\+::string Тело ответа, полученное от сервера. 
+\end{DoxyReturn}

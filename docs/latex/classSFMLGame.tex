@@ -1,0 +1,63 @@
+\doxysection{Класс SFMLGame}
+\hypertarget{classSFMLGame}{}\label{classSFMLGame}\index{SFMLGame@{SFMLGame}}
+
+
+Класс, управляющий окном SFML и игровым циклом.  
+
+
+
+
+{\ttfamily \#include $<$SFMLGame.\+h$>$}
+
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSFMLGame_a3ebd6477466c3c4cc4322c7a797fb7b3}{SFMLGame}} ()
+\begin{DoxyCompactList}\small\item\em Конструктор класса \doxylink{classSFMLGame}{SFMLGame}. \end{DoxyCompactList}\item 
+\Hypertarget{classSFMLGame_ab961aa0db8e6ffed704ca20254e99250}\label{classSFMLGame_ab961aa0db8e6ffed704ca20254e99250} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+SFMLGame} ()=default
+\begin{DoxyCompactList}\small\item\em Деструктор класса \doxylink{classSFMLGame}{SFMLGame}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSFMLGame_a00908fe9c382b572f7066ea58b491d33}{game\+Loop}} ()
+\begin{DoxyCompactList}\small\item\em Запускает основной игровой цикл. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс, управляющий окном SFML и игровым циклом. 
+
+Класс \doxylink{classSFMLGame}{SFMLGame} инициализирует окно для игры, загружает шрифт, запускает и контролирует основной игровой цикл до завершения. 
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{classSFMLGame_a3ebd6477466c3c4cc4322c7a797fb7b3}\label{classSFMLGame_a3ebd6477466c3c4cc4322c7a797fb7b3} 
+\index{SFMLGame@{SFMLGame}!SFMLGame@{SFMLGame}}
+\index{SFMLGame@{SFMLGame}!SFMLGame@{SFMLGame}}
+\doxysubsubsection{\texorpdfstring{SFMLGame()}{SFMLGame()}}
+{\footnotesize\ttfamily SFMLGame\+::\+SFMLGame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Конструктор класса \doxylink{classSFMLGame}{SFMLGame}. 
+
+Инициализирует окно SFML, загружает шрифт и подготавливает объект \doxylink{classGame}{Game} для запуска игрового цикла. 
+
+\doxysubsection{Методы}
+\Hypertarget{classSFMLGame_a00908fe9c382b572f7066ea58b491d33}\label{classSFMLGame_a00908fe9c382b572f7066ea58b491d33} 
+\index{SFMLGame@{SFMLGame}!gameLoop@{gameLoop}}
+\index{gameLoop@{gameLoop}!SFMLGame@{SFMLGame}}
+\doxysubsubsection{\texorpdfstring{gameLoop()}{gameLoop()}}
+{\footnotesize\ttfamily void SFMLGame\+::game\+Loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Запускает основной игровой цикл. 
+
+В безусловном цикле обрабатывает события окна, обновляет состояние игры и выполняет отрисовку до тех пор, пока окно не будет закрыто.
+
+\begin{DoxyReturn}{Возвращает}
+void 
+\end{DoxyReturn}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+Wordle\+SFML/\mbox{\hyperlink{SFMLGame_8h}{SFMLGame.\+h}}\item 
+Wordle\+SFML/SFMLGame.\+cpp\end{DoxyCompactItemize}

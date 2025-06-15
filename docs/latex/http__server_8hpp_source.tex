@@ -1,0 +1,47 @@
+\doxysection{http\+\_\+server.\+hpp}
+\hypertarget{http__server_8hpp_source}{}\label{http__server_8hpp_source}\index{server/http\_server.hpp@{server/http\_server.hpp}}
+\mbox{\hyperlink{http__server_8hpp}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ HTTP\_SERVER\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ HTTP\_SERVER\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <boost/beast/core.hpp>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <boost/beast/http.hpp>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <boost/beast/version.hpp>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <boost/asio/ip/tcp.hpp>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <boost/config.hpp>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <cstdlib>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <thread>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <ctime>}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ <unordered\_set>}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{namespace\ }beast\ =\ boost::beast;\ \ \ \ \ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{namespace\ }http\ \ =\ beast::http;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{namespace\ }net\ \ \ =\ boost::asio;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{using\ }\mbox{\hyperlink{client__http_8hpp_a60a92ea513bd2f25705cdd673983c5a8}{tcp}}\ \ \ \ \ \ \ =\ net::ip::tcp;\ \ \ \ \ \ }
+\DoxyCodeLine{00041\ std::string\ \mbox{\hyperlink{http__server_8hpp_a8022b1dcfe423fcdaa14a9923fb60f3c}{get\_word}}(\textcolor{keywordtype}{int}\ len\_w);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00049\ std::string\ \mbox{\hyperlink{http__server_8hpp_af477d6ae2e37faa9c9c15190f1d953d8}{check\_word}}(std::string\&\ word);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00057\ std::string\ \mbox{\hyperlink{http__server_8hpp_aaea2d82c891b95aa00cefe39d32efe0e}{file\_name}}(\textcolor{keywordtype}{int}\ len\_w);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00067\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ Body,\ \textcolor{keyword}{class}\ Allocator>}
+\DoxyCodeLine{00068\ http::message\_generator\ \mbox{\hyperlink{http__server_8hpp_a02416cc55718961f3a3281cdcfb329fc}{handle\_request}}(}
+\DoxyCodeLine{00069\ \ \ \ \ beast::string\_view\ doc\_root,}
+\DoxyCodeLine{00070\ \ \ \ \ http::request<Body,\ http::basic\_fields<Allocator>>\&\&\ req);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00078\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{http__server_8hpp_a32c8356aac9650319300fe83f8936f9c}{do\_session}}(}
+\DoxyCodeLine{00079\ \ \ \ \ tcp::socket\&\ socket,}
+\DoxyCodeLine{00080\ \ \ \ \ std::string\ \textcolor{keyword}{const}\&\ doc\_root);}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ HTTP\_SERVER\_HPP}}
+
+\end{DoxyCode}

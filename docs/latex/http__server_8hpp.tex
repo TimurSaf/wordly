@@ -1,0 +1,190 @@
+\doxysection{Файл server/http\+\_\+server.hpp}
+\hypertarget{http__server_8hpp}{}\label{http__server_8hpp}\index{server/http\_server.hpp@{server/http\_server.hpp}}
+
+
+Заголовочный файл с объявлениями функций HTTP-\/сервера и утилит для работы со словарями.  
+
+
+{\ttfamily \#include $<$boost/beast/core.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/beast/http.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/beast/version.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/asio/ip/tcp.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/config.\+hpp$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+set$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+\doxysubsubsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{http__server_8hpp_a60a92ea513bd2f25705cdd673983c5a8}{tcp}} = net\+::ip\+::tcp
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{http__server_8hpp_a8022b1dcfe423fcdaa14a9923fb60f3c}{get\+\_\+word}} (int len\+\_\+w)
+\begin{DoxyCompactList}\small\item\em Получает случайное слово заданной длины из файла-\/словaря. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{http__server_8hpp_af477d6ae2e37faa9c9c15190f1d953d8}{check\+\_\+word}} (std\+::string \&word)
+\begin{DoxyCompactList}\small\item\em Проверяет существование слова в словаре. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{http__server_8hpp_aaea2d82c891b95aa00cefe39d32efe0e}{file\+\_\+name}} (int len\+\_\+w)
+\begin{DoxyCompactList}\small\item\em Формирует имя файла-\/словaря по длине слова. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Body , class Allocator $>$ }\\http\+::message\+\_\+generator \mbox{\hyperlink{http__server_8hpp_a02416cc55718961f3a3281cdcfb329fc}{handle\+\_\+request}} (beast\+::string\+\_\+view doc\+\_\+root, http\+::request$<$ Body, http\+::basic\+\_\+fields$<$ Allocator $>$ $>$ \&\&req)
+\begin{DoxyCompactList}\small\item\em Обрабатывает HTTP-\/запрос и формирует ответ. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{http__server_8hpp_a32c8356aac9650319300fe83f8936f9c}{do\+\_\+session}} (tcp\+::socket \&socket, std\+::string const \&doc\+\_\+root)
+\begin{DoxyCompactList}\small\item\em Обрабатывает сессию TCP-\/соединения с клиентом. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Заголовочный файл с объявлениями функций HTTP-\/сервера и утилит для работы со словарями. 
+
+Содержит прототипы функций для получения случайного слова, проверки слова в словаре, формирования имени файла-\/словаря, обработки HTTP-\/запросов и управления сессиями сервера. 
+
+\doxysubsection{Типы}
+\Hypertarget{http__server_8hpp_a60a92ea513bd2f25705cdd673983c5a8}\label{http__server_8hpp_a60a92ea513bd2f25705cdd673983c5a8} 
+\index{http\_server.hpp@{http\_server.hpp}!tcp@{tcp}}
+\index{tcp@{tcp}!http\_server.hpp@{http\_server.hpp}}
+\doxysubsubsection{\texorpdfstring{tcp}{tcp}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{client__http_8hpp_a60a92ea513bd2f25705cdd673983c5a8}{tcp}} =  net\+::ip\+::tcp}
+
+Тип TCP-\/сокета из Boost.\+Asio. 
+
+\doxysubsection{Функции}
+\Hypertarget{http__server_8hpp_af477d6ae2e37faa9c9c15190f1d953d8}\label{http__server_8hpp_af477d6ae2e37faa9c9c15190f1d953d8} 
+\index{http\_server.hpp@{http\_server.hpp}!check\_word@{check\_word}}
+\index{check\_word@{check\_word}!http\_server.hpp@{http\_server.hpp}}
+\doxysubsubsection{\texorpdfstring{check\_word()}{check\_word()}}
+{\footnotesize\ttfamily std\+::string check\+\_\+word (\begin{DoxyParamCaption}\item[{std\+::string \&}]{word }\end{DoxyParamCaption})}
+
+
+
+Проверяет существование слова в словаре. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em word} & Ссылка на строку со словом для проверки. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+std\+::string "{}correct word"{}, если слово найдено; иначе "{}not exist"{}. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em std\+::runtime\+\_\+error} & Если длина word не равна 4, 5, 6. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{http__server_8hpp_a32c8356aac9650319300fe83f8936f9c}\label{http__server_8hpp_a32c8356aac9650319300fe83f8936f9c} 
+\index{http\_server.hpp@{http\_server.hpp}!do\_session@{do\_session}}
+\index{do\_session@{do\_session}!http\_server.hpp@{http\_server.hpp}}
+\doxysubsubsection{\texorpdfstring{do\_session()}{do\_session()}}
+{\footnotesize\ttfamily void do\+\_\+session (\begin{DoxyParamCaption}\item[{tcp\+::socket \&}]{socket,  }\item[{std\+::string const \&}]{doc\+\_\+root }\end{DoxyParamCaption})}
+
+
+
+Обрабатывает сессию TCP-\/соединения с клиентом. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em socket} & Сокет, по которому установлено соединение. \\
+\hline
+{\em doc\+\_\+root} & Указатель на строку с корнем документов. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+void 
+\end{DoxyReturn}
+\Hypertarget{http__server_8hpp_aaea2d82c891b95aa00cefe39d32efe0e}\label{http__server_8hpp_aaea2d82c891b95aa00cefe39d32efe0e} 
+\index{http\_server.hpp@{http\_server.hpp}!file\_name@{file\_name}}
+\index{file\_name@{file\_name}!http\_server.hpp@{http\_server.hpp}}
+\doxysubsubsection{\texorpdfstring{file\_name()}{file\_name()}}
+{\footnotesize\ttfamily std\+::string file\+\_\+name (\begin{DoxyParamCaption}\item[{int}]{len\+\_\+w }\end{DoxyParamCaption})}
+
+
+
+Формирует имя файла-\/словaря по длине слова. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em len\+\_\+w} & Длина слова. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+std\+::string Имя файла-\/словaря (например, "{}dict\+\_\+5.\+txt"{}). 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em std\+::runtime\+\_\+error} & Если len\+\_\+w не равна 4, 5, 6.\\
+\hline
+\end{DoxyExceptions}
+Формирует имя файла-\/словaря по длине слова.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em len\+\_\+w} & Длина проверяемого слова. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+std\+::string Имя файла-\/словаря (например, "{}dict\+\_\+5.\+txt"{}). 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em std\+::runtime\+\_\+error} & Если len\+\_\+w не равна 4, 5, 6. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{http__server_8hpp_a8022b1dcfe423fcdaa14a9923fb60f3c}\label{http__server_8hpp_a8022b1dcfe423fcdaa14a9923fb60f3c} 
+\index{http\_server.hpp@{http\_server.hpp}!get\_word@{get\_word}}
+\index{get\_word@{get\_word}!http\_server.hpp@{http\_server.hpp}}
+\doxysubsubsection{\texorpdfstring{get\_word()}{get\_word()}}
+{\footnotesize\ttfamily std\+::string get\+\_\+word (\begin{DoxyParamCaption}\item[{int}]{len\+\_\+w }\end{DoxyParamCaption})}
+
+
+
+Получает случайное слово заданной длины из файла-\/словaря. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em len\+\_\+w} & Длина слова. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+std\+::string Случайное слово длины len\+\_\+w.\textquotesingle{} 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em std\+::runtime\+\_\+error} & Если len\+\_\+w не равна 4, 5, 6. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{http__server_8hpp_a02416cc55718961f3a3281cdcfb329fc}\label{http__server_8hpp_a02416cc55718961f3a3281cdcfb329fc} 
+\index{http\_server.hpp@{http\_server.hpp}!handle\_request@{handle\_request}}
+\index{handle\_request@{handle\_request}!http\_server.hpp@{http\_server.hpp}}
+\doxysubsubsection{\texorpdfstring{handle\_request()}{handle\_request()}}
+{\footnotesize\ttfamily template$<$class Body , class Allocator $>$ \\
+http\+::message\+\_\+generator handle\+\_\+request (\begin{DoxyParamCaption}\item[{beast\+::string\+\_\+view}]{doc\+\_\+root,  }\item[{http\+::request$<$ Body, http\+::basic\+\_\+fields$<$ Allocator $>$ $>$ \&\&}]{req }\end{DoxyParamCaption})}
+
+
+
+Обрабатывает HTTP-\/запрос и формирует ответ. 
+
+
+\begin{DoxyTemplParams}{Параметры шаблона}
+{\em Body} & Тип тела запроса. \\
+\hline
+{\em Allocator} & Тип аллокатора для полей HTTP. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Аргументы}
+{\em doc\+\_\+root} & Путь к корню документов (string\+\_\+view). \\
+\hline
+{\em req} & Перемещаемый HTTP-\/запрос. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+\href{http::message_generator}{\texttt{ http\+::message\+\_\+generator}} Генератор HTTP-\/ответа. 
+\end{DoxyReturn}

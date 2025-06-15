@@ -1,0 +1,183 @@
+\doxysection{Класс Puzzle\+Letter}
+\hypertarget{classPuzzleLetter}{}\label{classPuzzleLetter}\index{PuzzleLetter@{PuzzleLetter}}
+
+
+Класс, представляющий одну букву в игровом поле пазла.  
+
+
+
+
+{\ttfamily \#include $<$Puzzle\+Letter.\+h$>$}
+
+\doxysubsubsection*{Открытые типы}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classPuzzleLetter_aed18be531bd480e5b1e252886b25759f}{Solution\+State}} \{ {\bfseries NO\+\_\+\+STATE}
+, {\bfseries CORRECT}
+, {\bfseries WRONG\+\_\+\+POS}
+ \}
+\begin{DoxyCompactList}\small\item\em Перечисление возможных состояний буквы при решении пазла. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPuzzleLetter_aa172d7ab114894637fef39127d30f9b3}{Puzzle\+Letter}} (const sf\+::\+Int\+Rect \&bounds, const sf\+::\+Font \&font)
+\begin{DoxyCompactList}\small\item\em Конструктор по умолчанию. \end{DoxyCompactList}\item 
+\Hypertarget{classPuzzleLetter_a40f79b2fbb8b3f830a82b54fa0646de8}\label{classPuzzleLetter_a40f79b2fbb8b3f830a82b54fa0646de8} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Puzzle\+Letter} ()=default
+\begin{DoxyCompactList}\small\item\em Деструктор по умолчанию. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPuzzleLetter_aec8a6db119d69160e3627e554ec6b701}{draw}} (sf\+::\+Render\+Window \&render\+Window) const
+\begin{DoxyCompactList}\small\item\em Рисует букву на указанном окне. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{classPuzzleLetter_a6b6748d00d5e1e2d9121cf5f3f07e75e}{get\+Letter}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает текущий символ буквы. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPuzzleLetter_a0c48c400f6121fc1b04bcd0cc435da5e}{set\+Letter}} (const char letter)
+\begin{DoxyCompactList}\small\item\em Устанавливает символ для отображения. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPuzzleLetter_a58447f0f80314f527671edfb2abacc64}{set\+Solution\+State}} (const \mbox{\hyperlink{classPuzzleLetter_aed18be531bd480e5b1e252886b25759f}{Solution\+State}} \&solution\+State)
+\begin{DoxyCompactList}\small\item\em Устанавливает состояние решения для этой буквы. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPuzzleLetter_aed18be531bd480e5b1e252886b25759f}{Solution\+State}} \mbox{\hyperlink{classPuzzleLetter_a0241714d436568111f40fde5ee988434}{get\+Solution\+State}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает текущее состояние решения этой буквы. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс, представляющий одну букву в игровом поле пазла. 
+
+Класс \doxylink{classPuzzleLetter}{Puzzle\+Letter} позволяет отображать символ в прямоугольной области, задавать его значение, изменять цвет фона в зависимости от состояния решения (CORRECT, WRONG\+\_\+\+POS или NO\+\_\+\+STATE) и получать текущее состояние буквы. 
+
+\doxysubsection{Перечисления}
+\Hypertarget{classPuzzleLetter_aed18be531bd480e5b1e252886b25759f}\label{classPuzzleLetter_aed18be531bd480e5b1e252886b25759f} 
+\index{PuzzleLetter@{PuzzleLetter}!SolutionState@{SolutionState}}
+\index{SolutionState@{SolutionState}!PuzzleLetter@{PuzzleLetter}}
+\doxysubsubsection{\texorpdfstring{SolutionState}{SolutionState}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classPuzzleLetter_aed18be531bd480e5b1e252886b25759f}{Puzzle\+Letter\+::\+Solution\+State}}}
+
+
+
+Перечисление возможных состояний буквы при решении пазла. 
+
+NO\+\_\+\+STATE -\/ состояние по умолчанию (буква ещё не проверялась), CORRECT -\/ буква стоит на правильном месте, WRONG\+\_\+\+POS -\/ буква присутствует в слове, но в неправильной позиции. 
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{classPuzzleLetter_aa172d7ab114894637fef39127d30f9b3}\label{classPuzzleLetter_aa172d7ab114894637fef39127d30f9b3} 
+\index{PuzzleLetter@{PuzzleLetter}!PuzzleLetter@{PuzzleLetter}}
+\index{PuzzleLetter@{PuzzleLetter}!PuzzleLetter@{PuzzleLetter}}
+\doxysubsubsection{\texorpdfstring{PuzzleLetter()}{PuzzleLetter()}}
+{\footnotesize\ttfamily Puzzle\+Letter\+::\+Puzzle\+Letter (\begin{DoxyParamCaption}\item[{const sf\+::\+Int\+Rect \&}]{bounds,  }\item[{const sf\+::\+Font \&}]{font }\end{DoxyParamCaption})}
+
+
+
+Конструктор по умолчанию. 
+
+Инициализирует букву пустым символом (\textquotesingle{}\textbackslash{}0\textquotesingle{}) в заданных границах и создаёт соответствующие объекты для отображения фона и текста.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em bounds} & Прямоугольная область, в которой будет отображаться буква (sf\+::\+Int\+Rect). \\
+\hline
+{\em font} & Шрифт для отображения символа (sf\+::\+Font). \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Исключения}
+{\em std\+::invalid\+\_\+argument} & Если bounds имеют неположительные размеры. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Методы}
+\Hypertarget{classPuzzleLetter_aec8a6db119d69160e3627e554ec6b701}\label{classPuzzleLetter_aec8a6db119d69160e3627e554ec6b701} 
+\index{PuzzleLetter@{PuzzleLetter}!draw@{draw}}
+\index{draw@{draw}!PuzzleLetter@{PuzzleLetter}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Puzzle\+Letter\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{render\+Window }\end{DoxyParamCaption}) const}
+
+
+
+Рисует букву на указанном окне. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em render\+Window} & Ссылка на объект sf\+::\+Render\+Window для отрисовки элементов. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+void 
+\end{DoxyReturn}
+\Hypertarget{classPuzzleLetter_a6b6748d00d5e1e2d9121cf5f3f07e75e}\label{classPuzzleLetter_a6b6748d00d5e1e2d9121cf5f3f07e75e} 
+\index{PuzzleLetter@{PuzzleLetter}!getLetter@{getLetter}}
+\index{getLetter@{getLetter}!PuzzleLetter@{PuzzleLetter}}
+\doxysubsubsection{\texorpdfstring{getLetter()}{getLetter()}}
+{\footnotesize\ttfamily char Puzzle\+Letter\+::get\+Letter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Возвращает текущий символ буквы. 
+
+\begin{DoxyReturn}{Возвращает}
+char Символ, установленный для этой буквы. Если символ не задан, возвращается \textquotesingle{}\textbackslash{}0\textquotesingle{}. 
+\end{DoxyReturn}
+\Hypertarget{classPuzzleLetter_a0241714d436568111f40fde5ee988434}\label{classPuzzleLetter_a0241714d436568111f40fde5ee988434} 
+\index{PuzzleLetter@{PuzzleLetter}!getSolutionState@{getSolutionState}}
+\index{getSolutionState@{getSolutionState}!PuzzleLetter@{PuzzleLetter}}
+\doxysubsubsection{\texorpdfstring{getSolutionState()}{getSolutionState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPuzzleLetter_aed18be531bd480e5b1e252886b25759f}{Puzzle\+Letter\+::\+Solution\+State}} Puzzle\+Letter\+::get\+Solution\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Возвращает текущее состояние решения этой буквы. 
+
+\begin{DoxyReturn}{Возвращает}
+Solution\+State Текущее состояние (\+\_\+current\+State). 
+\end{DoxyReturn}
+\Hypertarget{classPuzzleLetter_a0c48c400f6121fc1b04bcd0cc435da5e}\label{classPuzzleLetter_a0c48c400f6121fc1b04bcd0cc435da5e} 
+\index{PuzzleLetter@{PuzzleLetter}!setLetter@{setLetter}}
+\index{setLetter@{setLetter}!PuzzleLetter@{PuzzleLetter}}
+\doxysubsubsection{\texorpdfstring{setLetter()}{setLetter()}}
+{\footnotesize\ttfamily void Puzzle\+Letter\+::set\+Letter (\begin{DoxyParamCaption}\item[{const char}]{letter }\end{DoxyParamCaption})}
+
+
+
+Устанавливает символ для отображения. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em letter} & Символ, который будет отображён (char). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+void 
+\end{DoxyReturn}
+\Hypertarget{classPuzzleLetter_a58447f0f80314f527671edfb2abacc64}\label{classPuzzleLetter_a58447f0f80314f527671edfb2abacc64} 
+\index{PuzzleLetter@{PuzzleLetter}!setSolutionState@{setSolutionState}}
+\index{setSolutionState@{setSolutionState}!PuzzleLetter@{PuzzleLetter}}
+\doxysubsubsection{\texorpdfstring{setSolutionState()}{setSolutionState()}}
+{\footnotesize\ttfamily void Puzzle\+Letter\+::set\+Solution\+State (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPuzzleLetter_aed18be531bd480e5b1e252886b25759f}{Solution\+State}} \&}]{solution\+State }\end{DoxyParamCaption})}
+
+
+
+Устанавливает состояние решения для этой буквы. 
+
+Изменяет цвет фона в зависимости от переданного состояния\+:
+\begin{DoxyItemize}
+\item CORRECT\+: фон зелёный (буква на своём месте),
+\item WRONG\+\_\+\+POS\+: фон жёлтый (буква есть в слове, но не на этой позиции),
+\item NO\+\_\+\+STATE\+: фон серый (состояние по умолчанию).
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Аргументы}
+{\em solution\+State} & Состояние решения для буквы (Solution\+State). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+void 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em std\+::out\+\_\+of\+\_\+range} & Если solution\+State недопустим. \\
+\hline
+\end{DoxyExceptions}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+Wordle\+SFML/\mbox{\hyperlink{PuzzleLetter_8h}{Puzzle\+Letter.\+h}}\item 
+Wordle\+SFML/Puzzle\+Letter.\+cpp\end{DoxyCompactItemize}

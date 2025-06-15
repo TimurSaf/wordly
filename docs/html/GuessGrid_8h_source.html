@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Wordle Game SFML and Boost Beast C++: Исходный файл WordleSFML/GuessGrid.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Wordle Game SFML and Boost Beast C++
+   </div>
+   <div id="projectbrief">Документация по коду игры Wordle на библиотеках SFML и Boost Beast</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d37a2a9fa814a0962ce38360bf62308f.html">WordleSFML</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">GuessGrid.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="GuessGrid_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef GUESSGRID_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define GUESSGRID_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;WndInterface.h&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="PuzzleLetter_8h.html">PuzzleLetter.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;SFML/Graphics.hpp&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="};">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classGuessGrid.html">   28</a></span><span class="keyword">class </span><a class="code hl_class" href="classGuessGrid.html">GuessGrid</a> : <span class="keyword">public</span> <a class="code hl_class" href="classWndInterface.html">WndInterface</a></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>{</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <a class="code hl_class" href="classGuessGrid.html">GuessGrid</a>(<span class="keyword">const</span> sf::IntRect&amp; bounds, <span class="keyword">const</span> sf::Font&amp; font, <span class="keyword">const</span> std::string&amp; solution, <span class="keyword">const</span> <span class="keywordtype">int</span> maxGuesses);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classGuessGrid.html#aabcc7fa3dc10651e788751b876c16bae">   50</a></span>    <span class="keyword">virtual</span> <a class="code hl_function" href="classGuessGrid.html#aabcc7fa3dc10651e788751b876c16bae">~GuessGrid</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="classGuessGrid.html#a9d2738991a37ee32258a14b87bd21c15">   61</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classGuessGrid.html#a9d2738991a37ee32258a14b87bd21c15">update</a>(<span class="keyword">const</span> <span class="keywordtype">float</span> deltaTime)<span class="keyword"> override </span>{}</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classGuessGrid.html#aa1aa24a79c48d2fe595b36be6d6daf7b">draw</a>(sf::RenderWindow&amp; renderWindow) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classGuessGrid.html#a6f87ffccedd4a7c4d18bb8e7bec9f643">handleKeyInput</a>(<span class="keyword">const</span> sf::Keyboard::Key key) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGuessGrid.html#a59bca21bfbcc341a089552e3f55c93b5">tryInsertLetter</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> letter);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGuessGrid.html#a2b07ad3850a5972f4d9eb7bab988b563">backSpace</a>();</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGuessGrid.html#a5db096dddd8b7ec07618ae698c2de69a">checkSolution</a>();</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classGuessGrid.html#a2b0113ac5d863efbc3cbba140f8aa328">isSolved</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classGuessGrid.html#a6d53f499c80775f0fd709eff2aa324dc">hasMoreGuesses</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    std::vector&lt;std::string&gt; <a class="code hl_function" href="classGuessGrid.html#a333ca8663e04213dbd879b571cec3af7">getAllRules</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classGuessGrid.html#ae017f406f9fac6f4371e32e064a672e0">getKeyCheckReset</a>();</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    std::string <a class="code hl_function" href="classGuessGrid.html#a6fa352d74879496e78238860936c866b">getSolution</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno"><a class="line" href="classGuessGrid.html#a8d3afbcd3e42c790ef5db61d493a202d">  161</a></span>    std::string <a class="code hl_function" href="classGuessGrid.html#a8d3afbcd3e42c790ef5db61d493a202d">getShareString</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    std::vector&lt;std::vector&lt;PuzzleLetter&gt;&gt; _guessLetters; </div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    <span class="keywordtype">int</span>                                   _insertPosition; </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="keywordtype">int</span>                                   _currentWordIndex; </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    <span class="keywordtype">bool</span>                                  _solved; </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    <span class="keywordtype">bool</span>                                  _usedKeyCheck; </div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <span class="keyword">const</span> std::string                     _solution; </div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    <span class="keywordtype">void</span> initialiseAllGuesses(<span class="keyword">const</span> sf::Font&amp; font, <span class="keyword">const</span> <span class="keywordtype">int</span> wordLength, <span class="keyword">const</span> <span class="keywordtype">int</span> maxGuesses);</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>};</div>
+</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span><span class="preprocessor">#endif </span><span class="comment">// GUESSGRID_H</span></div>
+<div class="ttc" id="aPuzzleLetter_8h_html"><div class="ttname"><a href="PuzzleLetter_8h.html">PuzzleLetter.h</a></div><div class="ttdoc">Заголовочный файл с классом PuzzleLetter для отображения одной буквы пазла.</div></div>
+<div class="ttc" id="aclassGuessGrid_html"><div class="ttname"><a href="classGuessGrid.html">GuessGrid</a></div><div class="ttdoc">Класс для управления сеткой догадок в игровой механике.</div><div class="ttdef"><b>Definition</b> GuessGrid.h:29</div></div>
+<div class="ttc" id="aclassGuessGrid_html_a2b0113ac5d863efbc3cbba140f8aa328"><div class="ttname"><a href="classGuessGrid.html#a2b0113ac5d863efbc3cbba140f8aa328">GuessGrid::isSolved</a></div><div class="ttdeci">bool isSolved() const</div><div class="ttdoc">Проверяет, было ли решение найдено.</div><div class="ttdef"><b>Definition</b> GuessGrid.cpp:134</div></div>
+<div class="ttc" id="aclassGuessGrid_html_a2b07ad3850a5972f4d9eb7bab988b563"><div class="ttname"><a href="classGuessGrid.html#a2b07ad3850a5972f4d9eb7bab988b563">GuessGrid::backSpace</a></div><div class="ttdeci">void backSpace()</div><div class="ttdoc">Удаляет последнюю букву в текущей попытке (Backspace).</div><div class="ttdef"><b>Definition</b> GuessGrid.cpp:64</div></div>
+<div class="ttc" id="aclassGuessGrid_html_a333ca8663e04213dbd879b571cec3af7"><div class="ttname"><a href="classGuessGrid.html#a333ca8663e04213dbd879b571cec3af7">GuessGrid::getAllRules</a></div><div class="ttdeci">std::vector&lt; std::string &gt; getAllRules() const</div><div class="ttdoc">Формирует все правила (цвета) на основе предыдущих догадок.</div><div class="ttdef"><b>Definition</b> GuessGrid.cpp:144</div></div>
+<div class="ttc" id="aclassGuessGrid_html_a59bca21bfbcc341a089552e3f55c93b5"><div class="ttname"><a href="classGuessGrid.html#a59bca21bfbcc341a089552e3f55c93b5">GuessGrid::tryInsertLetter</a></div><div class="ttdeci">void tryInsertLetter(const char letter)</div><div class="ttdoc">Пытается вставить указанную букву в текущую попытку.</div><div class="ttdef"><b>Definition</b> GuessGrid.cpp:52</div></div>
+<div class="ttc" id="aclassGuessGrid_html_a5db096dddd8b7ec07618ae698c2de69a"><div class="ttname"><a href="classGuessGrid.html#a5db096dddd8b7ec07618ae698c2de69a">GuessGrid::checkSolution</a></div><div class="ttdeci">void checkSolution()</div><div class="ttdoc">Проверяет текущее слово-слово на совпадение с решением.</div><div class="ttdef"><b>Definition</b> GuessGrid.cpp:72</div></div>
+<div class="ttc" id="aclassGuessGrid_html_a6d53f499c80775f0fd709eff2aa324dc"><div class="ttname"><a href="classGuessGrid.html#a6d53f499c80775f0fd709eff2aa324dc">GuessGrid::hasMoreGuesses</a></div><div class="ttdeci">bool hasMoreGuesses() const</div><div class="ttdoc">Проверяет, остались ли ещё попытки.</div><div class="ttdef"><b>Definition</b> GuessGrid.cpp:139</div></div>
+<div class="ttc" id="aclassGuessGrid_html_a6f87ffccedd4a7c4d18bb8e7bec9f643"><div class="ttname"><a href="classGuessGrid.html#a6f87ffccedd4a7c4d18bb8e7bec9f643">GuessGrid::handleKeyInput</a></div><div class="ttdeci">virtual void handleKeyInput(const sf::Keyboard::Key key) override</div><div class="ttdoc">Обрабатывает ввод с аппаратной клавиатуры.</div><div class="ttdef"><b>Definition</b> GuessGrid.cpp:37</div></div>
+<div class="ttc" id="aclassGuessGrid_html_a6fa352d74879496e78238860936c866b"><div class="ttname"><a href="classGuessGrid.html#a6fa352d74879496e78238860936c866b">GuessGrid::getSolution</a></div><div class="ttdeci">std::string getSolution() const</div><div class="ttdoc">Возвращает текущее слово-решение.</div><div class="ttdef"><b>Definition</b> GuessGrid.cpp:172</div></div>
+<div class="ttc" id="aclassGuessGrid_html_a8d3afbcd3e42c790ef5db61d493a202d"><div class="ttname"><a href="classGuessGrid.html#a8d3afbcd3e42c790ef5db61d493a202d">GuessGrid::getShareString</a></div><div class="ttdeci">std::string getShareString() const</div><div class="ttdoc">Возвращает строку для расшаривания результата (Share String).</div></div>
+<div class="ttc" id="aclassGuessGrid_html_a9d2738991a37ee32258a14b87bd21c15"><div class="ttname"><a href="classGuessGrid.html#a9d2738991a37ee32258a14b87bd21c15">GuessGrid::update</a></div><div class="ttdeci">virtual void update(const float deltaTime) override</div><div class="ttdoc">Обновление логики сетки (не используется).</div><div class="ttdef"><b>Definition</b> GuessGrid.h:61</div></div>
+<div class="ttc" id="aclassGuessGrid_html_aa1aa24a79c48d2fe595b36be6d6daf7b"><div class="ttname"><a href="classGuessGrid.html#aa1aa24a79c48d2fe595b36be6d6daf7b">GuessGrid::draw</a></div><div class="ttdeci">virtual void draw(sf::RenderWindow &amp;renderWindow) const override</div><div class="ttdoc">Рисует сетку догадок на экране.</div><div class="ttdef"><b>Definition</b> GuessGrid.cpp:28</div></div>
+<div class="ttc" id="aclassGuessGrid_html_aabcc7fa3dc10651e788751b876c16bae"><div class="ttname"><a href="classGuessGrid.html#aabcc7fa3dc10651e788751b876c16bae">GuessGrid::~GuessGrid</a></div><div class="ttdeci">virtual ~GuessGrid()=default</div><div class="ttdoc">Деструктор.</div></div>
+<div class="ttc" id="aclassGuessGrid_html_ae017f406f9fac6f4371e32e064a672e0"><div class="ttname"><a href="classGuessGrid.html#ae017f406f9fac6f4371e32e064a672e0">GuessGrid::getKeyCheckReset</a></div><div class="ttdeci">bool getKeyCheckReset()</div><div class="ttdoc">Возвращает и сбрасывает флаг изменения проверки клавиши (Enter).</div><div class="ttdef"><b>Definition</b> GuessGrid.cpp:165</div></div>
+<div class="ttc" id="aclassWndInterface_html"><div class="ttname"><a href="classWndInterface.html">WndInterface</a></div><div class="ttdef"><b>Definition</b> WndInterface.h:9</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>
