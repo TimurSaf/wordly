@@ -1,14 +1,11 @@
 #include "PostGameWnd.h"
 #include <stdexcept>
 
-PostGameWnd::PostGameWnd(const sf::IntRect & bounds, const sf::Font & font, const std::string & solution, const bool wonGame, const int attempts)
+PostGameWnd::PostGameWnd(const sf::IntRect & bounds, const sf::Font & font, const std::string & solution, const bool wonGame)
 	: WndInterface(bounds)
 {
 	if (bounds.size.x <= 0 || bounds.size.y <= 0) {
         throw std::invalid_argument("Window bounds must have positive dimensions");
-    }
-    if (attempts < 0) {
-        throw std::invalid_argument("Attempts count cannot be negative");
     }
 	
 	_resultState = WndResultState::NothingState;
