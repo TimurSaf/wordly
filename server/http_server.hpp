@@ -57,6 +57,19 @@ std::string check_word(std::string& word);
 std::string file_name(int len_w);
 
 /**
+ * \brief Генерирует HTTP-ответ на основе входящего запроса.
+ * \tparam Body      Тип тела запроса.
+ * \tparam Allocator Тип аллокатора для полей HTTP.
+ * \param doc_root Корневая директория документов.
+ * \param req Входящий HTTP-запрос.
+ * \return http::response<http::string_body> Сгенерированный HTTP-ответ.
+ */
+template<class Body, class Allocator>
+http::response<http::string_body> generate_response(
+    beast::string_view doc_root,
+    const http::request<Body, http::basic_fields<Allocator>>& req);
+
+/**
  * \brief Обрабатывает HTTP-запрос и формирует ответ.
  * \tparam Body      Тип тела запроса.
  * \tparam Allocator Тип аллокатора для полей HTTP.

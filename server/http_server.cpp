@@ -1,10 +1,10 @@
 #include "http_server.hpp"
 
 
-template <class Body, class Allocator>
-http::message_generator handle_request(
+template<class Body, class Allocator>
+http::response<http::string_body> generate_response(
     beast::string_view doc_root,
-    http::request<Body, http::basic_fields<Allocator>>&& req)
+    const http::request<Body, http::basic_fields<Allocator>>& req)
 {
     auto const bad_request =
     [&req](beast::string_view why)
@@ -21,12 +21,14 @@ http::message_generator handle_request(
     if(req.method() != http::verb::post &&
        req.method() != http::verb::get)
         return bad_request("Unknown HTTP-method");
+
     if (req.method() == http::verb::post) {
-        std::string word = (req.body());
+        std::string word = req.body();
         int const word_size = word.size();
         word = word.substr(5, word_size - 5);
         std::string body = check_word(word);
         int const body_size = body.size();
+
         http::response<http::string_body> res{
             std::piecewise_construct,
             std::make_tuple(std::move(body)),
@@ -36,7 +38,8 @@ http::message_generator handle_request(
         res.content_length(body_size);
         res.keep_alive(req.keep_alive());
         return res;
-        }
+    }
+
     std::string len_word_str {req.target()[11]};
     int len_word {atoi(len_word_str.c_str())};
 
@@ -52,6 +55,14 @@ http::message_generator handle_request(
     res.content_length(size);
     res.keep_alive(req.keep_alive());
     return res;
+}
+
+template<class Body, class Allocator>
+http::message_generator handle_request(
+    beast::string_view doc_root,
+    http::request<Body, http::basic_fields<Allocator>>&& req)
+{
+    return generate_response(doc_root, req);
 }
 
 
