@@ -35,6 +35,8 @@ std\+::string \mbox{\hyperlink{http__server_8hpp_af477d6ae2e37faa9c9c15190f1d953
 \begin{DoxyCompactList}\small\item\em Проверяет существование слова в словаре. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{http__server_8hpp_aaea2d82c891b95aa00cefe39d32efe0e}{file\+\_\+name}} (int len\+\_\+w)
 \begin{DoxyCompactList}\small\item\em Формирует имя файла-\/словaря по длине слова. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Body , class Allocator $>$ }\\http\+::response$<$ http\+::string\+\_\+body $>$ \mbox{\hyperlink{http__server_8hpp_a0d69b5b9b8f50a581e4b5d788c3bdfa0}{generate\+\_\+response}} (beast\+::string\+\_\+view doc\+\_\+root, const http\+::request$<$ Body, http\+::basic\+\_\+fields$<$ Allocator $>$ $>$ \&req)
+\begin{DoxyCompactList}\small\item\em Генерирует HTTP-\/ответ на основе входящего запроса. \end{DoxyCompactList}\item 
 {\footnotesize template$<$class Body , class Allocator $>$ }\\http\+::message\+\_\+generator \mbox{\hyperlink{http__server_8hpp_a02416cc55718961f3a3281cdcfb329fc}{handle\+\_\+request}} (beast\+::string\+\_\+view doc\+\_\+root, http\+::request$<$ Body, http\+::basic\+\_\+fields$<$ Allocator $>$ $>$ \&\&req)
 \begin{DoxyCompactList}\small\item\em Обрабатывает HTTP-\/запрос и формирует ответ. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{http__server_8hpp_a32c8356aac9650319300fe83f8936f9c}{do\+\_\+session}} (tcp\+::socket \&socket, std\+::string const \&doc\+\_\+root)
@@ -137,6 +139,34 @@ std\+::string Имя файла-\/словаря (например, "{}dict\+\_\
 {\em std\+::runtime\+\_\+error} & Если len\+\_\+w не равна 4, 5, 6. \\
 \hline
 \end{DoxyExceptions}
+\Hypertarget{http__server_8hpp_a0d69b5b9b8f50a581e4b5d788c3bdfa0}\label{http__server_8hpp_a0d69b5b9b8f50a581e4b5d788c3bdfa0} 
+\index{http\_server.hpp@{http\_server.hpp}!generate\_response@{generate\_response}}
+\index{generate\_response@{generate\_response}!http\_server.hpp@{http\_server.hpp}}
+\doxysubsubsection{\texorpdfstring{generate\_response()}{generate\_response()}}
+{\footnotesize\ttfamily template$<$class Body , class Allocator $>$ \\
+http\+::response$<$ http\+::string\+\_\+body $>$ generate\+\_\+response (\begin{DoxyParamCaption}\item[{beast\+::string\+\_\+view}]{doc\+\_\+root,  }\item[{const http\+::request$<$ Body, http\+::basic\+\_\+fields$<$ Allocator $>$ $>$ \&}]{req }\end{DoxyParamCaption})}
+
+
+
+Генерирует HTTP-\/ответ на основе входящего запроса. 
+
+
+\begin{DoxyTemplParams}{Параметры шаблона}
+{\em Body} & Тип тела запроса. \\
+\hline
+{\em Allocator} & Тип аллокатора для полей HTTP. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Аргументы}
+{\em doc\+\_\+root} & Корневая директория документов. \\
+\hline
+{\em req} & Входящий HTTP-\/запрос. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+http\+::response$<$http\+::string\+\_\+body$>$ Сгенерированный HTTP-\/ответ. 
+\end{DoxyReturn}
 \Hypertarget{http__server_8hpp_a8022b1dcfe423fcdaa14a9923fb60f3c}\label{http__server_8hpp_a8022b1dcfe423fcdaa14a9923fb60f3c} 
 \index{http\_server.hpp@{http\_server.hpp}!get\_word@{get\_word}}
 \index{get\_word@{get\_word}!http\_server.hpp@{http\_server.hpp}}

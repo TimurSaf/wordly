@@ -1,4 +1,9 @@
 var searchData=
 [
-  ['update_0',['update',['../classBeforeGameWnd.html#a13f1ba3788017d91d436c4038de76583',1,'BeforeGameWnd::update()'],['../classGame.html#ac68764e711349196e5d3280b2297d268',1,'Game::update()'],['../classKeyboardWnd.html#a5c574e59f4d6303a52b4380c95ec9037',1,'KeyboardWnd::update()'],['../classPostGameWnd.html#a93391a529197a4099674acc213bbeeab',1,'PostGameWnd::update()'],['../classPuzzleWnd.html#a60eaa7c671f1ec2326a6082fe5c66fce',1,'PuzzleWnd::update()'],['../classWndInterface.html#acc76841cf5afb7d69f6de1067eef2205',1,'WndInterface::update()']]]
+  ['setbackgroundcolour_0',['setBackgroundColour',['../classButton.html#ad1635e4e0093b545da4d250a815b68a7',1,'Button']]],
+  ['setenabled_1',['setEnabled',['../classWndInterface.html#a1e37ec57b10bb1043159c483a571e257',1,'WndInterface']]],
+  ['sethovering_2',['setHovering',['../classButton.html#af8a588df880659a28c9ba110891c977b',1,'Button']]],
+  ['setletter_3',['setLetter',['../classPuzzleLetter.html#a0c48c400f6121fc1b04bcd0cc435da5e',1,'PuzzleLetter']]],
+  ['setsolutionstate_4',['setSolutionState',['../classPuzzleLetter.html#a58447f0f80314f527671edfb2abacc64',1,'PuzzleLetter']]],
+  ['sfmlgame_5',['SFMLGame',['../classSFMLGame.html#a3ebd6477466c3c4cc4322c7a797fb7b3',1,'SFMLGame']]]
 ];

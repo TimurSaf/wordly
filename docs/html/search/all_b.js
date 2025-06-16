@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['nothingstate_0',['NothingState',['../WndInterface_8h.html#a0ab26bd2624b188834cc7e71cd81f45fac5a18bdcc1252d65aae0c9303f8ac88b',1,'WndInterface.h']]]
+  ['make_5frequest_0',['make_request',['../client__http_8hpp.html#a71bc5ee987b6c96c4c523b49b6683214',1,'make_request.cpp']]]
 ];

@@ -33,8 +33,8 @@ virtual void \mbox{\hyperlink{classPuzzleWnd_a255d180e39795eaec5ead9b9c565baec}{
 \begin{DoxyCompactList}\small\item\em Обрабатывает перемещение мыши внутри окна. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classPuzzleWnd_a13e13d68a7087f79f486ed125550640d}{handle\+Key\+Input}} (const sf\+::\+Keyboard\+::\+Key key\+Code) override
 \begin{DoxyCompactList}\small\item\em Обрабатывает ввод с аппаратной клавиатуры. \end{DoxyCompactList}\item 
-const Guess\+Grid \& \mbox{\hyperlink{classPuzzleWnd_af8858d8e2d45c0feca835a158c2ff736}{get\+Guess\+Grid}} () const
-\begin{DoxyCompactList}\small\item\em Возвращает ссылку на объект Guess\+Grid. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classGuessGrid}{Guess\+Grid}} \& \mbox{\hyperlink{classPuzzleWnd_af8858d8e2d45c0feca835a158c2ff736}{get\+Guess\+Grid}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает ссылку на объект \doxylink{classGuessGrid}{Guess\+Grid}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{WndInterface_8h_a0ab26bd2624b188834cc7e71cd81f45f}{Wnd\+Result\+State}} \mbox{\hyperlink{classPuzzleWnd_a5c450fdb37d54fbb07a76d450dec2bdd}{get\+Result\+State}} () const override
 \begin{DoxyCompactList}\small\item\em Возвращает текущее состояние окна. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Открытые члены унаследованные от \mbox{\hyperlink{classWndInterface}{Wnd\+Interface}}}
@@ -61,7 +61,7 @@ bool \mbox{\hyperlink{classWndInterface_ab96909811c3e8554476150fa5941d964}{\+\_\
 \doxysubsection{Подробное описание}
 Класс игрового окна пазла. 
 
-\doxylink{classPuzzleWnd}{Puzzle\+Wnd} отвечает за инициализацию нового пазла, отображение заголовка, сетки догадок (Guess\+Grid), виртуальной клавиатуры (\doxylink{classKeyboardWnd}{Keyboard\+Wnd}) и обработку всех пользовательских событий (нажатия клавиш и мыши). ~\newline
+\doxylink{classPuzzleWnd}{Puzzle\+Wnd} отвечает за инициализацию нового пазла, отображение заголовка, сетки догадок (\doxylink{classGuessGrid}{Guess\+Grid}), виртуальной клавиатуры (\doxylink{classKeyboardWnd}{Keyboard\+Wnd}) и обработку всех пользовательских событий (нажатия клавиш и мыши). ~\newline
  Окно переходит в состояние Restart, когда игра завершена и нужно вернуться к экрану выбора или началу новой игры. 
 
 \doxysubsection{Конструктор(ы)}
@@ -99,7 +99,7 @@ bool \mbox{\hyperlink{classWndInterface_ab96909811c3e8554476150fa5941d964}{\+\_\
 
 Отрисовывает все компоненты игрового окна. 
 
-Рисует заголовок, сетку догадок (Guess\+Grid) и виртуальную клавиатуру (\doxylink{classKeyboardWnd}{Keyboard\+Wnd}) на заданном объекте sf\+::\+Render\+Window.
+Рисует заголовок, сетку догадок (\doxylink{classGuessGrid}{Guess\+Grid}) и виртуальную клавиатуру (\doxylink{classKeyboardWnd}{Keyboard\+Wnd}) на заданном объекте sf\+::\+Render\+Window.
 
 
 \begin{DoxyParams}{Аргументы}
@@ -117,11 +117,11 @@ void
 \index{PuzzleWnd@{PuzzleWnd}!getGuessGrid@{getGuessGrid}}
 \index{getGuessGrid@{getGuessGrid}!PuzzleWnd@{PuzzleWnd}}
 \doxysubsubsection{\texorpdfstring{getGuessGrid()}{getGuessGrid()}}
-{\footnotesize\ttfamily const Guess\+Grid \& Puzzle\+Wnd\+::get\+Guess\+Grid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classGuessGrid}{Guess\+Grid}} \& Puzzle\+Wnd\+::get\+Guess\+Grid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
-Возвращает ссылку на объект Guess\+Grid. 
+Возвращает ссылку на объект \doxylink{classGuessGrid}{Guess\+Grid}. 
 
 С помощью этого метода можно получить доступ к сетке догадок для чтения состояний или выполнения дополнительных проверок извне. 
 \begin{DoxyExceptions}{Исключения}
@@ -129,7 +129,7 @@ void
 \hline
 \end{DoxyExceptions}
 \begin{DoxyReturn}{Возвращает}
-const Guess\+Grid\& Ссылка на текущий объект Guess\+Grid. 
+const \doxylink{classGuessGrid}{Guess\+Grid}\& Ссылка на текущий объект \doxylink{classGuessGrid}{Guess\+Grid}. 
 \end{DoxyReturn}
 \Hypertarget{classPuzzleWnd_a5c450fdb37d54fbb07a76d450dec2bdd}\label{classPuzzleWnd_a5c450fdb37d54fbb07a76d450dec2bdd} 
 \index{PuzzleWnd@{PuzzleWnd}!getResultState@{getResultState}}
@@ -160,7 +160,7 @@ Wnd\+Result\+State Текущее состояние окна (Nothing\+State и
 
 Обрабатывает ввод с аппаратной клавиатуры. 
 
-Если игрок нажал на клавишу (букву или Enter), соответствующее событие будет передано в Guess\+Grid или использовано для проверки слова.
+Если игрок нажал на клавишу (букву или Enter), соответствующее событие будет передано в \doxylink{classGuessGrid}{Guess\+Grid} или использовано для проверки слова.
 
 
 \begin{DoxyParams}{Аргументы}

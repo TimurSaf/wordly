@@ -72,6 +72,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
 <a href="classSFMLGame-members.html">Полный список членов класса</a>  </div>
   <div class="headertitle"><div class="title">Класс SFMLGame</div></div>
 </div><!--header-->
@@ -94,6 +95,12 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~SFMLGame</b> ()=d
 <tr class="memitem:a00908fe9c382b572f7066ea58b491d33" id="r_a00908fe9c382b572f7066ea58b491d33"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSFMLGame.html#a00908fe9c382b572f7066ea58b491d33">gameLoop</a> ()</td></tr>
 <tr class="memdesc:a00908fe9c382b572f7066ea58b491d33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Запускает основной игровой цикл.  <br /></td></tr>
 <tr class="separator:a00908fe9c382b572f7066ea58b491d33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:ab3cf44973df9df93231f2da2bc4a0b66" id="r_ab3cf44973df9df93231f2da2bc4a0b66"><td class="memItemLeft" align="right" valign="top">static sf::Font&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSFMLGame.html#ab3cf44973df9df93231f2da2bc4a0b66">loadFont</a> ()</td></tr>
+<tr class="memdesc:ab3cf44973df9df93231f2da2bc4a0b66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Загружает и возвращает шрифт для использования в игре.  <br /></td></tr>
+<tr class="separator:ab3cf44973df9df93231f2da2bc4a0b66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
 <div class="textblock"><p>Класс, управляющий окном SFML и игровым циклом. </p>
@@ -138,6 +145,41 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~SFMLGame</b> ()=d
 <p>Запускает основной игровой цикл. </p>
 <p>В безусловном цикле обрабатывает события окна, обновляет состояние игры и выполняет отрисовку до тех пор, пока окно не будет закрыто.</p>
 <dl class="section return"><dt>Возвращает</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="ab3cf44973df9df93231f2da2bc4a0b66" name="ab3cf44973df9df93231f2da2bc4a0b66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3cf44973df9df93231f2da2bc4a0b66">&#9670;&#160;</a></span>loadFont()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Font SFMLGame::loadFont </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Загружает и возвращает шрифт для использования в игре. </p>
+<p>Выполняет загрузку файла шрифта из заранее известного пути и возвращает объект sf::Font. В случае неудачи бросает исключение.</p>
+<dl class="section return"><dt>Возвращает</dt><dd>sf::Font Загрузка шрифта, готового к использованию. </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>Если не удалось загрузить файл шрифта. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

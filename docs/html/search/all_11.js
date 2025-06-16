@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['wndinterface_0',['wndinterface',['../classWndInterface.html',1,'WndInterface'],['../classWndInterface.html#a6b5c70af6e357fba833fbe6f1aebf6fb',1,'WndInterface::WndInterface()']]],
-  ['wndinterface_2eh_1',['WndInterface.h',['../WndInterface_8h.html',1,'']]],
-  ['wndresultstate_2',['WndResultState',['../WndInterface_8h.html#a0ab26bd2624b188834cc7e71cd81f45f',1,'WndInterface.h']]]
+  ['update_0',['update',['../classBeforeGameWnd.html#a13f1ba3788017d91d436c4038de76583',1,'BeforeGameWnd::update()'],['../classGame.html#ac68764e711349196e5d3280b2297d268',1,'Game::update()'],['../classGuessGrid.html#a9d2738991a37ee32258a14b87bd21c15',1,'GuessGrid::update()'],['../classKeyboardWnd.html#a5c574e59f4d6303a52b4380c95ec9037',1,'KeyboardWnd::update()'],['../classPostGameWnd.html#a93391a529197a4099674acc213bbeeab',1,'PostGameWnd::update()'],['../classPuzzleWnd.html#a60eaa7c671f1ec2326a6082fe5c66fce',1,'PuzzleWnd::update()'],['../classWndInterface.html#acc76841cf5afb7d69f6de1067eef2205',1,'WndInterface::update()']]]
 ];

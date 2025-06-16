@@ -33,15 +33,20 @@
 \DoxyCodeLine{00050\ }
 \DoxyCodeLine{00057\ std::string\ \mbox{\hyperlink{http__server_8hpp_aaea2d82c891b95aa00cefe39d32efe0e}{file\_name}}(\textcolor{keywordtype}{int}\ len\_w);}
 \DoxyCodeLine{00058\ }
-\DoxyCodeLine{00067\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ Body,\ \textcolor{keyword}{class}\ Allocator>}
-\DoxyCodeLine{00068\ http::message\_generator\ \mbox{\hyperlink{http__server_8hpp_a02416cc55718961f3a3281cdcfb329fc}{handle\_request}}(}
+\DoxyCodeLine{00067\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ Body,\ \textcolor{keyword}{class}\ Allocator>}
+\DoxyCodeLine{00068\ http::response<http::string\_body>\ \mbox{\hyperlink{http__server_8hpp_a0d69b5b9b8f50a581e4b5d788c3bdfa0}{generate\_response}}(}
 \DoxyCodeLine{00069\ \ \ \ \ beast::string\_view\ doc\_root,}
-\DoxyCodeLine{00070\ \ \ \ \ http::request<Body,\ http::basic\_fields<Allocator>>\&\&\ req);}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keyword}{const}\ http::request<Body,\ http::basic\_fields<Allocator>>\&\ req);}
 \DoxyCodeLine{00071\ }
-\DoxyCodeLine{00078\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{http__server_8hpp_a32c8356aac9650319300fe83f8936f9c}{do\_session}}(}
-\DoxyCodeLine{00079\ \ \ \ \ tcp::socket\&\ socket,}
-\DoxyCodeLine{00080\ \ \ \ \ std::string\ \textcolor{keyword}{const}\&\ doc\_root);}
-\DoxyCodeLine{00081\ }
-\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ HTTP\_SERVER\_HPP}}
+\DoxyCodeLine{00080\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ Body,\ \textcolor{keyword}{class}\ Allocator>}
+\DoxyCodeLine{00081\ http::message\_generator\ \mbox{\hyperlink{http__server_8hpp_a02416cc55718961f3a3281cdcfb329fc}{handle\_request}}(}
+\DoxyCodeLine{00082\ \ \ \ \ beast::string\_view\ doc\_root,}
+\DoxyCodeLine{00083\ \ \ \ \ http::request<Body,\ http::basic\_fields<Allocator>>\&\&\ req);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00091\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{http__server_8hpp_a32c8356aac9650319300fe83f8936f9c}{do\_session}}(}
+\DoxyCodeLine{00092\ \ \ \ \ tcp::socket\&\ socket,}
+\DoxyCodeLine{00093\ \ \ \ \ std::string\ \textcolor{keyword}{const}\&\ doc\_root);}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ HTTP\_SERVER\_HPP}}
 
 \end{DoxyCode}
