@@ -1,11 +1,4 @@
 var searchData=
 [
-  ['_7ebutton_0',['~Button',['../classButton.html#afb6a5e927ef20e4017939af3524eed69',1,'Button']]],
-  ['_7egame_1',['~Game',['../classGame.html#ae3d112ca6e0e55150d2fdbc704474530',1,'Game']]],
-  ['_7ekeyboardwnd_2',['~KeyboardWnd',['../classKeyboardWnd.html#ac48faea353c8ed2c429f69fef4f43396',1,'KeyboardWnd']]],
-  ['_7epostgamewnd_3',['~PostGameWnd',['../classPostGameWnd.html#ad29c6b916ad2fd6f3ab42ff497e13541',1,'PostGameWnd']]],
-  ['_7epuzzleletter_4',['~PuzzleLetter',['../classPuzzleLetter.html#a40f79b2fbb8b3f830a82b54fa0646de8',1,'PuzzleLetter']]],
-  ['_7epuzzlewnd_5',['~PuzzleWnd',['../classPuzzleWnd.html#a369ad4478474724aeac3ae27321db8d0',1,'PuzzleWnd']]],
-  ['_7esfmlgame_6',['~SFMLGame',['../classSFMLGame.html#ab961aa0db8e6ffed704ca20254e99250',1,'SFMLGame']]],
-  ['_7ewndinterface_7',['~WndInterface',['../classWndInterface.html#a761ac33f53af1a2ae4b0989560411c55',1,'WndInterface']]]
+  ['update_0',['update',['../classBeforeGameWnd.html#a13f1ba3788017d91d436c4038de76583',1,'BeforeGameWnd::update()'],['../classGame.html#ac68764e711349196e5d3280b2297d268',1,'Game::update()'],['../classGuessGrid.html#a9d2738991a37ee32258a14b87bd21c15',1,'GuessGrid::update()'],['../classKeyboardWnd.html#a5c574e59f4d6303a52b4380c95ec9037',1,'KeyboardWnd::update()'],['../classPostGameWnd.html#a93391a529197a4099674acc213bbeeab',1,'PostGameWnd::update()'],['../classPuzzleWnd.html#a60eaa7c671f1ec2326a6082fe5c66fce',1,'PuzzleWnd::update()'],['../classWndInterface.html#acc76841cf5afb7d69f6de1067eef2205',1,'WndInterface::update()']]]
 ];

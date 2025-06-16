@@ -115,8 +115,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~PuzzleWnd</b> ()<
 <tr class="memitem:a13e13d68a7087f79f486ed125550640d" id="r_a13e13d68a7087f79f486ed125550640d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPuzzleWnd.html#a13e13d68a7087f79f486ed125550640d">handleKeyInput</a> (const sf::Keyboard::Key keyCode) override</td></tr>
 <tr class="memdesc:a13e13d68a7087f79f486ed125550640d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обрабатывает ввод с аппаратной клавиатуры.  <br /></td></tr>
 <tr class="separator:a13e13d68a7087f79f486ed125550640d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8858d8e2d45c0feca835a158c2ff736" id="r_af8858d8e2d45c0feca835a158c2ff736"><td class="memItemLeft" align="right" valign="top">const GuessGrid &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPuzzleWnd.html#af8858d8e2d45c0feca835a158c2ff736">getGuessGrid</a> () const</td></tr>
-<tr class="memdesc:af8858d8e2d45c0feca835a158c2ff736"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает ссылку на объект GuessGrid.  <br /></td></tr>
+<tr class="memitem:af8858d8e2d45c0feca835a158c2ff736" id="r_af8858d8e2d45c0feca835a158c2ff736"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classGuessGrid.html">GuessGrid</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPuzzleWnd.html#af8858d8e2d45c0feca835a158c2ff736">getGuessGrid</a> () const</td></tr>
+<tr class="memdesc:af8858d8e2d45c0feca835a158c2ff736"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает ссылку на объект <a class="el" href="classGuessGrid.html" title="Класс для управления сеткой догадок в игровой механике.">GuessGrid</a>.  <br /></td></tr>
 <tr class="separator:af8858d8e2d45c0feca835a158c2ff736"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c450fdb37d54fbb07a76d450dec2bdd" id="r_a5c450fdb37d54fbb07a76d450dec2bdd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="WndInterface_8h.html#a0ab26bd2624b188834cc7e71cd81f45f">WndResultState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPuzzleWnd.html#a5c450fdb37d54fbb07a76d450dec2bdd">getResultState</a> () const override</td></tr>
 <tr class="memdesc:a5c450fdb37d54fbb07a76d450dec2bdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает текущее состояние окна.  <br /></td></tr>
@@ -146,7 +146,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~WndInterface</b> 
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
 <div class="textblock"><p>Класс игрового окна пазла. </p>
-<p><a class="el" href="classPuzzleWnd.html" title="Класс игрового окна пазла.">PuzzleWnd</a> отвечает за инициализацию нового пазла, отображение заголовка, сетки догадок (GuessGrid), виртуальной клавиатуры (<a class="el" href="classKeyboardWnd.html" title="Класс виртуальной клавиатуры для ввода символов.">KeyboardWnd</a>) и обработку всех пользовательских событий (нажатия клавиш и мыши). <br  />
+<p><a class="el" href="classPuzzleWnd.html" title="Класс игрового окна пазла.">PuzzleWnd</a> отвечает за инициализацию нового пазла, отображение заголовка, сетки догадок (<a class="el" href="classGuessGrid.html" title="Класс для управления сеткой догадок в игровой механике.">GuessGrid</a>), виртуальной клавиатуры (<a class="el" href="classKeyboardWnd.html" title="Класс виртуальной клавиатуры для ввода символов.">KeyboardWnd</a>) и обработку всех пользовательских событий (нажатия клавиш и мыши). <br  />
  Окно переходит в состояние Restart, когда игра завершена и нужно вернуться к экрану выбора или началу новой игры. </p>
 </div><h2 class="groupheader">Конструктор(ы)</h2>
 <a id="a5c4f7a8439b5bdddfbffb618919bf53c" name="a5c4f7a8439b5bdddfbffb618919bf53c"></a>
@@ -220,7 +220,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~WndInterface</b> 
 </div><div class="memdoc">
 
 <p>Отрисовывает все компоненты игрового окна. </p>
-<p>Рисует заголовок, сетку догадок (GuessGrid) и виртуальную клавиатуру (<a class="el" href="classKeyboardWnd.html" title="Класс виртуальной клавиатуры для ввода символов.">KeyboardWnd</a>) на заданном объекте sf::RenderWindow.</p>
+<p>Рисует заголовок, сетку догадок (<a class="el" href="classGuessGrid.html" title="Класс для управления сеткой догадок в игровой механике.">GuessGrid</a>) и виртуальную клавиатуру (<a class="el" href="classKeyboardWnd.html" title="Класс виртуальной клавиатуры для ввода символов.">KeyboardWnd</a>) на заданном объекте sf::RenderWindow.</p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">renderWindow</td><td>Ссылка на объект sf::RenderWindow для отрисовки элементов. </td></tr>
@@ -240,7 +240,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~WndInterface</b> 
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const GuessGrid &amp; PuzzleWnd::getGuessGrid </td>
+          <td class="memname">const <a class="el" href="classGuessGrid.html">GuessGrid</a> &amp; PuzzleWnd::getGuessGrid </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -248,14 +248,14 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~WndInterface</b> 
       </table>
 </div><div class="memdoc">
 
-<p>Возвращает ссылку на объект GuessGrid. </p>
+<p>Возвращает ссылку на объект <a class="el" href="classGuessGrid.html" title="Класс для управления сеткой догадок в игровой механике.">GuessGrid</a>. </p>
 <p>С помощью этого метода можно получить доступ к сетке догадок для чтения состояний или выполнения дополнительных проверок извне. </p><dl class="exception"><dt>Исключения</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::logic_error</td><td>если игра ещё не завершена (<a class="el" href="classPuzzleWnd.html#a5c450fdb37d54fbb07a76d450dec2bdd" title="Возвращает текущее состояние окна.">getResultState()</a> != Finished). </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Возвращает</dt><dd>const GuessGrid&amp; Ссылка на текущий объект GuessGrid. </dd></dl>
+<dl class="section return"><dt>Возвращает</dt><dd>const <a class="el" href="classGuessGrid.html" title="Класс для управления сеткой догадок в игровой механике.">GuessGrid</a>&amp; Ссылка на текущий объект <a class="el" href="classGuessGrid.html" title="Класс для управления сеткой догадок в игровой механике.">GuessGrid</a>. </dd></dl>
 
 </div>
 </div>
@@ -315,7 +315,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~WndInterface</b> 
 </div><div class="memdoc">
 
 <p>Обрабатывает ввод с аппаратной клавиатуры. </p>
-<p>Если игрок нажал на клавишу (букву или Enter), соответствующее событие будет передано в GuessGrid или использовано для проверки слова.</p>
+<p>Если игрок нажал на клавишу (букву или Enter), соответствующее событие будет передано в <a class="el" href="classGuessGrid.html" title="Класс для управления сеткой догадок в игровой механике.">GuessGrid</a> или использовано для проверки слова.</p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">keyCode</td><td>Код нажатой клавиши (sf::Keyboard::Key). </td></tr>

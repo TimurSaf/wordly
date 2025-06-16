@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['wndinterface_0',['WndInterface',['../classWndInterface.html#a6b5c70af6e357fba833fbe6f1aebf6fb',1,'WndInterface']]]
+  ['tryinsertletter_0',['tryInsertLetter',['../classGuessGrid.html#a59bca21bfbcc341a089552e3f55c93b5',1,'GuessGrid']]]
 ];

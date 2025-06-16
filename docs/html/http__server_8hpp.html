@@ -118,6 +118,10 @@ $(function() {
 <tr class="memitem:aaea2d82c891b95aa00cefe39d32efe0e" id="r_aaea2d82c891b95aa00cefe39d32efe0e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="http__server_8hpp.html#aaea2d82c891b95aa00cefe39d32efe0e">file_name</a> (int len_w)</td></tr>
 <tr class="memdesc:aaea2d82c891b95aa00cefe39d32efe0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Формирует имя файла-словaря по длине слова.  <br /></td></tr>
 <tr class="separator:aaea2d82c891b95aa00cefe39d32efe0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d69b5b9b8f50a581e4b5d788c3bdfa0" id="r_a0d69b5b9b8f50a581e4b5d788c3bdfa0"><td class="memTemplParams" colspan="2">template&lt;class Body , class Allocator &gt; </td></tr>
+<tr class="memitem:a0d69b5b9b8f50a581e4b5d788c3bdfa0"><td class="memTemplItemLeft" align="right" valign="top">http::response&lt; http::string_body &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="http__server_8hpp.html#a0d69b5b9b8f50a581e4b5d788c3bdfa0">generate_response</a> (beast::string_view doc_root, const http::request&lt; Body, http::basic_fields&lt; Allocator &gt; &gt; &amp;req)</td></tr>
+<tr class="memdesc:a0d69b5b9b8f50a581e4b5d788c3bdfa0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Генерирует HTTP-ответ на основе входящего запроса.  <br /></td></tr>
+<tr class="separator:a0d69b5b9b8f50a581e4b5d788c3bdfa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02416cc55718961f3a3281cdcfb329fc" id="r_a02416cc55718961f3a3281cdcfb329fc"><td class="memTemplParams" colspan="2">template&lt;class Body , class Allocator &gt; </td></tr>
 <tr class="memitem:a02416cc55718961f3a3281cdcfb329fc"><td class="memTemplItemLeft" align="right" valign="top">http::message_generator&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="http__server_8hpp.html#a02416cc55718961f3a3281cdcfb329fc">handle_request</a> (beast::string_view doc_root, http::request&lt; Body, http::basic_fields&lt; Allocator &gt; &gt; &amp;&amp;req)</td></tr>
 <tr class="memdesc:a02416cc55718961f3a3281cdcfb329fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обрабатывает HTTP-запрос и формирует ответ.  <br /></td></tr>
@@ -261,6 +265,53 @@ $(function() {
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a0d69b5b9b8f50a581e4b5d788c3bdfa0" name="a0d69b5b9b8f50a581e4b5d788c3bdfa0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d69b5b9b8f50a581e4b5d788c3bdfa0">&#9670;&#160;</a></span>generate_response()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Body , class Allocator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">http::response&lt; http::string_body &gt; generate_response </td>
+          <td>(</td>
+          <td class="paramtype">beast::string_view&#160;</td>
+          <td class="paramname"><em>doc_root</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const http::request&lt; Body, http::basic_fields&lt; Allocator &gt; &gt; &amp;&#160;</td>
+          <td class="paramname"><em>req</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Генерирует HTTP-ответ на основе входящего запроса. </p>
+<dl class="tparams"><dt>Параметры шаблона</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Body</td><td>Тип тела запроса. </td></tr>
+    <tr><td class="paramname">Allocator</td><td>Тип аллокатора для полей HTTP. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">doc_root</td><td>Корневая директория документов. </td></tr>
+    <tr><td class="paramname">req</td><td>Входящий HTTP-запрос. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>http::response&lt;http::string_body&gt; Сгенерированный HTTP-ответ. </dd></dl>
 
 </div>
 </div>

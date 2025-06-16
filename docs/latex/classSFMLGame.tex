@@ -19,6 +19,11 @@ virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+SFMLGame} ()=default
 \begin{DoxyCompactList}\small\item\em Деструктор класса \doxylink{classSFMLGame}{SFMLGame}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classSFMLGame_a00908fe9c382b572f7066ea58b491d33}{game\+Loop}} ()
 \begin{DoxyCompactList}\small\item\em Запускает основной игровой цикл. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static sf\+::\+Font \mbox{\hyperlink{classSFMLGame_ab3cf44973df9df93231f2da2bc4a0b66}{load\+Font}} ()
+\begin{DoxyCompactList}\small\item\em Загружает и возвращает шрифт для использования в игре. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Подробное описание}
@@ -55,6 +60,26 @@ void \mbox{\hyperlink{classSFMLGame_a00908fe9c382b572f7066ea58b491d33}{game\+Loo
 \begin{DoxyReturn}{Возвращает}
 void 
 \end{DoxyReturn}
+\Hypertarget{classSFMLGame_ab3cf44973df9df93231f2da2bc4a0b66}\label{classSFMLGame_ab3cf44973df9df93231f2da2bc4a0b66} 
+\index{SFMLGame@{SFMLGame}!loadFont@{loadFont}}
+\index{loadFont@{loadFont}!SFMLGame@{SFMLGame}}
+\doxysubsubsection{\texorpdfstring{loadFont()}{loadFont()}}
+{\footnotesize\ttfamily sf\+::\+Font SFMLGame\+::load\+Font (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Загружает и возвращает шрифт для использования в игре. 
+
+Выполняет загрузку файла шрифта из заранее известного пути и возвращает объект sf\+::\+Font. В случае неудачи бросает исключение.
+
+\begin{DoxyReturn}{Возвращает}
+sf\+::\+Font Загрузка шрифта, готового к использованию. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em std\+::runtime\+\_\+error} & Если не удалось загрузить файл шрифта. \\
+\hline
+\end{DoxyExceptions}
 
 
 Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
