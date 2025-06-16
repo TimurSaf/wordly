@@ -1,6 +1,6 @@
 #include "PuzzleWnd.h"
 
-PuzzleWnd::PuzzleWnd(const sf::IntRect & bounds, const sf::Font & font, const std::string& solution)
+PuzzleWnd::PuzzleWnd(const sf::IntRect& bounds, const sf::Font& font, const std::string& solution)
 	: WndInterface(bounds), _font(font), _gameTitle(font, "Wordle", 50),
 	_keyboard(bounds, font), _guessGrid(bounds, font, solution, 6)
 {
@@ -19,14 +19,14 @@ void PuzzleWnd::update(const float deltaTime)
 	}
 }
 
-void PuzzleWnd::draw(sf::RenderWindow & renderWindow) const
+void PuzzleWnd::draw(sf::RenderWindow& renderWindow) const
 {
 	renderWindow.draw(_gameTitle);
 	_keyboard.draw(renderWindow);
 	_guessGrid.draw(renderWindow);
 }
 
-void PuzzleWnd::handleMousePress(const sf::Vector2i & mousePosition, bool isLeft)
+void PuzzleWnd::handleMousePress(const sf::Vector2i& mousePosition, bool isLeft)
 {
 	_keyboard.handleMousePress(mousePosition, isLeft);
 	int action = _keyboard.getActionIDReset();
@@ -41,7 +41,7 @@ void PuzzleWnd::handleMousePress(const sf::Vector2i & mousePosition, bool isLeft
 	}
 }
 
-void PuzzleWnd::handleMouseMove(const sf::Vector2i & mousePosition)
+void PuzzleWnd::handleMouseMove(const sf::Vector2i& mousePosition)
 {
 	_keyboard.handleMouseMove(mousePosition);
 }

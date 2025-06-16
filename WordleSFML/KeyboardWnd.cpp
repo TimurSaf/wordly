@@ -8,14 +8,14 @@ KeyboardWnd::KeyboardWnd(const sf::IntRect& bounds, const sf::Font& font)
 	_actionID = -1;
 }
 
-void KeyboardWnd::draw(sf::RenderWindow & renderWindow) const
+void KeyboardWnd::draw(sf::RenderWindow& renderWindow) const
 {
 	for (const auto& button : _buttons) {
 		button.draw(renderWindow);
 	}
 }
 
-void KeyboardWnd::handleMousePress(const sf::Vector2i & mousePosition, bool isLeft)
+void KeyboardWnd::handleMousePress(const sf::Vector2i& mousePosition, bool isLeft)
 {
 	for (auto& button : _buttons) {
 		if (button.isPositionInside(mousePosition)) {
@@ -25,7 +25,7 @@ void KeyboardWnd::handleMousePress(const sf::Vector2i & mousePosition, bool isLe
 	}
 }
 
-void KeyboardWnd::handleMouseMove(const sf::Vector2i & mousePosition)
+void KeyboardWnd::handleMouseMove(const sf::Vector2i& mousePosition)
 {
 	for (auto& button : _buttons) {
 		button.setHovering(button.isPositionInside(mousePosition));

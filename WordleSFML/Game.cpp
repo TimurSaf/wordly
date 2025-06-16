@@ -5,7 +5,7 @@
 #include "BeforeGameWnd.h"
 
 
-Game::Game(const sf::IntRect & gameBounds, const sf::Font & font)
+Game::Game(const sf::IntRect& gameBounds, const sf::Font& font)
 	: _bounds(gameBounds), _font(font)
 {
 	unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
@@ -52,7 +52,7 @@ void Game::update(const float deltaTime) {
     }
 }
 
-void Game::draw(sf::RenderWindow & renderWindow) const
+void Game::draw(sf::RenderWindow& renderWindow) const
 {
 	if (_activeInterface) {
 		_activeInterface->draw(renderWindow);
@@ -63,7 +63,7 @@ void Game::draw(sf::RenderWindow & renderWindow) const
 	}
 }
 
-void Game::handleMousePress(const sf::Vector2i & mousePosition, bool isLeft)
+void Game::handleMousePress(const sf::Vector2i& mousePosition, bool isLeft)
 {
 	if (_activeOverlay) {
 		_activeOverlay->handleMousePress(mousePosition, isLeft);
@@ -73,7 +73,7 @@ void Game::handleMousePress(const sf::Vector2i & mousePosition, bool isLeft)
 	}
 }
 
-void Game::handleMouseMove(const sf::Vector2i & mousePosition)
+void Game::handleMouseMove(const sf::Vector2i& mousePosition)
 {
 	if (_activeOverlay) {
 		_activeOverlay->handleMouseMove(mousePosition);
