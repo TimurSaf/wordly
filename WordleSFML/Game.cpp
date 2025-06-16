@@ -47,7 +47,7 @@ void Game::update(const float deltaTime) {
             auto guessGrid = dynamic_cast<PuzzleWnd*>(_activeInterface.get())->getGuessGrid();
             auto rules = guessGrid.getAllRules();
             std::string solution = guessGrid.getSolution();
-            _activeOverlay = std::make_unique<PostGameWnd>(_bounds, _font, solution, guessGrid.isSolved(), rules.size());
+            _activeOverlay = std::make_unique<PostGameWnd>(_bounds, _font, solution, guessGrid.isSolved());
         }
     }
 }
