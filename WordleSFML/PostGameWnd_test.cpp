@@ -10,7 +10,7 @@ public:
 
     PostGameWndFixture() 
         : font(),
-          postGameWnd(sf::IntRect(sf::Vector2<int>(0, 0), sf::Vector2<int>(800, 600)), font, "TEST", true, 5)
+          postGameWnd(sf::IntRect(sf::Vector2<int>(0, 0), sf::Vector2<int>(800, 600)), font, "TEST", true)
     {
         font.openFromFile("arial.ttf");
     }
@@ -19,13 +19,8 @@ public:
 //Тесты для конструктора
 TEST_CASE_FIXTURE(PostGameWndFixture, "Создание окна с нулевыми размерами - исключение")
 {
-    CHECK_THROWS_AS(PostGameWnd(sf::IntRect(sf::Vector2<int>(0, 0), sf::Vector2<int>(0, 600)), font, "TEST", true, 5), std::invalid_argument);
-    CHECK_THROWS_AS(PostGameWnd(sf::IntRect(sf::Vector2<int>(0, 0), sf::Vector2<int>(800, 0)), font, "TEST", true, 5), std::invalid_argument);
-}
-
-TEST_CASE_FIXTURE(PostGameWndFixture, "Создание окна с отрицательными попытками - исключение")
-{
-    CHECK_THROWS_AS(PostGameWnd(sf::IntRect(sf::Vector2<int>(0, 0), sf::Vector2<int>(800, 600)), font, "TEST", true, -1), std::invalid_argument);
+    CHECK_THROWS_AS(PostGameWnd(sf::IntRect(sf::Vector2<int>(0, 0), sf::Vector2<int>(0, 600)), font, "TEST", true), std::invalid_argument);
+    CHECK_THROWS_AS(PostGameWnd(sf::IntRect(sf::Vector2<int>(0, 0), sf::Vector2<int>(800, 0)), font, "TEST", true), std::invalid_argument);
 }
 
 
