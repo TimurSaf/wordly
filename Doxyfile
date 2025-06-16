@@ -1075,7 +1075,7 @@ RECURSIVE              = YES
 EXCLUDE                = WordleSFML/BeforeGameWnd_test.cpp \
                          WordleSFML/Button_test.cpp \
                          WordleSFML/CMakeLists.txt \
-                         WordleSFML/GuessGrid_test.txt \
+                         WordleSFML/GuessGrid_test.cpp \
                          WordleSFML/KeyboardWnd_test.cpp \
                          WordleSFML/PostGameWnd_test.cpp \
                          WordleSFML/PuzzleLetter_test.cpp \
