@@ -38,14 +38,11 @@ public:
      * \param font       Шрифт для отображения текста (sf::Font).
      * \param solution   Строка с разгаданным (или неудачно отгаданным) словом.
      * \param wonGame    Логический флаг: true, если пользователь угадал слово; false в противном случае.
-     * \param attempts   Количество попыток, которое потребовалось для угадывания слова.
-     * \throw std::invalid_argument Если bounds невалидны или attempts < 0.
      */
     PostGameWnd(const sf::IntRect& bounds,
                 const sf::Font& font,
                 const std::string& solution,
-                const bool wonGame,
-                const int attempts);
+                const bool wonGame);
 
     /**
      * \brief Деструктор по умолчанию.
