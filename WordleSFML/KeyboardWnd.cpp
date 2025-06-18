@@ -17,7 +17,7 @@ void KeyboardWnd::draw(sf::RenderWindow& renderWindow) const
 
 void KeyboardWnd::handleMousePress(const sf::Vector2i& mousePosition, bool isLeft)
 {
-	for (auto& button : _buttons) {
+	for (const auto& button : _buttons) {
 		if (button.isPositionInside(mousePosition)) {
 			_actionID = button.getActionID();
 			break;
@@ -41,8 +41,8 @@ int KeyboardWnd::getActionIDReset()
 
 void KeyboardWnd::applyRules(const std::vector<std::string>& rules)
 {
-	for (auto rule : rules) {
-		for (int i = 0, pos = 0; i < rule.length(); ++i, ++pos) {
+	for (const auto& rule : rules) {
+		for (int i = 0; i < rule.length(); ++i) {
 			int colourID = 1;
 			if (rule.at(i) == '*') {
 				i++;
@@ -54,8 +54,10 @@ void KeyboardWnd::applyRules(const std::vector<std::string>& rules)
 			}
 
 			int letterCasted = static_cast<int>(rule.at(i));
-			auto button = std::find_if(_buttons.begin(), _buttons.end(),
-				[&](Button b) { return b.getActionID() == letterCasted; });
+			auto button = std::find_if(_buttons.begin(), _buttons.end(), [&](const Button& btn) {
+				return btn.getActionID() == letterCasted; 
+				}
+			);
 			if (button != _buttons.end()) {
 				button->applyColourID(colourID);
 			}
@@ -70,15 +72,15 @@ void KeyboardWnd::initialiseButtons(const sf::Font& font)
 	int buttonWidth = 60;
 	int buttonHeight = 60;
 
-	int midX = ((buttonWidth + 10) * (3 + 8) - 10) / 2;
+	int midX = ((buttonWidth + 10) * 11 - 10) / 2;
 	int actualLeft = _bounds.position.x + _bounds.size.x / 2 - midX;
 
-	int posX = actualLeft + midX - ((buttonWidth + 10) * (10) - 10) / 2;
+	int posX = actualLeft + midX - ((buttonWidth + 10) * 10 - 10) / 2;
 	int posY = _bounds.position.y + _bounds.size.y - (buttonHeight + 15) * 3;
 	int i = 0;
 
 	for (; i < 10; i++, posX += buttonWidth + 10) {
-		_buttons.emplace_back(
+		_buttons.push_back(
 			Button(
 				sf::IntRect(
 					sf::Vector2<int>(posX, posY), 
@@ -91,11 +93,11 @@ void KeyboardWnd::initialiseButtons(const sf::Font& font)
 		);
 	}
 	
-	posX = actualLeft + midX - ((buttonWidth + 10) * (9) - 10) / 2;
+	posX = actualLeft + midX - ((buttonWidth + 10) * 9 - 10) / 2;
 	posY += 10 + buttonHeight;
 
 	for (; i < 19; i++, posX += buttonWidth + 10) {
-		_buttons.emplace_back(
+		_buttons.push_back(
 			Button(
 				sf::IntRect(
 					sf::Vector2<int>(posX, posY), 
@@ -111,7 +113,7 @@ void KeyboardWnd::initialiseButtons(const sf::Font& font)
 	posX = actualLeft;
 	posY += 10 + buttonHeight;
 
-	_buttons.emplace_back(
+	_buttons.push_back(
 		Button(
 			sf::IntRect(
 				sf::Vector2<int>(posX, posY), 
@@ -127,7 +129,7 @@ void KeyboardWnd::initialiseButtons(const sf::Font& font)
 	posX += buttonWidth * 3 + 10;
 
 	for (; i < buttonText.size(); i++, posX += buttonWidth + 10) {
-		_buttons.emplace_back(
+		_buttons.push_back(
 			Button(
 				sf::IntRect(
 					sf::Vector2<int>(posX, posY), 

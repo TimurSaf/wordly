@@ -5,7 +5,7 @@
 #include <stdexcept>
 
 struct KeyboardWndFixture {
-    sf::Font    font;
+    sf::Font font;
     KeyboardWnd wnd;
 
     KeyboardWndFixture()

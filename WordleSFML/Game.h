@@ -10,7 +10,6 @@
  * а также обработку основных событий (обновление, отрисовка, ввод).
  */
 
-#include <random>
 #include <memory>
 #include "WndInterface.h"
 #include "client_http.hpp"
@@ -42,7 +41,7 @@ public:
      *
      * Освобождает ресурсы, связанные с активными интерфейсами.
      */
-    virtual ~Game();
+    ~Game();
 
     /**
      * \brief Обновляет текущее состояние активного окна.
@@ -98,10 +97,8 @@ public:
 private:
     const sf::IntRect            _bounds;          /**< Область игрового поля. */
     const sf::Font&              _font;            /**< Ссылка на шрифт для текста. */
-    std::default_random_engine   _randomEngine;    /**< Общий генератор случайных чисел. */
     std::unique_ptr<WndInterface> _activeInterface; /**< Текущий активный интерфейс (окно). */
     std::unique_ptr<WndInterface> _activeOverlay;   /**< Текущий активный оверлей (если есть). */
-    bool                         _terminateGame;   /**< Флаг запроса на завершение игры. */
 };
 
 #endif // GAME_H

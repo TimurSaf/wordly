@@ -1,5 +1,4 @@
 #include "Game.h"
-#include <chrono>      
 #include "PuzzleWnd.h"
 #include "PostGameWnd.h"
 #include "BeforeGameWnd.h"
@@ -8,8 +7,6 @@
 Game::Game(const sf::IntRect& gameBounds, const sf::Font& font)
 	: _bounds(gameBounds), _font(font)
 {
-	unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
-	_randomEngine = std::default_random_engine(seed);
     _activeInterface = std::make_unique<BeforeGameWnd>(_bounds, _font);
     _activeOverlay   = nullptr;
 }
@@ -21,7 +18,7 @@ void Game::update(const float deltaTime) {
         _activeOverlay->update(deltaTime);
         if (_activeOverlay->getResultState() == WndResultState::Restart) {
             int wordLength = 6;
-            if (auto* postGame = dynamic_cast<PostGameWnd*>(_activeOverlay.get())) {
+            if (PostGameWnd* postGame = dynamic_cast<PostGameWnd*>(_activeOverlay.get())) {
                 wordLength = 4 + postGame->getSelectedActionID();
             }
             _activeOverlay.reset();
@@ -31,7 +28,7 @@ void Game::update(const float deltaTime) {
 
     }
     else if (_activeInterface) {
-        if (auto* before = dynamic_cast<BeforeGameWnd*>(_activeInterface.get());
+        if (BeforeGameWnd* before = dynamic_cast<BeforeGameWnd*>(_activeInterface.get());
             before && before->getResultState() == WndResultState::Restart)
         {
             int btnID = before->getSelectedActionID();
@@ -44,8 +41,7 @@ void Game::update(const float deltaTime) {
         }
         _activeInterface->update(deltaTime);
         if (_activeInterface->getResultState() == WndResultState::Finished && !_activeOverlay) {
-            auto guessGrid = dynamic_cast<PuzzleWnd*>(_activeInterface.get())->getGuessGrid();
-            auto rules = guessGrid.getAllRules();
+            GuessGrid guessGrid = dynamic_cast<PuzzleWnd*>(_activeInterface.get())->getGuessGrid();
             std::string solution = guessGrid.getSolution();
             _activeOverlay = std::make_unique<PostGameWnd>(_bounds, _font, solution, guessGrid.isSolved());
         }
