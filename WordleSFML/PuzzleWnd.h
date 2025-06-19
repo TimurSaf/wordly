@@ -47,7 +47,7 @@ public:
     /**
      * \brief Деструктор класса PuzzleWnd.
      */
-    virtual ~PuzzleWnd();
+    ~PuzzleWnd();
 
     /**
      * \brief Обновляет внутреннюю логику окна каждую итерацию игрового цикла.
@@ -58,7 +58,7 @@ public:
      * \param deltaTime Время (в секундах), прошедшее с предыдущего кадра.
      * \return void
      */
-    virtual void update(const float deltaTime) override;
+    void update(const float deltaTime) override;
 
     /**
      * \brief Отрисовывает все компоненты игрового окна.
@@ -69,7 +69,7 @@ public:
      * \param renderWindow Ссылка на объект sf::RenderWindow для отрисовки элементов.
      * \return void
      */
-    virtual void draw(sf::RenderWindow& renderWindow) const override;
+    void draw(sf::RenderWindow& renderWindow) const override;
 
     /**
      * \brief Обрабатывает нажатие мыши внутри окна.
@@ -81,7 +81,7 @@ public:
      * \param isLeft        Логический флаг: true, если нажата левая кнопка мыши.
      * \return void
      */
-    virtual void handleMousePress(const sf::Vector2i& mousePosition, bool isLeft) override;
+    void handleMousePress(const sf::Vector2i& mousePosition, bool isLeft) override;
 
     /**
      * \brief Обрабатывает перемещение мыши внутри окна.
@@ -92,7 +92,7 @@ public:
      * \param mousePosition Координаты курсора мыши при движении (sf::Vector2i).
      * \return void
      */
-    virtual void handleMouseMove(const sf::Vector2i& mousePosition) override;
+    void handleMouseMove(const sf::Vector2i& mousePosition) override;
 
     /**
      * \brief Обрабатывает ввод с аппаратной клавиатуры.
@@ -103,7 +103,7 @@ public:
      * \param keyCode Код нажатой клавиши (sf::Keyboard::Key).
      * \return void
      */
-    virtual void handleKeyInput(const sf::Keyboard::Key keyCode) override;
+    void handleKeyInput(const sf::Keyboard::Key keyCode) override;
 
     /**
      * \brief Возвращает ссылку на объект GuessGrid.

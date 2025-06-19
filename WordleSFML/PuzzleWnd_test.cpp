@@ -22,7 +22,7 @@ TEST_CASE_FIXTURE(PuzzleWndFixture, "Ошибка при получении Gues
 }
 
 TEST_CASE_FIXTURE(PuzzleWndFixture, "Получение GuessGrid после завершения игры") {
-    for (char c : std::string("HELLO")) {
+    for (char c : "HELLO") {
         sf::Keyboard::Key key = static_cast<sf::Keyboard::Key>(
             static_cast<int>(sf::Keyboard::Key::A) + (c - 'A')
         );
@@ -32,7 +32,7 @@ TEST_CASE_FIXTURE(PuzzleWndFixture, "Получение GuessGrid после з�
     wnd.update(0.0f);
     CHECK(wnd.getResultState() == Finished);
     CHECK_NOTHROW({
-        auto const& grid = wnd.getGuessGrid();
+        const GuessGrid& grid = wnd.getGuessGrid();
         CHECK(grid.getSolution() == "HELLO");
     });
 }

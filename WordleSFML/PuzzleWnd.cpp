@@ -8,9 +8,7 @@ PuzzleWnd::PuzzleWnd(const sf::IntRect& bounds, const sf::Font& font, const std:
 	_currentState = WndResultState::NothingState;
 }
 
-PuzzleWnd::~PuzzleWnd()
-{
-}
+PuzzleWnd::~PuzzleWnd() {}
 
 void PuzzleWnd::update(const float deltaTime)
 {
